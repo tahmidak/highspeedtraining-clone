@@ -1,0 +1,19 @@
+:root {
+  --color-primary: #20293e;
+}
+
+body {
+  min-width: 425px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Product card styles */
+.product-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}

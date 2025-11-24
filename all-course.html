@@ -1,0 +1,3522 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highspeedtraining-clone - home</title>
+
+    <!-- DaisyUI CSS (load FIRST) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Your custom CSS (load LAST so it can override if needed) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      /* Custom Brand Colors based on HST */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- header sec -->
+    <header class="main-header">
+      <div class="main-header-container">
+        <!-- phone nav -->
+        <div
+          class="phone-nav w-full flex lg:justify-end justify-between items-center md:hidden p-4 bg-[#20293e] text-white"
+        >
+          <div
+            class="logo-container-phone lg:hidden flex flex-col justify-end items-center"
+          >
+            <a href="index.html" class="w-full h-full">
+              <img
+                src="assets/img/logo/logo-blue.svg"
+                alt="logo"
+                width="100%"
+              />
+            </a>
+          </div>
+          <div class="flex gap-4 justify-center items-end text-lg">
+            <div
+              class="nav-icon w-10 h-10 flex justify-center items-center cursor-pointer"
+              id="search-btn"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#00000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g id="Interface / Search_Magnifying_Glass">
+                    <path
+                      id="Vector"
+                      d="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z"
+                      stroke="#ffffff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="flex text-xl font-semibold">
+              <div class="nav-icon w-10 h-10 flex justify-center items-center">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="none"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2 2C1.44772 2 1 2.44772 1 3C1 3.55228 1.44772 4 2 4H2.47241C2.92336 4 3.31852 4.30182 3.43717 4.73688L3.85342 6.26312L6 14.1339V16C6 16.6935 6.23533 17.3321 6.63048 17.8402C6.23824 18.2816 6 18.863 6 19.5C6 20.8807 7.11929 22 8.5 22C9.88071 22 11 20.8807 11 19.5C11 19.3288 10.9828 19.1616 10.95 19H14.05C14.0172 19.1616 14 19.3288 14 19.5C14 20.8807 15.1193 22 16.5 22C17.8807 22 19 20.8807 19 19.5C19 19.1715 18.9366 18.8578 18.8215 18.5704C18.934 18.4086 19 18.212 19 18C19 17.4477 18.5523 17 18 17H16.5H9C8.44772 17 8 16.5523 8 16V15H18.236C19.1381 15 19.9285 14.3962 20.1657 13.5258L21.8007 7.52583C22.1473 6.25364 21.1896 5 19.871 5H5.58198L5.3667 4.21065C5.01074 2.90547 3.82526 2 2.47241 2H2ZM16.5 19C16.2239 19 16 19.2239 16 19.5C16 19.7761 16.2239 20 16.5 20C16.7761 20 17 19.7761 17 19.5C17 19.2239 16.7761 19 16.5 19ZM18.236 13H7.7638L6.12743 7H19.871L18.236 13ZM8.5 19C8.22386 19 8 19.2239 8 19.5C8 19.7761 8.22386 20 8.5 20C8.77614 20 9 19.7761 9 19.5C9 19.2239 8.77614 19 8.5 19Z"
+                      fill="#ffffff"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="text-4xl">(<span>0</span>)</div>
+            </div>
+            <div
+              class="nav-icon w-10 h-10 flex justify-center items-center cursor-pointer relative"
+              id="hamburger-btn"
+            >
+              <div
+                class="hamburger-lines w-6 h-5 flex flex-col justify-between"
+              >
+                <span
+                  class="line block h-0.5 w-full bg-white transition-all duration-300"
+                ></span>
+                <span
+                  class="line block h-0.5 w-full bg-white transition-all duration-300"
+                ></span>
+                <span
+                  class="line block h-0.5 w-full bg-white transition-all duration-300"
+                ></span>
+              </div>
+            </div>
+            <!-- <div class="nav-icon w-10 h-10 flex justify-center items-center">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#00000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M4 18L20 18"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M4 12L20 12"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M4 6L20 6"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                </g>
+              </svg>
+            </div> -->
+          </div>
+        </div>
+        <!-- phone search container -->
+        <div
+          id="phone-search-container"
+          class="w-full hidden md:hidden bg-[#20293e] text-white p-4"
+        >
+          <div class="flex justify-center items-center flex-1 gap-2 w-full">
+            <div class="">Find a course:</div>
+            <label
+              class="search-ipt input input-bordered flex items-center gap-2 flex-1 rounded-full text-black"
+            >
+              <input type="search" class="grow flex-1" placeholder="Search" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="h-4 w-4 opacity-70 text-black"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </label>
+          </div>
+        </div>
+        <!-- phone Menu -->
+        <div
+          id="mobile-menu"
+          class="w-full hidden md:hidden bg-[#20293e] text-white"
+        >
+          <nav class="p-4">
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a href="all-course.html" class="block py-2">All-Course</a>
+              </li>
+              <li>
+                <details class="mobile-dropdown">
+                  <summary class="py-2 cursor-pointer">Parent item</summary>
+                  <ul class="pl-4 mt-2 flex flex-col gap-2">
+                    <li><a href="#" class="block py-2">Submenu 1</a></li>
+                    <li><a href="#" class="block py-2">Submenu 2</a></li>
+                    <li>
+                      <details>
+                        <summary class="py-2 cursor-pointer">Parent</summary>
+                        <ul class="pl-4 mt-2 flex flex-col gap-2">
+                          <li>
+                            <a href="single-course.html" class="block py-2"
+                              >Single</a
+                            >
+                          </li>
+                          <li><a href="#" class="block py-2">item 2</a></li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li><a href="bs.html" class="block py-2">Test</a></li>
+              <li><a href="single-course.html">Single</a></li>
+              <li><a href="category-course.html">Category</a></li>
+              <li class="static">
+                <details>
+                  <summary>Parent item</summary>
+                  <div
+                    class="bg-base-200 text-black shadow-lg rounded-none p-0 mt-8"
+                  >
+                    <div
+                      class="w-full flex flex-col justify-stretch items-stretch"
+                    >
+                      <div
+                        class="w-full bg-[#e3cad8] flex justify-center items-stretch"
+                      >
+                        <div
+                          class="p-10 w-full flex justify-center items-center text-center flex-col h-full gap-4 max-w-[550px]"
+                        >
+                          <p class="flex">
+                            Our range of over 180 online courses are fully
+                            accredited, trusted by more than 3 million learners
+                            and ideal for training you and your team.
+                          </p>
+                          <button
+                            class="btn px-6 py-3 rounded-full uppercase border-2 border-black bg-white hover:border-[#ff8100] hover:bg-[#ff8100]"
+                          >
+                            See all courses
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flex-1 p-8 flex flex-col">
+                        <div
+                          class="grid grid-cols-[repeat(auto-fit,350px)] justify-center items-center w-full"
+                        >
+                          <!-- Your grid items here -->
+                          <div class="p-4 w-full">
+                            <a
+                              href="#"
+                              class="w-full flex justify-between items-center"
+                            >
+                              <span class="underline">Food Hygiene</span>
+                              <span
+                                class="flex w-4 h-4 justify-center items-center"
+                                ><img
+                                  src="assets/img/left-default.webp"
+                                  alt="left-0"
+                                  width="100%"
+                              /></span>
+                            </a>
+                          </div>
+                          <div class="p-4 w-full">
+                            <a
+                              href="#"
+                              class="w-full flex justify-between items-center"
+                            >
+                              <span class="underline">Food Hygiene</span>
+                              <span
+                                class="flex w-4 h-4 justify-center items-center"
+                                ><img
+                                  src="assets/img/left-default.webp"
+                                  alt="left-0"
+                                  width="100%"
+                              /></span>
+                            </a>
+                          </div>
+                          <div class="p-4 w-full">
+                            <a
+                              href="#"
+                              class="w-full flex justify-between items-center"
+                            >
+                              <span class="underline">Food Hygiene</span>
+                              <span
+                                class="flex w-4 h-4 justify-center items-center"
+                                ><img
+                                  src="assets/img/left-default.webp"
+                                  alt="left-0"
+                                  width="100%"
+                              /></span>
+                            </a>
+                          </div>
+                          <div class="p-4 w-full">
+                            <a
+                              href="#"
+                              class="w-full flex justify-between items-center"
+                            >
+                              <span class="underline">Food Hygiene</span>
+                              <span
+                                class="flex w-4 h-4 justify-center items-center"
+                                ><img
+                                  src="assets/img/left-default.webp"
+                                  alt="left-0"
+                                  width="100%"
+                              /></span>
+                            </a>
+                          </div>
+                          <div class="p-4 w-full">
+                            <a
+                              href="#"
+                              class="w-full flex justify-between items-center"
+                            >
+                              <span class="underline">Food Hygiene</span>
+                              <span
+                                class="flex w-4 h-4 justify-center items-center"
+                                ><img
+                                  src="assets/img/left-default.webp"
+                                  alt="left-0"
+                                  width="100%"
+                              /></span>
+                            </a>
+                          </div>
+                          <div class="p-4 w-full">
+                            <a
+                              href="#"
+                              class="w-full flex justify-between items-center"
+                            >
+                              <span class="underline">Food Hygiene</span>
+                              <span
+                                class="flex w-4 h-4 justify-center items-center"
+                                ><img
+                                  src="assets/img/left-default.webp"
+                                  alt="left-0"
+                                  width="100%"
+                              /></span>
+                            </a>
+                          </div>
+                          <div class="p-4 w-full">
+                            <a
+                              href="#"
+                              class="w-full flex justify-between items-center"
+                            >
+                              <span class="underline">Food Hygiene</span>
+                              <span
+                                class="flex w-4 h-4 justify-center items-center"
+                                ><img
+                                  src="assets/img/left-default.webp"
+                                  alt="left-0"
+                                  width="100%"
+                              /></span>
+                            </a>
+                          </div>
+                          <div class="p-4 w-full">
+                            <a
+                              href="#"
+                              class="w-full flex justify-between items-center"
+                            >
+                              <span class="underline">Food Hygiene</span>
+                              <span
+                                class="flex w-4 h-4 justify-center items-center"
+                                ><img
+                                  src="assets/img/left-default.webp"
+                                  alt="left-0"
+                                  width="100%"
+                              /></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="self-end justify-self-end uppercase text-black px-6"
+                        >
+                          <button
+                            class="close-btn hover:text-[#ff8100] cursor-pointer"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </li>
+              <li><a href="#" class="block py-2">Item 4</a></li>
+              <li><a href="#" class="block py-2">Item 5</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- main nav -->
+        <div
+          class="big-device-nav hidden md:flex flex-col w-full bg-[#20293e] text-white"
+        >
+          <div class="max-w-7xl mx-auto w-full">
+            <div
+              class="main-logo-nav-search-container flex w-full gap-4 p-7 lg:px-10 py-4"
+            >
+              <div
+                class="logo-container-lg w-80 h-32 hidden lg:flex flex-col justify-center items-center px-4"
+              >
+                <a href="index.html" class="w-full h-full">
+                  <img
+                    src="assets/img/logo/logo-blue.svg"
+                    alt="logo"
+                    width="100%"
+                  />
+                </a>
+              </div>
+              <div
+                class="nav-search-container flex flex-col gap-2 items-end justify-center w-full"
+              >
+                <div
+                  class="search-container w-full flex lg:justify-end justify-between items-center"
+                >
+                  <div
+                    class="logo-container-tablet lg:hidden flex flex-col justify-center items-center"
+                  >
+                    <a href="index.html" class="w-full h-full">
+                      <img
+                        src="assets/img/logo/logo-blue.svg"
+                        alt="logo"
+                        width="100%"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    class="flex gap-4 justify-center items-center text-lg w-4/6"
+                  >
+                    <div><a href="#" class="underline">About us</a></div>
+
+                    <div class="flex justify-center items-center flex-1 gap-2">
+                      <div class="">Find a course:</div>
+                      <label
+                        class="search-ipt input input-bordered flex items-center gap-2 flex-1 rounded-full text-black"
+                      >
+                        <input
+                          type="search"
+                          class="grow flex-1"
+                          placeholder="Search"
+                        />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          class="h-4 w-4 opacity-70 text-black"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav-container">
+                  <nav class="text-xl">
+                    <ul class="menu menu-horizontal rounded-box text-lg p-0">
+                      <li><a href="all-course.html">All-Course</a></li>
+                      <li class="static">
+                        <details>
+                          <summary>Parent item</summary>
+                          <div
+                            class="absolute left-0 right-0 w-screen bg-base-200 text-black shadow-lg rounded-none p-0 mt-8 z-[99999999]"
+                          >
+                            <div
+                              class="xl:max-w-7xl xl:mx-auto w-full flex justify-stretch items-stretch relative before:content-[''] before:absolute before:top-0 before:left-0 before:bg-[#e3cad8] before:-z-10 before:h-full before:w-[calc(40%+50vw)] before:-translate-x-[50vw]"
+                            >
+                              <div
+                                class="w-[40%] bg-[#e3cad8] flex justify-end items-stretch"
+                              >
+                                <div
+                                  class="p-10 w-fit flex justify-start items-start flex-col h-full gap-4 max-w-[550px]"
+                                >
+                                  <p class="flex">
+                                    Our range of over 180 online courses are
+                                    fully accredited, trusted by more than 3
+                                    million learners and ideal for training you
+                                    and your team.
+                                  </p>
+                                  <button
+                                    class="btn px-6 py-3 rounded-full uppercase border-2 border-black bg-white hover:border-[#ff8100] hover:bg-[#ff8100]"
+                                  >
+                                    See all courses
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="flex-1 p-8 flex flex-col max-w-[60%]">
+                                <div
+                                  class="grid grid-cols-[repeat(auto-fit,250px)] w-full"
+                                >
+                                  <!-- Your grid items here -->
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                </div>
+                                <div
+                                  class="self-end justify-self-end uppercase text-black px-6"
+                                >
+                                  <button
+                                    class="close-btn hover:text-[#ff8100] cursor-pointer"
+                                  >
+                                    Close
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </details>
+                      </li>
+                      <li><a href="bs.html">Test</a></li>
+                      <li><a href="single-course.html">Single</a></li>
+                      <li><a href="category-course.html">Category</a></li>
+                      <li class="static">
+                        <details>
+                          <summary>Parent item</summary>
+                          <div
+                            class="absolute left-0 right-0 w-screen bg-base-200 text-black shadow-lg rounded-none p-0 mt-8 z-[99999999]"
+                          >
+                            <div
+                              class="xl:max-w-7xl xl:mx-auto w-full flex justify-stretch items-stretch relative before:content-[''] before:absolute before:top-0 before:left-0 before:bg-[#e3cad8] before:-z-10 before:h-full before:w-[calc(40%+50vw)] before:-translate-x-[50vw]"
+                            >
+                              <div
+                                class="w-[40%] bg-[#e3cad8] flex justify-end items-stretch"
+                              >
+                                <div
+                                  class="p-10 w-fit flex justify-start items-start flex-col h-full gap-4 max-w-[550px]"
+                                >
+                                  <p class="flex">
+                                    Our range of over 180 online courses are
+                                    fully accredited, trusted by more than 3
+                                    million learners and ideal for training you
+                                    and your team.
+                                  </p>
+                                  <button
+                                    class="btn px-6 py-3 rounded-full uppercase border-2 border-black bg-white hover:border-[#ff8100] hover:bg-[#ff8100]"
+                                  >
+                                    See all courses
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="flex-1 p-8 flex flex-col max-w-[60%]">
+                                <div
+                                  class="grid grid-cols-[repeat(auto-fit,250px)] w-full"
+                                >
+                                  <!-- Your grid items here -->
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                  <div class="p-4 w-full">
+                                    <a
+                                      href="#"
+                                      class="w-full flex justify-between items-center"
+                                    >
+                                      <span class="underline"
+                                        >Food Hygiene</span
+                                      >
+                                      <span
+                                        class="flex w-4 h-4 justify-center items-center"
+                                        ><img
+                                          src="assets/img/left-default.webp"
+                                          alt="left-0"
+                                          width="100%"
+                                      /></span>
+                                    </a>
+                                  </div>
+                                </div>
+                                <div
+                                  class="self-end justify-self-end uppercase text-black px-6"
+                                >
+                                  <button
+                                    class="close-btn hover:text-[#ff8100] cursor-pointer"
+                                  >
+                                    Close
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </details>
+                      </li>
+                      <li class="">
+                        <details>
+                          <summary>Parent item</summary>
+                          <ul class="text-black">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                            <li>
+                              <details>
+                                <summary>Parent</summary>
+                                <ul>
+                                  <li><a>item 1</a></li>
+                                  <li><a>item 2</a></li>
+                                </ul>
+                              </details>
+                            </li>
+                          </ul>
+                        </details>
+                      </li>
+                      <li><a>Item 3</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- breadCrumb -->
+        <div
+          class="hidden md:flex breadcrumb-container text-lg text-white bg-[#192135]"
+        >
+          <div class="max-w-7xl mx-auto w-full px-10 py-4">
+            <a href="#">Home</a>
+          </div>
+        </div>
+        <!-- usp's -->
+        <div class="hidden lg:flex qualities-container">
+          <div class="max-w-7xl mx-auto w-full px-10 py-2">
+            <ul
+              class="qualities-list flex flex-wrap gap-6 justify-between items-center w-full uppercase text-sm font-semibold"
+            >
+              <li class="qualities-item flex items-center gap-2">
+                <svg
+                  class="w-4 h-4 fill-green-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512"
+                >
+                  <path
+                    d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                  />
+                </svg>
+                Trusted by 3 million learners
+              </li>
+              <li class="qualities-item flex items-center gap-2">
+                <svg
+                  class="w-4 h-4 fill-green-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"
+                  />
+                </svg>
+                24/7 online training
+              </li>
+              <li class="qualities-item flex items-center gap-2">
+                <svg
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 300.005 300.005"
+                  xml:space="preserve"
+                  class="w-4 h-4 fill-green-600"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <g>
+                        <path
+                          d="M150,0C67.159,0,0.002,67.159,0.002,150c0,82.838,67.157,150.005,149.997,150.005S300.003,232.841,300.003,150 C300,67.159,232.841,0,150,0z M235.661,168.822c-6.756,42.93-43.939,73.662-86.101,73.662c-4.487,0-9.028-0.35-13.598-1.066 c-47.497-7.485-80.063-52.215-72.593-99.707c3.621-23.011,15.985-43.236,34.814-56.946c16.21-11.801,35.538-17.543,55.286-16.607 l-14.527-13.834l9.521-9.991l22.29,21.239l0.005-0.003l9.97,9.513l-9.513,9.991l-0.005-0.008l-21.237,22.295l-9.98-9.521 l13.456-14.112c-16.457-0.934-32.605,3.789-46.107,13.619c-15.471,11.264-25.628,27.879-28.603,46.784 c-6.134,39.019,20.622,75.768,59.643,81.915c39.019,6.131,75.765-20.617,81.904-59.641c4.054-25.76-6.225-51.72-26.834-67.751 l9.56-12.281C228.083,105.877,240.595,137.47,235.661,168.822z M121.096,175.443l-0.511-1.196l12.823-5.436l0.506,1.198 c2.039,4.84,9.088,8.489,16.394,8.489c3.284,0,13.995-0.599,13.995-8.339c0-4.054-4.58-6.481-14.415-7.641 c-11.036-1.237-26.162-2.928-26.162-19.587c0-10.214,7.641-17.354,20.508-19.255v-7.851h13.821v7.885 c5.973,1.05,13.855,3.652,18.251,12.644l0.584,1.19l-11.804,5.46l-0.597-0.993c-2.067-3.413-8.147-6.092-13.834-6.092 c-3.836,0-12.755,0.685-12.755,7.011c0,4.547,5.747,5.594,13.264,6.494c11.752,1.447,27.84,3.429,27.84,20.733 c0,12.735-10.328,19.439-20.946,20.627v8.953H144.24v-8.523C133.09,189.903,124.893,184.329,121.096,175.443z"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+                Money back guarantee
+              </li>
+              <li class="qualities-item flex items-center gap-2">
+                <svg
+                  viewBox="0 -0.21 16.001 16.001"
+                  id="certified-16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 fill-green-600"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      id="Path_154"
+                      data-name="Path 154"
+                      d="M-4.146,12.146l-1.871-1.87a1.48,1.48,0,0,0,.484-.6,2.4,2.4,0,0,0-.214-1.792A2.882,2.882,0,0,1-6,7a2.726,2.726,0,0,1,.247-.841,2.433,2.433,0,0,0,.219-1.838A2.428,2.428,0,0,0-6.988,3.177a2.73,2.73,0,0,1-.768-.421,2.887,2.887,0,0,1-.45-.805A2.4,2.4,0,0,0-9.321.533a2.386,2.386,0,0,0-1.792.214A2.882,2.882,0,0,1-12,1a2.726,2.726,0,0,1-.841-.247A2.428,2.428,0,0,0-14.679.533a2.428,2.428,0,0,0-1.144,1.455,2.73,2.73,0,0,1-.421.768,2.887,2.887,0,0,1-.805.45,2.4,2.4,0,0,0-1.418,1.115,2.4,2.4,0,0,0,.214,1.792A2.882,2.882,0,0,1-18,7a2.726,2.726,0,0,1-.247.841,2.433,2.433,0,0,0-.219,1.838,1.517,1.517,0,0,0,.48.6l-1.867,1.866a.5.5,0,0,0-.14.434.5.5,0,0,0,.27.367l1.851.926.926,1.851a.5.5,0,0,0,.367.27A.549.549,0,0,0-16.5,16a.5.5,0,0,0,.354-.146l2.313-2.314a4.664,4.664,0,0,0,.946-.287A2.882,2.882,0,0,1-12,13a2.726,2.726,0,0,1,.841.247,4.514,4.514,0,0,0,1.005.305l2.3,2.3A.5.5,0,0,0-7.5,16a.549.549,0,0,0,.08-.006.5.5,0,0,0,.367-.27l.926-1.851,1.851-.926a.5.5,0,0,0,.27-.367A.5.5,0,0,0-4.146,12.146ZM-12,12a3.535,3.535,0,0,0-1.25.32c-.4.157-.815.318-1.046.222s-.41-.5-.583-.9a3.5,3.5,0,0,0-.658-1.11A3.373,3.373,0,0,0-16.616,9.9c-.4-.175-.822-.356-.927-.609s.063-.677.225-1.086A3.409,3.409,0,0,0-17,7a3.535,3.535,0,0,0-.32-1.25c-.157-.4-.318-.815-.222-1.046s.5-.41.9-.583a3.5,3.5,0,0,0,1.11-.658A3.373,3.373,0,0,0-14.9,2.384c.175-.4.356-.822.609-.927a1.808,1.808,0,0,1,1.086.225A3.409,3.409,0,0,0-12,2a3.535,3.535,0,0,0,1.25-.32c.4-.157.812-.321,1.046-.222s.41.5.583.9a3.5,3.5,0,0,0,.658,1.11,3.373,3.373,0,0,0,1.079.632c.4.175.822.356.927.609s-.063.677-.225,1.086A3.409,3.409,0,0,0-7,7a3.535,3.535,0,0,0,.32,1.25c.157.4.318.815.222,1.046s-.5.41-.9.583a3.5,3.5,0,0,0-1.11.658A3.373,3.373,0,0,0-9.1,11.616c-.175.4-.356.822-.609.927s-.676-.063-1.086-.225A3.409,3.409,0,0,0-12,12Zm-4.363,2.655-.69-1.38a.5.5,0,0,0-.223-.223l-1.38-.69,1.572-1.572.072.032a2.73,2.73,0,0,1,.768.421,2.887,2.887,0,0,1,.45.8,3.006,3.006,0,0,0,.812,1.226Zm9.639-1.6a.5.5,0,0,0-.223.223l-.69,1.38-1.38-1.38a3.012,3.012,0,0,0,.84-1.264,2.73,2.73,0,0,1,.421-.768,2.887,2.887,0,0,1,.8-.45l.026-.012,1.581,1.581ZM-8,7a4,4,0,0,0-4-4,4,4,0,0,0-4,4,4,4,0,0,0,4,4A4,4,0,0,0-8,7Zm-4,3a3,3,0,0,1-3-3,3,3,0,0,1,3-3A3,3,0,0,1-9,7,3,3,0,0,1-12,10Z"
+                      transform="translate(20 -0.423)"
+                    ></path>
+                  </g>
+                </svg>
+                Fully accredited courses
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- notification banner -->
+        <div class="notification-banner-container w-full bg-[#c5d4fc]">
+          <div class="max-w-7xl mx-auto w-full p-4 md:px-10 md:py-4">
+            <div
+              class="notification-banner w-full flex justify-center items-center text-center lowercase"
+            >
+              <div class="notification-banner-title">
+                <p>
+                  <strong>Worker Protection Act:</strong>&nbsp;One in five UK
+                  adults are concerned about sexual harassment in the workplace.
+                  <a href="#" class="underline font-semibold">We can help.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero sec -->
+      <section class="all-course-hero file:">
+        <div class="ac-hero-container">
+          <div class="relative w-full h-96 overflow-hidden">
+            <!-- Top 50% - Solid Green -->
+            <div class="absolute top-0 left-0 w-full h-1/2 bg-[#20293e]"></div>
+
+            <!-- Bottom 50% - Dot Pattern -->
+            <div
+              class="absolute bottom-0 left-0 w-full h-1/2"
+              style="
+                background-image: radial-gradient(
+                  circle,
+                  rgb(240, 237, 230) 3px,
+                  rgb(255, 255, 255) 3px
+                );
+                background-size: 7px 7px;
+              "
+            ></div>
+
+            <!-- Centered Text -->
+            <div class="absolute inset-0 flex items-center justify-start">
+              <div
+                class="max-w-7xl mx-auto w-full p-4 md:px-10 md:py-4 flex justify-start items-center gap-6 font-serif"
+              >
+                <h1 class="flex flex-col">
+                  <span
+                    class="text-2xl md:text-4xl xl:text-6xl font-medium text-black p-4 pb-1 ml-10 bg-white w-fit rounded-tl-3xl"
+                  >
+                    Online Training
+                  </span>
+                  <span
+                    class="text-2xl md:text-4xl xl:text-6xl font-medium text-black p-4 pb-1 bg-blue-500 w-fit rounded-tr-3xl"
+                  >
+                    Courses
+                  </span>
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="text-xl px-6 py-12 font-bold font-sans">
+            <div
+              class="max-w-7xl mx-auto w-full p-4 md:px-10 md:py-4 flex justify-start items-center gap-6"
+            >
+              <p class="w-4/6">
+                Our entire range of online training courses. Use the filters to
+                narrow down your area of interest or, if you know the course you
+                want to take, use the search bar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- main section -->
+      <section>
+        <div class="ac-main-sec-container bg-[#fcfbf8]">
+          <div
+            class="max-w-7xl mx-auto w-full p-4 md:px-10 md:py-4 flex justify-start items-center gap-6 font-serif flex-col"
+          >
+            <!-- search area -->
+            <div
+              class="w-full flex flex-col gap-2 bg-[#e0dbcc] px-10 py-6 rounded-br-[3rem] group"
+            >
+              <h4 class="text-xl font-bold font-sans">Search by keyword(s)</h4>
+              <div
+                class="ac-m-search-container w-full flex gap-4 flex-col md:flex-row"
+              >
+                <label
+                  class="search-ipt input input-bordered flex items-center gap-2 flex-1 rounded-lg text-black"
+                >
+                  <input
+                    type="search"
+                    class="grow flex-1"
+                    placeholder="Search"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    class="h-8 w-8 opacity-70 text-black"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </label>
+                <div class="ac-m-search-button w-full md:w-fit">
+                  <a
+                    class="btn px-10 w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white"
+                  >
+                    Search
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Course Catalogue Section -->
+            <section class="py-8 md:py-12">
+              <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar Filters (Left Column) -->
+                <aside
+                  class="lg:w-1/4 hidden lg:flex justify-center items-start"
+                >
+                  <div class="rounded-lg p-6 sticky top-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">
+                      Search by category
+                    </h3>
+
+                    <div class="w-full border-b border-gray-500 h-1 mb-3"></div>
+
+                    <!-- Topic Filter -->
+                    <div class="collapse collapse-arrow rounded-lg mb-4">
+                      <input type="checkbox" checked />
+                      <div class="collapse-title text-lg font-semibold">
+                        Topic
+                      </div>
+                      <div class="collapse-content">
+                        <div class="space-y-3">
+                          <label
+                            class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              class="checkbox checkbox-primary checkbox-sm mr-3"
+                            />
+                            <span class="text-sm"
+                              >Customer Service
+                              <span class="text-gray-500">(15)</span></span
+                            >
+                          </label>
+                          <label
+                            class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              class="checkbox checkbox-primary checkbox-sm mr-3"
+                            />
+                            <span class="text-sm"
+                              >Fire Safety
+                              <span class="text-gray-500">(7)</span></span
+                            >
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Industry Filter -->
+                    <div class="collapse collapse-arrow rounded-lg mb-4">
+                      <input type="checkbox" checked />
+                      <div class="collapse-title text-lg font-semibold">
+                        Industry
+                      </div>
+                      <div class="collapse-content">
+                        <div class="space-y-3">
+                          <label
+                            class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              class="checkbox checkbox-primary checkbox-sm mr-3"
+                            />
+                            <span class="text-sm"
+                              >Construction and Trades
+                              <span class="text-gray-500">(54)</span></span
+                            >
+                          </label>
+                          <label
+                            class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              class="checkbox checkbox-primary checkbox-sm mr-3"
+                            />
+                            <span class="text-sm"
+                              >Education
+                              <span class="text-gray-500">(38)</span></span
+                            >
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button class="btn btn-outline btn-block mt-6">
+                      Clear filters
+                    </button>
+                  </div>
+                </aside>
+
+                <!-- Main Content (Right Column) -->
+                <div class="lg:w-3/4">
+                  <!-- top and Sort Bar -->
+                  <div class="rounded-lg py-4 mb-6">
+                    <div
+                      class="flex flex-col md:flex-row gap-4 md:items-center justify-between lg:justify-end"
+                    >
+                      <!-- filter btn -->
+                      <div class="drawer lg:hidden w-full md:w-fit">
+                        <input
+                          id="my-drawer-1"
+                          type="checkbox"
+                          class="drawer-toggle"
+                        />
+                        <div class="drawer-content md:w-fit w-full">
+                          <!-- Page content here -->
+                          <label
+                            for="my-drawer-1"
+                            class="btn drawer-button w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white px-6"
+                            >Open drawer</label
+                          >
+                        </div>
+                        <div class="drawer-side">
+                          <label
+                            for="my-drawer-1"
+                            aria-label="close sidebar"
+                            class="drawer-overlay"
+                          ></label>
+                          <div class="menu bg-base-200 min-h-screen w-80 p-4">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">
+                              Search by category
+                            </h3>
+
+                            <div
+                              class="w-full border-b border-gray-500 h-1 mb-3"
+                            ></div>
+
+                            <!-- Topic Filter -->
+                            <div
+                              class="collapse collapse-arrow rounded-lg mb-4"
+                            >
+                              <input type="checkbox" checked />
+                              <div class="collapse-title text-lg font-semibold">
+                                Topic
+                              </div>
+                              <div class="collapse-content">
+                                <div class="space-y-3">
+                                  <label
+                                    class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded"
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox checkbox-primary checkbox-sm mr-3"
+                                    />
+                                    <span class="text-sm"
+                                      >Customer Service
+                                      <span class="text-gray-500"
+                                        >(15)</span
+                                      ></span
+                                    >
+                                  </label>
+                                  <label
+                                    class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded"
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox checkbox-primary checkbox-sm mr-3"
+                                    />
+                                    <span class="text-sm"
+                                      >Fire Safety
+                                      <span class="text-gray-500"
+                                        >(7)</span
+                                      ></span
+                                    >
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Industry Filter -->
+                            <div
+                              class="collapse collapse-arrow rounded-lg mb-4"
+                            >
+                              <input type="checkbox" checked />
+                              <div class="collapse-title text-lg font-semibold">
+                                Industry
+                              </div>
+                              <div class="collapse-content">
+                                <div class="space-y-3">
+                                  <label
+                                    class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded"
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox checkbox-primary checkbox-sm mr-3"
+                                    />
+                                    <span class="text-sm"
+                                      >Construction and Trades
+                                      <span class="text-gray-500"
+                                        >(54)</span
+                                      ></span
+                                    >
+                                  </label>
+                                  <label
+                                    class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded"
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox checkbox-primary checkbox-sm mr-3"
+                                    />
+                                    <span class="text-sm"
+                                      >Education
+                                      <span class="text-gray-500"
+                                        >(38)</span
+                                      ></span
+                                    >
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <button class="btn btn-outline btn-block mt-6">
+                              Clear filters
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- short btn -->
+                      <div class="form-control w-fit flex flex-row gap-4">
+                        <label class="label">
+                          <span class="label-text font-semibold">Sort by:</span>
+                        </label>
+                        <select class="select select-bordered">
+                          <option>Relevance</option>
+                          <option>Most popular</option>
+                          <option>Alphabetical: A to Z</option>
+                          <option>Alphabetical: Z to A</option>
+                          <option>Price: High to Low</option>
+                          <option>Price: Low to High</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Results Meta -->
+                  <div class="mb-6">
+                    <p class="text-gray-600 text-lg">
+                      Showing
+                      <span class="font-bold text-gray-800">178</span> courses
+                    </p>
+                  </div>
+
+                  <!-- Product Cards Grid -->
+                  <div class="grid grid-cols-1 gap-6 mb-8">
+                    <!-- Product Card 1 -->
+                    <div
+                      class="product-card bg-white hover:bg-[#f0ede6] flex flex-col md:flex-row rounded-ss-[35px] rounded-ee-[35px] overflow-hidden group"
+                    >
+                      <div class="md:w-1/3 bg-gray-200">
+                        <img
+                          src="https://www.highspeedtraining.co.uk/media/products/001/level-2-food-hygiene-safety-catering-course-thumbnail.jpg"
+                          alt="Level 2 Food Hygiene"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div>
+                          <div class="flex items-center gap-1 mb-3">
+                            <div class="rating rating-sm">
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                              />
+                            </div>
+                            <span class="text-sm text-gray-600"
+                              >(59050 Reviews)</span
+                            >
+                          </div>
+                          <h3 class="text-xl font-bold text-gray-800 mb-3">
+                            Level 2 Food Hygiene and Safety for Catering
+                          </h3>
+                          <div
+                            class="course-card-course-teg flex-1 mt-3 mb-6 text-sm"
+                          >
+                            <div
+                              class="flex flex-wrap gap-2 justify-start gap-y-2 items-start"
+                            >
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> CPD
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> Mesothelioma UK
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> ROSPA
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> City & Guilds
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> IATP
+                              </span>
+                            </div>
+                          </div>
+                          <!-- <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="badge badge-outline">EHO</span>
+                            <span class="badge badge-outline">CPD</span>
+                            <span class="badge badge-outline">IoH</span>
+                            <span class="badge badge-outline">RoSPA</span>
+                            <span class="badge badge-outline"
+                              >City & Guilds</span
+                            >
+                          </div> -->
+
+                          <p
+                            class="text-gray-600 text-sm mb-4 relative before:content-[''] before:absolute before:top-0 before:h-[1px] before:w-[64px] before:bg-[#0f1422] pt-4"
+                          >
+                            An online course designed to provide comprehensive
+                            guidance on the food hygiene and safety practices
+                            that catering staff must follow. An online course
+                            designed to provide comprehensive guidance on the
+                            food hygiene and safety practices that catering
+                            staff must follow. An online course designed to
+                            provide comprehensive guidance on the food hygiene
+                            and safety practices that catering staff must
+                            follow. An online course designed to provide
+                            comprehensive guidance on the food hygiene and
+                            safety practices that catering staff must follow.
+                          </p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <div class="text-2xl font-bold text-gray-700">
+                            £20 <span class="text-sm text-gray-500">+VAT</span>
+                          </div>
+                          <div class="course-card-course-button w-fit">
+                            <a
+                              class="btn w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white px-6"
+                            >
+                              View course
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Product Card 1 -->
+                    <div
+                      class="product-card bg-white hover:bg-[#f0ede6] flex flex-col md:flex-row rounded-ss-[35px] rounded-ee-[35px] overflow-hidden group"
+                    >
+                      <div class="md:w-1/3 bg-gray-200">
+                        <img
+                          src="https://www.highspeedtraining.co.uk/media/products/001/level-2-food-hygiene-safety-catering-course-thumbnail.jpg"
+                          alt="Level 2 Food Hygiene"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div>
+                          <div class="flex items-center gap-1 mb-3">
+                            <div class="rating rating-sm">
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                              />
+                            </div>
+                            <span class="text-sm text-gray-600"
+                              >(59050 Reviews)</span
+                            >
+                          </div>
+                          <h3 class="text-xl font-bold text-gray-800 mb-3">
+                            Level 2 Food Hygiene and Safety for Catering
+                          </h3>
+                          <div
+                            class="course-card-course-teg flex-1 mt-3 mb-6 text-sm"
+                          >
+                            <div
+                              class="flex flex-wrap gap-2 justify-start gap-y-2 items-start"
+                            >
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> CPD
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> Mesothelioma UK
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> ROSPA
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> City & Guilds
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> IATP
+                              </span>
+                            </div>
+                          </div>
+                          <!-- <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="badge badge-outline">EHO</span>
+                            <span class="badge badge-outline">CPD</span>
+                            <span class="badge badge-outline">IoH</span>
+                            <span class="badge badge-outline">RoSPA</span>
+                            <span class="badge badge-outline"
+                              >City & Guilds</span
+                            >
+                          </div> -->
+
+                          <p
+                            class="text-gray-600 text-sm mb-4 relative before:content-[''] before:absolute before:top-0 before:h-[1px] before:w-[64px] before:bg-[#0f1422] pt-4"
+                          >
+                            An online course designed to provide comprehensive
+                            guidance on the food hygiene and safety practices
+                            that catering staff must follow. An online course
+                            designed to provide comprehensive guidance on the
+                            food hygiene and safety practices that catering
+                            staff must follow. An online course designed to
+                            provide comprehensive guidance on the food hygiene
+                            and safety practices that catering staff must
+                            follow. An online course designed to provide
+                            comprehensive guidance on the food hygiene and
+                            safety practices that catering staff must follow.
+                          </p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <div class="text-2xl font-bold text-gray-700">
+                            £20 <span class="text-sm text-gray-500">+VAT</span>
+                          </div>
+                          <div class="course-card-course-button w-fit">
+                            <a
+                              class="btn w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white px-6"
+                            >
+                              View course
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Product Card 1 -->
+                    <div
+                      class="product-card bg-white hover:bg-[#f0ede6] flex flex-col md:flex-row rounded-ss-[35px] rounded-ee-[35px] overflow-hidden group"
+                    >
+                      <div class="md:w-1/3 bg-gray-200">
+                        <img
+                          src="https://www.highspeedtraining.co.uk/media/products/001/level-2-food-hygiene-safety-catering-course-thumbnail.jpg"
+                          alt="Level 2 Food Hygiene"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div>
+                          <div class="flex items-center gap-1 mb-3">
+                            <div class="rating rating-sm">
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                              />
+                            </div>
+                            <span class="text-sm text-gray-600"
+                              >(59050 Reviews)</span
+                            >
+                          </div>
+                          <h3 class="text-xl font-bold text-gray-800 mb-3">
+                            Level 2 Food Hygiene and Safety for Catering
+                          </h3>
+                          <div
+                            class="course-card-course-teg flex-1 mt-3 mb-6 text-sm"
+                          >
+                            <div
+                              class="flex flex-wrap gap-2 justify-start gap-y-2 items-start"
+                            >
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> CPD
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> Mesothelioma UK
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> ROSPA
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> City & Guilds
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> IATP
+                              </span>
+                            </div>
+                          </div>
+                          <!-- <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="badge badge-outline">EHO</span>
+                            <span class="badge badge-outline">CPD</span>
+                            <span class="badge badge-outline">IoH</span>
+                            <span class="badge badge-outline">RoSPA</span>
+                            <span class="badge badge-outline"
+                              >City & Guilds</span
+                            >
+                          </div> -->
+
+                          <p
+                            class="text-gray-600 text-sm mb-4 relative before:content-[''] before:absolute before:top-0 before:h-[1px] before:w-[64px] before:bg-[#0f1422] pt-4"
+                          >
+                            An online course designed to provide comprehensive
+                            guidance on the food hygiene and safety practices
+                            that catering staff must follow. An online course
+                            designed to provide comprehensive guidance on the
+                            food hygiene and safety practices that catering
+                            staff must follow. An online course designed to
+                            provide comprehensive guidance on the food hygiene
+                            and safety practices that catering staff must
+                            follow. An online course designed to provide
+                            comprehensive guidance on the food hygiene and
+                            safety practices that catering staff must follow.
+                          </p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <div class="text-2xl font-bold text-gray-700">
+                            £20 <span class="text-sm text-gray-500">+VAT</span>
+                          </div>
+                          <div class="course-card-course-button w-fit">
+                            <a
+                              class="btn w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white px-6"
+                            >
+                              View course
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Product Card 1 -->
+                    <div
+                      class="product-card bg-white hover:bg-[#f0ede6] flex flex-col md:flex-row rounded-ss-[35px] rounded-ee-[35px] overflow-hidden group"
+                    >
+                      <div class="md:w-1/3 bg-gray-200">
+                        <img
+                          src="https://www.highspeedtraining.co.uk/media/products/001/level-2-food-hygiene-safety-catering-course-thumbnail.jpg"
+                          alt="Level 2 Food Hygiene"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                        <div>
+                          <div class="flex items-center gap-1 mb-3">
+                            <div class="rating rating-sm">
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                                checked
+                              />
+                              <input
+                                type="radio"
+                                class="mask mask-star-2 bg-orange-400"
+                                disabled
+                              />
+                            </div>
+                            <span class="text-sm text-gray-600"
+                              >(59050 Reviews)</span
+                            >
+                          </div>
+                          <h3 class="text-xl font-bold text-gray-800 mb-3">
+                            Level 2 Food Hygiene and Safety for Catering
+                          </h3>
+                          <div
+                            class="course-card-course-teg flex-1 mt-3 mb-6 text-sm"
+                          >
+                            <div
+                              class="flex flex-wrap gap-2 justify-start gap-y-2 items-start"
+                            >
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> CPD
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> Mesothelioma UK
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> ROSPA
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> City & Guilds
+                              </span>
+                              <span
+                                class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                              >
+                                <span>✓</span> IATP
+                              </span>
+                            </div>
+                          </div>
+                          <!-- <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="badge badge-outline">EHO</span>
+                            <span class="badge badge-outline">CPD</span>
+                            <span class="badge badge-outline">IoH</span>
+                            <span class="badge badge-outline">RoSPA</span>
+                            <span class="badge badge-outline"
+                              >City & Guilds</span
+                            >
+                          </div> -->
+
+                          <p
+                            class="text-gray-600 text-sm mb-4 relative before:content-[''] before:absolute before:top-0 before:h-[1px] before:w-[64px] before:bg-[#0f1422] pt-4"
+                          >
+                            An online course designed to provide comprehensive
+                            guidance on the food hygiene and safety practices
+                            that catering staff must follow. An online course
+                            designed to provide comprehensive guidance on the
+                            food hygiene and safety practices that catering
+                            staff must follow. An online course designed to
+                            provide comprehensive guidance on the food hygiene
+                            and safety practices that catering staff must
+                            follow. An online course designed to provide
+                            comprehensive guidance on the food hygiene and
+                            safety practices that catering staff must follow.
+                          </p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <div class="text-2xl font-bold text-gray-700">
+                            £20 <span class="text-sm text-gray-500">+VAT</span>
+                          </div>
+                          <div class="course-card-course-button w-fit">
+                            <a
+                              class="btn w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white px-6"
+                            >
+                              View course
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pagination Section -->
+      <div
+        class="max-w-7xl mx-auto w-full p-4 md:px-10 md:py-4 flex justify-start items-center gap-6 font-serif flex-col"
+      >
+        <!-- Pagination -->
+        <div
+          class="relative flex flex-col justify-center md:flex-row items-center md:justify-between gap-4 my-8 py-4 w-full bg-[#f0ede6] before:content-[''] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-screen before:h-full before:bg-[#f0ede6] before:-z-10 after:content-[''] after:absolute after:top-0 after:left-1/2 after:-translate-x-1/2 after:w-screen after:h-full after:bg-[#f0ede6] after:-z-10"
+        >
+          <div
+            class="cip-cta sec-cta w-full md:text-start flex md:justify-start justify-center items-center py-4"
+          >
+            <a
+              href="#"
+              class="flex justify-center items-center gap-4 font-semibold underline"
+            >
+              View all of our accreditation
+              <span class="w-4 h-4 flex justify-center items-center">
+                <img
+                  src="assets/img/left-default.webp"
+                  alt="left-0"
+                  width="100%"
+                />
+              </span>
+            </a>
+          </div>
+
+          <div class="join bg-transparent shadow-none">
+            <button
+              class="join-item btn btn-disabled bg-transparent shadow-none border-none"
+            >
+              Previous
+            </button>
+            <button
+              class="join-item btn btn-active bg-transparent shadow-none border-none"
+            >
+              1
+            </button>
+            <button
+              class="join-item btn bg-transparent shadow-none border-none"
+            >
+              2
+            </button>
+            <button
+              class="join-item btn bg-transparent shadow-none border-none"
+            >
+              3
+            </button>
+            <button
+              class="join-item btn bg-transparent shadow-none border-none"
+            >
+              4
+            </button>
+            <button
+              class="join-item btn bg-transparent shadow-none border-none"
+            >
+              ...
+            </button>
+            <button
+              class="join-item btn bg-transparent shadow-none border-none"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promotional Panel Tablet/Desktop -->
+      <section class="hidden md:block py-12">
+        <div class="w-full h-96">
+          <div
+            class="flex flex-col md:flex-row bg-[#ff8100] overflow-hidden h-full"
+          >
+            <div class="md:w-1/2 bg-[#ff8100] flex justify-end items-center">
+              <div
+                class="max-w-[600px] p-8 lg:p-12 flex flex-col justify-center"
+              >
+                <h2 class="text-4xl font-semibold text-black mb-4 font-sans">
+                  Let's talk
+                </h2>
+                <p class="text-black text-lg mb-8">
+                  If you'd like to speak with us about your training needs, our
+                  friendly team are here to help.
+                </p>
+                <div class="course-card-course-button w-fit">
+                  <a
+                    class="btn w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white"
+                  >
+                    View course
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right panel (image) -->
+            <div class="md:w-1/2 flex justify-center items-center">
+              <img
+                src="https://www.highspeedtraining.co.uk/Site.V2.Theme/images/accreditations/customer-facing.jpg"
+                alt="Customer service team"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promotional Panel Mobile -->
+      <section class="block md:hidden p-6">
+        <div
+          class="md:w-1/2 p-8 lg:p-12 flex flex-col justify-center bg-[#ff8100] rounded-ss-[45px] rounded-ee-[45px] overflow-hidden"
+        >
+          <h2 class="text-4xl font-semibold text-black mb-4 font-sans">
+            Let's talk
+          </h2>
+          <p class="text-black text-lg mb-8">
+            If you'd like to speak with us about your training needs, our
+            friendly team are here to help.
+          </p>
+          <div class="course-card-course-button w-fit">
+            <a
+              class="btn w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white"
+            >
+              View course
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer course category section -->
+    <section>
+      <div class="bg-[#f7f6f2] text-black shadow-lg rounded-none p-0 mt-8">
+        <div
+          class="max-w-7xl mx-auto w-full px-4 md:px-10 flex justify-start items-center gap-6"
+        >
+          <div class="w-full flex justify-stretch items-stretch">
+            <div class="hidden w-1/4 lg:flex justify-center items-stretch">
+              <div class="text-3xl pt-12">All Course</div>
+            </div>
+
+            <div class="flex-1 p-8 flex flex-col">
+              <div class="lg:hidden text-3xl p-4">All Course</div>
+              <div
+                class="grid grid-cols-[repeat(auto-fit,250px)] lg:justify-center items-center w-full"
+              >
+                <!-- Your grid items here -->
+                <div class="p-4 w-full">
+                  <a href="#" class="w-full flex justify-between items-center">
+                    <span class="underline">Food Hygiene</span>
+                    <span class="flex w-4 h-4 justify-center items-center"
+                      ><img
+                        src="assets/img/left-default.webp"
+                        alt="left-0"
+                        width="100%"
+                    /></span>
+                  </a>
+                </div>
+                <div class="p-4 w-full">
+                  <a href="#" class="w-full flex justify-between items-center">
+                    <span class="underline">Food Hygiene</span>
+                    <span class="flex w-4 h-4 justify-center items-center"
+                      ><img
+                        src="assets/img/left-default.webp"
+                        alt="left-0"
+                        width="100%"
+                    /></span>
+                  </a>
+                </div>
+                <div class="p-4 w-full">
+                  <a href="#" class="w-full flex justify-between items-center">
+                    <span class="underline">Food Hygiene</span>
+                    <span class="flex w-4 h-4 justify-center items-center"
+                      ><img
+                        src="assets/img/left-default.webp"
+                        alt="left-0"
+                        width="100%"
+                    /></span>
+                  </a>
+                </div>
+                <div class="p-4 w-full">
+                  <a href="#" class="w-full flex justify-between items-center">
+                    <span class="underline">Food Hygiene</span>
+                    <span class="flex w-4 h-4 justify-center items-center"
+                      ><img
+                        src="assets/img/left-default.webp"
+                        alt="left-0"
+                        width="100%"
+                    /></span>
+                  </a>
+                </div>
+                <div class="p-4 w-full">
+                  <a href="#" class="w-full flex justify-between items-center">
+                    <span class="underline">Food Hygiene</span>
+                    <span class="flex w-4 h-4 justify-center items-center"
+                      ><img
+                        src="assets/img/left-default.webp"
+                        alt="left-0"
+                        width="100%"
+                    /></span>
+                  </a>
+                </div>
+                <div class="p-4 w-full">
+                  <a href="#" class="w-full flex justify-between items-center">
+                    <span class="underline">Food Hygiene</span>
+                    <span class="flex w-4 h-4 justify-center items-center"
+                      ><img
+                        src="assets/img/left-default.webp"
+                        alt="left-0"
+                        width="100%"
+                    /></span>
+                  </a>
+                </div>
+                <div class="p-4 w-full">
+                  <a href="#" class="w-full flex justify-between items-center">
+                    <span class="underline">Food Hygiene</span>
+                    <span class="flex w-4 h-4 justify-center items-center"
+                      ><img
+                        src="assets/img/left-default.webp"
+                        alt="left-0"
+                        width="100%"
+                    /></span>
+                  </a>
+                </div>
+                <div class="p-4 w-full">
+                  <a href="#" class="w-full flex justify-between items-center">
+                    <span class="underline">Food Hygiene</span>
+                    <span class="flex w-4 h-4 justify-center items-center"
+                      ><img
+                        src="assets/img/left-default.webp"
+                        alt="left-0"
+                        width="100%"
+                    /></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <section class="brand-logo bg-[#f0ede6]">
+        <div class="max-w-screen-2xl mx-auto w-full p-4 lg:px-10 lg:py-6">
+          <div
+            class="w-full brand-logo-container flex justify-center lg:justify-between gap-2 items-center flex-wrap"
+          >
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-1-living-wage-logo.webp"
+                alt="brand-logo-1-living-wage-logo"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-2-mindful-employer.webp"
+                alt="brand-logo-2-mindful-employer"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-3-cyber-essentials.webp"
+                alt="brand-logo-3-cyber-essentials"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-4-disability-confident.webp"
+                alt="brand-logo-4-disability-confident"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-5-best-companies-top5.webp"
+                alt="brand-logo-5-best-companies-top5"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-6-best-companies-top25.webp"
+                alt="brand-logo-6-best-companies-top25"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-7-best-companies-3-stars.webp"
+                alt="brand-logo-7-best-companies-3-stars"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-8-british-safety-council-logo.webp"
+                alt="brand-logo-8-british-safety-council-logo"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-9-cpd-logo.webp"
+                alt="brand-logo-9-cpd-logo"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+
+            <div class="footer-brand-logo h-8 md:h-12 lg:h-16">
+              <img
+                src="assets/img/brand-logo/brand-logo-10-bcorp-logo.webp"
+                alt="brand-logo-10-bcorp-logo"
+                class="h-full"
+                height="100%"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--main footer sec -->
+      <footer>
+        <!-- footer cta -->
+        <div class="w-full bg-[#0f1422] text-white">
+          <div class="max-w-screen-2xl mx-auto w-full p-4 lg:px-10 lg:py-6">
+            <div class="footer-cta text-lg flex justify-end items-center">
+              <p>
+                Need help? View our
+                <a class="underline">customer support page</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full bg-[#20293e] text-white">
+          <div class="max-w-screen-2xl mx-auto w-full p-4 lg:px-10 lg:py-4">
+            <div class="footer-info flex flex-wrap py-10">
+              <!-- footer logo -->
+              <div class="footer-logo w-full lg:w-1/4 pb-10">
+                <a href="/">
+                  <img
+                    alt="logo"
+                    loading="lazy"
+                    src="assets/img/logo/logo-blue.svg"
+                  />
+                </a>
+              </div>
+              <!-- footer nav-lists -->
+              <div
+                class="footer-navLists flex items-start justify-between flex-col md:flex-row gap-6 md:gap-16 w-full lg:w-3/4 pb-10"
+              >
+                <nav class="mb-6">
+                  <h6 class="text-gray-400 mb-4">About</h6>
+                  <ul class="flex flex-col justify-start items-start gap-2">
+                    <li>
+                      <a>About us</a>
+                    </li>
+                    <li>
+                      <a>Work for us</a>
+                    </li>
+                    <li>
+                      <a>Force for Good</a>
+                    </li>
+                    <li>
+                      <a>Resources</a>
+                    </li>
+                    <li>
+                      <a>Reviews</a>
+                    </li>
+                  </ul>
+                </nav>
+                <nav class="mb-6">
+                  <h6 class="text-gray-400 mb-4">Support</h6>
+                  <ul class="flex flex-col justify-start items-start gap-2">
+                    <li>
+                      <a>Customer support</a>
+                    </li>
+                    <li>
+                      <a>Sales enquiries</a>
+                    </li>
+                    <li>
+                      <a>Verify certificate</a>
+                    </li>
+                    <li>
+                      <a>Cancellations and refunds</a>
+                    </li>
+                    <li>
+                      <a>Policies and terms of use</a>
+                    </li>
+                  </ul>
+                </nav>
+                <nav class="mb-6">
+                  <h6 class="text-gray-400 mb-4">Connect with us</h6>
+                  <ul class="flex flex-col justify-start items-start gap-2">
+                    <li>
+                      <a class="flex justify-start items-center gap-2">
+                        <span
+                          class="footer-social-icons flex justify-center items-center w-6 h-6"
+                        >
+                          <svg
+                            enable-background="new 0 0 48 48"
+                            id="Layer_1"
+                            version="1.1"
+                            viewBox="0 0 48 48"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                          >
+                            <circle cx="24" cy="24" fill="#3e5079" r="24" />
+                            <g>
+                              <g>
+                                <path
+                                  d="M36.8,15.4c-0.9,0.5-2,0.8-3,0.9c1.1-0.7,1.9-1.8,2.3-3.1c-1,0.6-2.1,1.1-3.4,1.4c-1-1.1-2.3-1.8-3.8-1.8    c-2.9,0-5.3,2.5-5.3,5.7c0,0.4,0,0.9,0.1,1.3c-4.4-0.2-8.3-2.5-10.9-5.9c-0.5,0.8-0.7,1.8-0.7,2.9c0,2,0.9,3.7,2.3,4.7    c-0.9,0-1.7-0.3-2.4-0.7c0,0,0,0.1,0,0.1c0,2.7,1.8,5,4.2,5.6c-0.4,0.1-0.9,0.2-1.4,0.2c-0.3,0-0.7,0-1-0.1    c0.7,2.3,2.6,3.9,4.9,3.9c-1.8,1.5-4.1,2.4-6.5,2.4c-0.4,0-0.8,0-1.3-0.1c2.3,1.6,5.1,2.6,8.1,2.6c9.7,0,15-8.6,15-16.1    c0-0.2,0-0.5,0-0.7C35.2,17.6,36.1,16.6,36.8,15.4z"
+                                  fill="#FFFFFF"
+                                />
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                        Twitter
+                      </a>
+                    </li>
+                    <li>
+                      <a class="flex justify-start items-center gap-2">
+                        <span
+                          class="footer-social-icons flex justify-center items-center w-6 h-6"
+                        >
+                          <svg
+                            viewBox="126.445 2.281 589 589"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#000000"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <circle
+                                cx="420.945"
+                                cy="296.781"
+                                r="294.5"
+                                fill="#3e5079"
+                              ></circle>
+                              <path
+                                d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z"
+                                fill="#ffffff"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        Facebook
+                      </a>
+                    </li>
+                    <li>
+                      <a class="flex justify-start items-center gap-2">
+                        <span
+                          class="footer-social-icons flex justify-center items-center w-6 h-6"
+                        >
+                          <svg
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <rect
+                                x="2"
+                                y="2"
+                                width="28"
+                                height="28"
+                                rx="14"
+                                fill="#3e5079"
+                              ></rect>
+                              <path
+                                d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z"
+                                fill="white"
+                              ></path>
+                              <path
+                                d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z"
+                                fill="white"
+                              ></path>
+                              <path
+                                d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z"
+                                fill="white"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        Linkedin
+                      </a>
+                    </li>
+                    <li>
+                      <a class="flex justify-start items-center gap-2">
+                        <span
+                          class="footer-social-icons flex justify-center items-center w-6 h-6"
+                        >
+                          <svg
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <circle
+                                cx="24"
+                                cy="24"
+                                r="20"
+                                fill="#3e5079"
+                              ></circle>
+                              <path
+                                d="M24 14.1622C27.2041 14.1622 27.5837 14.1744 28.849 14.2321C30.019 14.2855 30.6544 14.481 31.0773 14.6453C31.6374 14.863 32.0371 15.123 32.457 15.5429C32.877 15.9629 33.137 16.3626 33.3547 16.9227C33.519 17.3456 33.7145 17.981 33.7679 19.1509C33.8256 20.4163 33.8378 20.7958 33.8378 23.9999C33.8378 27.2041 33.8256 27.5836 33.7679 28.849C33.7145 30.019 33.519 30.6543 33.3547 31.0772C33.137 31.6373 32.877 32.0371 32.4571 32.457C32.0371 32.8769 31.6374 33.1369 31.0773 33.3546C30.6544 33.519 30.019 33.7144 28.849 33.7678C27.5839 33.8255 27.2044 33.8378 24 33.8378C20.7956 33.8378 20.4162 33.8255 19.151 33.7678C17.981 33.7144 17.3456 33.519 16.9227 33.3546C16.3626 33.1369 15.9629 32.8769 15.543 32.457C15.1231 32.0371 14.863 31.6373 14.6453 31.0772C14.481 30.6543 14.2855 30.019 14.2321 28.849C14.1744 27.5836 14.1622 27.2041 14.1622 23.9999C14.1622 20.7958 14.1744 20.4163 14.2321 19.1509C14.2855 17.981 14.481 17.3456 14.6453 16.9227C14.863 16.3626 15.123 15.9629 15.543 15.543C15.9629 15.123 16.3626 14.863 16.9227 14.6453C17.3456 14.481 17.981 14.2855 19.151 14.2321C20.4163 14.1744 20.7959 14.1622 24 14.1622ZM24 12C20.741 12 20.3323 12.0138 19.0524 12.0722C17.7752 12.1305 16.9028 12.3333 16.1395 12.63C15.3504 12.9366 14.6812 13.3469 14.0141 14.0141C13.3469 14.6812 12.9366 15.3504 12.63 16.1395C12.3333 16.9028 12.1305 17.7751 12.0722 19.0524C12.0138 20.3323 12 20.741 12 23.9999C12 27.259 12.0138 27.6676 12.0722 28.9475C12.1305 30.2248 12.3333 31.0971 12.63 31.8604C12.9366 32.6495 13.3469 33.3187 14.0141 33.9859C14.6812 34.653 15.3504 35.0633 16.1395 35.3699C16.9028 35.6666 17.7752 35.8694 19.0524 35.9277C20.3323 35.9861 20.741 35.9999 24 35.9999C27.259 35.9999 27.6677 35.9861 28.9476 35.9277C30.2248 35.8694 31.0972 35.6666 31.8605 35.3699C32.6496 35.0633 33.3188 34.653 33.9859 33.9859C34.653 33.3187 35.0634 32.6495 35.37 31.8604C35.6667 31.0971 35.8695 30.2248 35.9278 28.9475C35.9862 27.6676 36 27.259 36 23.9999C36 20.741 35.9862 20.3323 35.9278 19.0524C35.8695 17.7751 35.6667 16.9028 35.37 16.1395C35.0634 15.3504 34.653 14.6812 33.9859 14.0141C33.3188 13.3469 32.6496 12.9366 31.8605 12.63C31.0972 12.3333 30.2248 12.1305 28.9476 12.0722C27.6677 12.0138 27.259 12 24 12Z"
+                                fill="white"
+                              ></path>
+                              <path
+                                d="M24.0059 17.8433C20.6026 17.8433 17.8438 20.6021 17.8438 24.0054C17.8438 27.4087 20.6026 30.1675 24.0059 30.1675C27.4092 30.1675 30.1681 27.4087 30.1681 24.0054C30.1681 20.6021 27.4092 17.8433 24.0059 17.8433ZM24.0059 28.0054C21.7968 28.0054 20.0059 26.2145 20.0059 24.0054C20.0059 21.7963 21.7968 20.0054 24.0059 20.0054C26.2151 20.0054 28.0059 21.7963 28.0059 24.0054C28.0059 26.2145 26.2151 28.0054 24.0059 28.0054Z"
+                                fill="white"
+                              ></path>
+                              <path
+                                d="M31.8507 17.5963C31.8507 18.3915 31.206 19.0363 30.4107 19.0363C29.6154 19.0363 28.9707 18.3915 28.9707 17.5963C28.9707 16.801 29.6154 16.1562 30.4107 16.1562C31.206 16.1562 31.8507 16.801 31.8507 17.5963Z"
+                                fill="white"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        Instagram
+                      </a>
+                    </li>
+                    <li>
+                      <a class="flex justify-start items-center gap-2">
+                        <span
+                          class="footer-social-icons flex justify-center items-center w-6 h-6"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1"
+                            width=""
+                            height=""
+                            viewBox="0 0 256 256"
+                            xml:space="preserve"
+                          >
+                            <g
+                              style="
+                                stroke: none;
+                                stroke-width: 0;
+                                stroke-dasharray: none;
+                                stroke-linecap: butt;
+                                stroke-linejoin: miter;
+                                stroke-miterlimit: 10;
+                                fill: none;
+                                fill-rule: nonzero;
+                                opacity: 1;
+                              "
+                              transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+                            >
+                              <path
+                                d="M 45 90 L 45 90 C 20.147 90 0 69.853 0 45 v 0 C 0 20.147 20.147 0 45 0 h 0 c 24.853 0 45 20.147 45 45 v 0 C 90 69.853 69.853 90 45 90 z"
+                                style="
+                                  stroke: none;
+                                  stroke-width: 1;
+                                  stroke-dasharray: none;
+                                  stroke-linecap: butt;
+                                  stroke-linejoin: miter;
+                                  stroke-miterlimit: 10;
+                                  fill: rgb(62, 80, 121);
+                                  fill-rule: nonzero;
+                                  opacity: 1;
+                                "
+                                transform=" matrix(1 0 0 1 0 0) "
+                                stroke-linecap="round"
+                              />
+                              <path
+                                d="M 24.401 10.458 c -1.158 0 -2.226 -0.383 -3.083 -1.03 c -0.984 -0.742 -1.69 -1.829 -1.94 -3.083 c -0.062 -0.31 -0.095 -0.63 -0.099 -0.957 h -3.307 v 9.036 l -0.004 4.949 c 0 1.323 -0.862 2.445 -2.056 2.84 c -0.347 0.115 -0.721 0.169 -1.111 0.147 c -0.498 -0.027 -0.964 -0.178 -1.369 -0.42 c -0.863 -0.516 -1.447 -1.452 -1.463 -2.522 c -0.025 -1.673 1.328 -3.037 2.999 -3.037 c 0.33 0 0.647 0.054 0.944 0.152 v -2.469 v -0.888 c -0.313 -0.046 -0.631 -0.07 -0.954 -0.07 c -1.83 0 -3.541 0.761 -4.765 2.131 c -0.925 1.036 -1.479 2.357 -1.565 3.742 c -0.112 1.82 0.554 3.55 1.845 4.827 c 0.19 0.187 0.389 0.361 0.597 0.522 c 1.107 0.852 2.461 1.314 3.887 1.314 c 0.322 0 0.641 -0.024 0.954 -0.07 c 1.332 -0.197 2.561 -0.807 3.531 -1.766 c 1.192 -1.178 1.85 -2.742 1.857 -4.406 l -0.017 -7.391 c 0.568 0.439 1.19 0.802 1.857 1.083 c 1.038 0.438 2.138 0.66 3.27 0.659 v -2.401 v -0.891 C 24.411 10.458 24.402 10.458 24.401 10.458 L 24.401 10.458 z"
+                                style="
+                                  stroke: none;
+                                  stroke-width: 1;
+                                  stroke-dasharray: none;
+                                  stroke-linecap: butt;
+                                  stroke-linejoin: miter;
+                                  stroke-miterlimit: 10;
+                                  fill: rgb(255, 255, 255);
+                                  fill-rule: nonzero;
+                                  opacity: 1;
+                                "
+                                transform=" matrix(2.81 0 0 2.81 1.4065934065934016 1.4065934065934016) "
+                                stroke-linecap="round"
+                              />
+                            </g>
+                          </svg>
+                        </span>
+                        TikTok
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- footer-copyright -->
+              <div
+                class="footer-copyright w-full text-start md:text-end text-gray-400"
+              >
+                <p>
+                  © 2025 High Speed Training Limited. Riverside Business Park,
+                  Dansk Way, Ilkley, West Yorkshire, LS29 8JZ.<br />VAT Reg. No:
+                  923 6593 07&nbsp;&nbsp;|&nbsp; Registered in England and
+                  Wales: 6428976
+                </p>
+                <br />
+                <p>
+                  This site is protected by reCAPTCHA and the Google
+                  <a class="underline text-white">Privacy Policy</a>
+                  and
+                  <a class="underline text-white">Terms of Service</a>
+                  apply.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </footer>
+
+    <!-- scripts -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const details = document.querySelectorAll(".menu details");
+
+        details.forEach((targetDetail) => {
+          targetDetail.addEventListener("click", () => {
+            details.forEach((detail) => {
+              if (detail !== targetDetail) {
+                detail.removeAttribute("open");
+              }
+            });
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Hamburger menu toggle
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const lines = hamburgerBtn.querySelectorAll(".line");
+
+        hamburgerBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+
+          // Animate hamburger to X
+          if (!mobileMenu.classList.contains("hidden")) {
+            lines[0].style.transform = "rotate(45deg) translateY(8px)";
+            lines[1].style.opacity = "0";
+            lines[2].style.transform = "rotate(-45deg) translateY(-8px)";
+          } else {
+            lines[0].style.transform = "none";
+            lines[1].style.opacity = "1";
+            lines[2].style.transform = "none";
+          }
+        });
+
+        // Search toggle
+        const searchBtn = document.getElementById("search-btn");
+        const phoneSearchContainer = document.getElementById(
+          "phone-search-container"
+        );
+
+        searchBtn.addEventListener("click", function () {
+          phoneSearchContainer.classList.toggle("hidden");
+        });
+
+        // Desktop menu accordion (close others when one opens)
+        const details = document.querySelectorAll(".menu details");
+        details.forEach((targetDetail) => {
+          targetDetail.addEventListener("click", () => {
+            details.forEach((detail) => {
+              if (detail !== targetDetail) {
+                detail.removeAttribute("open");
+              }
+            });
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const details = document.querySelectorAll(".menu details");
+
+        // Close other dropdowns when one opens
+        details.forEach((targetDetail) => {
+          targetDetail.addEventListener("click", (e) => {
+            if (e.target.classList.contains("close-btn")) return;
+
+            details.forEach((detail) => {
+              if (detail !== targetDetail) {
+                detail.removeAttribute("open");
+              }
+            });
+          });
+        });
+
+        // Close button functionality
+        const closeButtons = document.querySelectorAll(".close-btn");
+        closeButtons.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const parentDetails = btn.closest("details");
+            if (parentDetails) {
+              parentDetails.removeAttribute("open");
+            }
+          });
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+          const isClickInsideMenu = e.target.closest(".menu");
+          if (!isClickInsideMenu) {
+            details.forEach((detail) => {
+              detail.removeAttribute("open");
+            });
+          }
+        });
+
+        // Prevent closing when clicking inside mega menu
+        const megaMenuContents =
+          document.querySelectorAll(".mega-menu-content");
+        megaMenuContents.forEach((content) => {
+          content.addEventListener("click", (e) => {
+            e.stopPropagation();
+          });
+        });
+      });
+    </script>
+
+    <!-- <section class="course-catalogue__main">
+      <div id="js_keyword-search__template">
+        <section
+          class="cmpt"
+          data-cmpt-container="container--page"
+          data-keyword-search=""
+        >
+          <div class="container">
+            <div class="course-catalogue__keyword-search no-gap">
+              <div class="course-catalogue__keyword-search__row">
+                <div class="course-catalogue__keyword-search__col--1st">
+                  <label
+                    for="keyword-search"
+                    class="course-catalogue__keyword-search__label"
+                    >Search by keyword(s)</label
+                  >
+                  <div
+                    class="js_keyword-search__input-wrapper course-catalogue__keyword-search__input-wrapper"
+                  >
+                    <input
+                      type="text"
+                      class="js_keyword-search__input course-catalogue__keyword-search__input"
+                      id="keyword-search"
+                      placeholder="E.g. food hygiene"
+                      data-selenium-id="course-catalogue__keyword-search__input"
+                    />
+                    <button
+                      type="button"
+                      class="js_keyword-search__reset-button course-catalogue__keyword-search__button--icon"
+                      aria-hidden="true"
+                      data-selenium-id="course-catalogue__keyword-search__button--icon"
+                    >
+                      <svg
+                        class="svg-icon--search"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"
+                        ></path>
+                      </svg>
+                      <svg
+                        class="svg-icon--reset"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512"
+                      >
+                        <path
+                          d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                        ></path>
+                      </svg>
+                      <svg
+                        class="svg-icon--loading"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"
+                      >
+                        <path
+                          d="M320 96C320 113.7 305.7 128 288 128C270.3 128 256 113.7 256 96V32C256 14.33 270.3 0 288 0C305.7 0 320 14.33 320 32V96zM320 480C320 497.7 305.7 512 288 512C270.3 512 256 497.7 256 480V416C256 398.3 270.3 384 288 384C305.7 384 320 398.3 320 416V480zM32 256C32 238.3 46.33 224 64 224H128C145.7 224 160 238.3 160 256C160 273.7 145.7 288 128 288H64C46.33 288 32 273.7 32 256zM512 224C529.7 224 544 238.3 544 256C544 273.7 529.7 288 512 288H448C430.3 288 416 273.7 416 256C416 238.3 430.3 224 448 224H512zM106.1 74.98C119.5 62.49 139.7 62.49 152.2 74.98L197.5 120.2C209.1 132.7 209.1 152.1 197.5 165.5C184.1 177.1 164.7 177.1 152.2 165.5L106.1 120.2C94.48 107.7 94.48 87.48 106.1 74.98zM469 391.8C481.5 404.3 481.5 424.5 469 437C456.5 449.5 436.3 449.5 423.8 437L378.5 391.8C366 379.3 366 359 378.5 346.5C391 334 411.3 334 423.8 346.5L469 391.8zM106.1 437C94.48 424.5 94.48 404.3 106.1 391.8L152.2 346.5C164.7 334 184.1 334 197.5 346.5C209.1 359 209.1 379.3 197.5 391.8L152.2 437C139.7 449.5 119.5 449.5 106.1 437zM423.8 74.98C436.3 62.48 456.5 62.48 469 74.98C481.5 87.47 481.5 107.7 469 120.2L423.8 165.5C411.3 177.1 391 177.1 378.5 165.5C366 152.1 366 132.7 378.5 120.2L423.8 74.98z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div
+                    class="js_keyword-search__error-message course-catalogue__keyword-search__error-message is-hidden"
+                    data-selenium-id="course-catalogue__keyword-search__error-message"
+                  ></div>
+                  <input
+                    name="__RequestVerificationToken"
+                    type="hidden"
+                    value="CfDJ8DRXMpUHv6FKmnEa7dOo3rOIHOjG_Ugplk74uPe9pBixrcSxllVAhP1uTv0w66yIIpwSfelAFQX3qQxc5EM2ZjSoETtAkkLIsg-BwVgZltmavc8GRXqZSSfGFG7ccCrXvDf_e8TbpzNNvI9ByIYMHi0"
+                  />
+                </div>
+                <div class="course-catalogue__keyword-search__col--2nd">
+                  <button
+                    type="button"
+                    class="js_keyword-search__button course-catalogue__keyword-search__button btn btn--primary"
+                    data-selenium-id="course-catalogue__keyword-search__button"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="cmpt" data-cmpt-container="container--page">
+        <div class="container">
+          <div class="main">
+            <div class="row">
+              <div class="col-xs-12 col-lg-3">
+                <div id="js_filters__template">
+                  <div
+                    class="course-catalogue__filters__overlay js_course-catalogue__filters-trigger"
+                    data-selenium-id="filters-panel-overlay"
+                  ></div>
+                  <div
+                    class="course-catalogue__filters__wrapper"
+                    data-selenium-id="filters-panel"
+                  >
+                    <button
+                      type="button"
+                      class="course-catalogue__filters__close-button js_course-catalogue__filters-trigger"
+                      data-selenium-id="filters-panel-close"
+                    >
+                      <svg
+                        class="svg-icon--large course-catalogue__filters__close-button__icon"
+                      >
+                        <use xlink:href="#close"></use>
+                      </svg>
+                    </button>
+                    <div class="course-catalogue__filters__title">
+                      Search by category
+                    </div>
+                    <div class="course-catalogue__filters">
+                      <div
+                        class="course-catalogue__filters__group"
+                        data-group="Topic"
+                      >
+                        <button
+                          type="button"
+                          class="course-catalogue__filters__header js_course-catalogue__filters-header"
+                        >
+                          <div class="course-catalogue__filters__header__title">
+                            Topic
+                          </div>
+                          <svg
+                            class="svg-icon--large course-catalogue__filters__header__icon"
+                          >
+                            <use xlink:href="#chevron-up"></use>
+                          </svg>
+                        </button>
+                        <div class="course-catalogue__filters__items-wrapper">
+                          <div class="course-catalogue__filters__item">
+                            <input
+                              type="checkbox"
+                              value="4tftc8ncg4y4w395q3nrjx57mh"
+                              id="4tftc8ncg4y4w395q3nrjx57mh"
+                              name="4tftc8ncg4y4w395q3nrjx57mh"
+                              autocomplete="off"
+                              class="js_filters__item"
+                              data-label="Customer Service"
+                              data-selenium-id="course-catalogue__filter-checkbox"
+                            />
+                            <label
+                              for="4tftc8ncg4y4w395q3nrjx57mh"
+                              data-selenium-id="course-catalogue__filter-label"
+                              >Customer Service (<span
+                                class="js_filters__count"
+                                for="4tftc8ncg4y4w395q3nrjx57mh"
+                                >15</span
+                              >)</label
+                            >
+                          </div>
+                          <div class="course-catalogue__filters__item">
+                            <input
+                              type="checkbox"
+                              value="4a41807es8s8gxypwv53ye9hdv"
+                              id="4a41807es8s8gxypwv53ye9hdv"
+                              name="4a41807es8s8gxypwv53ye9hdv"
+                              autocomplete="off"
+                              class="js_filters__item"
+                              data-label="Fire Safety"
+                              data-selenium-id="course-catalogue__filter-checkbox"
+                            />
+                            <label
+                              for="4a41807es8s8gxypwv53ye9hdv"
+                              data-selenium-id="course-catalogue__filter-label"
+                              >Fire Safety (<span
+                                class="js_filters__count"
+                                for="4a41807es8s8gxypwv53ye9hdv"
+                                >7</span
+                              >)</label
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="course-catalogue__filters__border-bottom"
+                        ></div>
+                      </div>
+                      <div
+                        class="course-catalogue__filters__group"
+                        data-group="Industry"
+                      >
+                        <button
+                          type="button"
+                          class="course-catalogue__filters__header js_course-catalogue__filters-header"
+                        >
+                          <div class="course-catalogue__filters__header__title">
+                            Industry
+                          </div>
+                          <svg
+                            class="svg-icon--large course-catalogue__filters__header__icon"
+                          >
+                            <use xlink:href="#chevron-up"></use>
+                          </svg>
+                        </button>
+                        <div class="course-catalogue__filters__items-wrapper">
+                          <div class="course-catalogue__filters__item">
+                            <input
+                              type="checkbox"
+                              value="4d08cj4m19tp1tyrjn1bz63zwr"
+                              id="4d08cj4m19tp1tyrjn1bz63zwr"
+                              name="4d08cj4m19tp1tyrjn1bz63zwr"
+                              autocomplete="off"
+                              class="js_filters__item"
+                              data-label="Construction and Trades"
+                              data-selenium-id="course-catalogue__filter-checkbox"
+                            />
+                            <label
+                              for="4d08cj4m19tp1tyrjn1bz63zwr"
+                              data-selenium-id="course-catalogue__filter-label"
+                              >Construction and Trades (<span
+                                class="js_filters__count"
+                                for="4d08cj4m19tp1tyrjn1bz63zwr"
+                                >54</span
+                              >)</label
+                            >
+                          </div>
+                          <div class="course-catalogue__filters__item">
+                            <input
+                              type="checkbox"
+                              value="426xqegmjsn2ay2nxygs7x6axn"
+                              id="426xqegmjsn2ay2nxygs7x6axn"
+                              name="426xqegmjsn2ay2nxygs7x6axn"
+                              autocomplete="off"
+                              class="js_filters__item"
+                              data-label="Education"
+                              data-selenium-id="course-catalogue__filter-checkbox"
+                            />
+                            <label
+                              for="426xqegmjsn2ay2nxygs7x6axn"
+                              data-selenium-id="course-catalogue__filter-label"
+                              >Education (<span
+                                class="js_filters__count"
+                                for="426xqegmjsn2ay2nxygs7x6axn"
+                                >38</span
+                              >)</label
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="course-catalogue__filters__border-bottom"
+                        ></div>
+                      </div>
+                    </div>
+                    <div
+                      class="course-catalogue__filters__result-button__wrapper"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn--primary course-catalogue__filters__result-button js_course-catalogue__filters-trigger"
+                        data-selenium-id="filters-panel-view-results"
+                      >
+                        View
+                        <span class="js_course-catalogue__filters-result-count"
+                          >178</span
+                        >
+                        results
+                      </button>
+                    </div>
+                    <button
+                      type="button"
+                      class="course-catalogue__filters__clear-filters-button js_course-catalogue__filters-clear"
+                      data-selenium-id="filters-panel-clear-filters"
+                    >
+                      Clear filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-lg-9">
+                <div id="js_sorting__template">
+                  <div class="filters-sorting-wrapper">
+                    <button
+                      type="button"
+                      class="btn btn--secondary-outline js_course-catalogue__filters-trigger course-catalogue__filters__show-filters-button"
+                      data-selenium-id="show-filter-trigger"
+                    >
+                      <svg
+                        class="svg-icon--large course-catalogue__filters__show-filters-button__icon"
+                      >
+                        <use xlink:href="#sliders-solid"></use>
+                      </svg>
+                      Show Filters
+                    </button>
+                    <div class="js_search__sorting search__sorting">
+                      <div class="search__sorting__wrapper">
+                        <label
+                          class="search__sorting__select--label"
+                          for="js_search__sorting__select"
+                          >Sort by:</label
+                        >
+                        <select
+                          id="js_search__sorting__select"
+                          class="js_search__sorting__select search__sorting__select"
+                          data-selenium-id="course-catalogue__sorting-select"
+                        >
+                          <option value="relevance" selected="selected">
+                            Relevance
+                          </option>
+                          <option value="popularity">Most popular</option>
+                          <option value="title-asc">
+                            Alphabetical: A to Z
+                          </option>
+                          <option value="title-dsc">
+                            Alphabetical: Z to A
+                          </option>
+                          <option value="price-dsc">Price: High to Low</option>
+                          <option value="price-asc">Price: Low to High</option>
+                        </select>
+                      </div>
+                      <div class="js_sticky-trigger js_sticky-instance"></div>
+                    </div>
+                  </div>
+                  <div id="js_search-meta" class="search-meta__wrapper">
+                    <div
+                      class="js_search__label search__label"
+                      data-selenium-id="course-catalogue__search__label"
+                    >
+                      Showing
+                      <span class="js_search__meta__count">178</span> courses
+                    </div>
+                    <div
+                      class="js_search__meta__tags search__meta__tags"
+                      data-selenium-id="course-catalogue__filter-checkbox"
+                    ></div>
+                  </div>
+                  <link
+                    rel="stylesheet"
+                    crossorigin="anonymous"
+                    href="https://ui.highspeedtraining.co.uk/components/2025.10.28.551/styles/components/product-card--landscape/index.bundle.css?cb=134079488799722963"
+                  />
+                  <div class="course-catalogue__product-cards">
+                    <div
+                      class="cmpt"
+                      data-cmpt="collection--product-card--landscape"
+                    >
+                      <div class="collection__outer-wrapper">
+                        <div
+                          class="collection__inner-wrapper js_product-container js_course-catalogue__container"
+                          data-selenium-id="pagination__container"
+                        >
+                          <div
+                            data-cmpt="product-card--landscape"
+                            class="cmpt"
+                            data-selenium-id="pagination__container__child"
+                            data-pid="1"
+                            data-sorts='{"price":20.00,"title":"Food Safety &amp; Hygiene Level 2 Course for Catering","popularity":500}'
+                            data-cid='["417bwxkd4937ytjsh0532jfpc0","4d08cj4m19tp1tyrjn1bz63zwr","426xqegmjsn2ay2nxygs7x6axn","4728jvhhg4hgf40tvcfpexcnxs","4vd2rzag7678s6zcxc77aepxme","46bm1cfgngcpmvgea8jcqtegmz","4egvhfer65vv60cj7cbgwddmxm"]'
+                          >
+                            <a
+                              class="product-card"
+                              tabindex="0"
+                              data-selenium-id="Food Safety &amp; Hygiene Level 2 Course for Catering"
+                              href="https://www.highspeedtraining.co.uk/courses/food-hygiene/level2-food-hygiene-safety-catering/"
+                              data-cmpt-tag-helper="icon-initialised"
+                            >
+                              <div class="product-card__image">
+                                <picture>
+                                  <img
+                                    alt="Level 2 Food Hygiene and Safety for Catering"
+                                    loading="lazy"
+                                    src="https://www.highspeedtraining.co.uk/media/products/001/level-2-food-hygiene-safety-catering-course-thumbnail.jpg?cb=134079488799722963"
+                                  />
+                                </picture>
+                                <div
+                                  class="product-card__image__background-fallback"
+                                  style="
+                                    background-image: url(https://www.highspeedtraining.co.uk/media/products/001/level-2-food-hygiene-safety-catering-course-thumbnail.jpg?cb=134079488799722963);
+                                  "
+                                ></div>
+                              </div>
+                              <div
+                                class="product-card__content--white"
+                                data-selenium-id="product-block"
+                              >
+                                <div class="product-card__content__inner">
+                                  <div class="product-card__rating">
+                                    <div
+                                      class="ruk_rating_snippet"
+                                      data-sku="1"
+                                      data-regression-hidden=""
+                                      rating-snippet-batch="0"
+                                      style="color: rgb(199, 148, 177)"
+                                      title="4.79 Stars - 59050 Reviews"
+                                      aria-label="4.79 Stars - 59050 Reviews"
+                                      data-done="true"
+                                      data-retrieved="true"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--75"
+                                      ></i
+                                      ><span
+                                        aria-hidden="true"
+                                        class="ruk-rating-snippet-count"
+                                        style="color: rgb(51, 51, 51)"
+                                        >(59050 Reviews)</span
+                                      >
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="product-card__title"
+                                    data-selenium-id="product-title"
+                                  >
+                                    <h2>
+                                      Level 2 Food Hygiene and Safety for
+                                      Catering
+                                    </h2>
+                                  </div>
+                                  <div class="product-card__pills">
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>EHO</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>CPD</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>IoH</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>RoSPA</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>City &amp; Guilds</span>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__description">
+                                    <p>
+                                      An online course designed to provide
+                                      comprehensive guidance on the food hygiene
+                                      and safety practices that catering staff
+                                      must follow. The course explains your
+                                      responsibilities under food safety law and
+                                      how to ensure the food you handle remains
+                                      safe to eat by identifying hazards and
+                                      preventing contamination.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <div class="product-card__price">
+                                    <span
+                                      >£20&nbsp;<span class="vat"
+                                        >+VAT</span
+                                      ></span
+                                    >
+                                  </div>
+                                  <div class="product-card__btns">
+                                    <div class="product-card__button">
+                                      View course
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div
+                            data-cmpt="product-card--landscape"
+                            class="cmpt"
+                            data-selenium-id="pagination__container__child"
+                            data-pid="91"
+                            data-sorts='{"price":25.00,"title":"Asbestos Awareness Course (Category A)","popularity":498}'
+                            data-cid='["41ymaenys8hrhs457tn57hnmcx","4d08cj4m19tp1tyrjn1bz63zwr"]'
+                          >
+                            <a
+                              class="product-card"
+                              tabindex="0"
+                              data-selenium-id="Asbestos Awareness Course (Category A)"
+                              href="https://www.highspeedtraining.co.uk/courses/health-and-safety/asbestos-awareness-training/"
+                              data-cmpt-tag-helper="icon-initialised"
+                            >
+                              <div class="product-card__image">
+                                <picture>
+                                  <img
+                                    alt="Asbestos Awareness Course (Category A)"
+                                    loading="lazy"
+                                    src="https://www.highspeedtraining.co.uk/media/products/091/asbestos-awareness-course-thumbnail-v9.jpg?cb=134079488799722963"
+                                  />
+                                </picture>
+                                <div
+                                  class="product-card__image__background-fallback"
+                                  style="
+                                    background-image: url(https://www.highspeedtraining.co.uk/media/products/091/asbestos-awareness-course-thumbnail-v9.jpg?cb=134079488799722963);
+                                  "
+                                ></div>
+                              </div>
+                              <div
+                                class="product-card__content--white"
+                                data-selenium-id="product-block"
+                              >
+                                <div class="product-card__content__inner">
+                                  <div class="product-card__rating">
+                                    <div
+                                      class="ruk_rating_snippet"
+                                      data-sku="91"
+                                      data-regression-hidden=""
+                                      rating-snippet-batch="0"
+                                      style="color: rgb(199, 148, 177)"
+                                      title="4.65 Stars - 15603 Reviews"
+                                      aria-label="4.65 Stars - 15603 Reviews"
+                                      data-done="true"
+                                      data-retrieved="true"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--75"
+                                      ></i
+                                      ><span
+                                        aria-hidden="true"
+                                        class="ruk-rating-snippet-count"
+                                        style="color: rgb(51, 51, 51)"
+                                        >(15603 Reviews)</span
+                                      >
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="product-card__title"
+                                    data-selenium-id="product-title"
+                                  >
+                                    <h2>
+                                      Asbestos Awareness Course (Category A)
+                                    </h2>
+                                  </div>
+                                  <div class="product-card__pills">
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>CPD</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>RoSPA</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>City &amp; Guilds</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>IATP</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>BOHS</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>Mesothelioma UK</span>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__description">
+                                    <p>
+                                      An online course designed to provide a
+                                      comprehensive introduction to the dangers
+                                      of working with asbestos so that anyone
+                                      who is likely to disturb it in their work
+                                      can work safely and prevent ill health.
+                                      This Asbestos Awareness (Category A)
+                                      course is suitable for anyone who may be
+                                      exposed to asbestos so that they can avoid
+                                      work which may disturb an asbestos
+                                      containing material.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <div class="product-card__price">
+                                    <span
+                                      >£25&nbsp;<span class="vat"
+                                        >+VAT</span
+                                      ></span
+                                    >
+                                  </div>
+                                  <div class="product-card__btns">
+                                    <div class="product-card__button">
+                                      View course
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div
+                            data-cmpt="product-card--landscape"
+                            class="cmpt"
+                            data-selenium-id="pagination__container__child"
+                            data-pid="78"
+                            data-sorts='{"price":26.00,"title":"Workplace First Aid Training","popularity":496}'
+                            data-cid='["4v94cy1g7w3512pv2hh2gbkzw7","4d08cj4m19tp1tyrjn1bz63zwr","426xqegmjsn2ay2nxygs7x6axn","4728jvhhg4hgf40tvcfpexcnxs","4vd2rzag7678s6zcxc77aepxme","46bm1cfgngcpmvgea8jcqtegmz","4egvhfer65vv60cj7cbgwddmxm"]'
+                          >
+                            <a
+                              class="product-card"
+                              tabindex="0"
+                              data-selenium-id="Workplace First Aid Training"
+                              href="https://www.highspeedtraining.co.uk/courses/first-aid/workplace-first-aid-training/"
+                              data-cmpt-tag-helper="icon-initialised"
+                            >
+                              <div class="product-card__image">
+                                <picture>
+                                  <img
+                                    alt="Workplace First Aid Training"
+                                    loading="lazy"
+                                    src="https://www.highspeedtraining.co.uk/media/products/078/workplace-first-aid-course-thumbnail.jpg?cb=134079488799722963"
+                                  />
+                                </picture>
+                                <div
+                                  class="product-card__image__background-fallback"
+                                  style="
+                                    background-image: url(https://www.highspeedtraining.co.uk/media/products/078/workplace-first-aid-course-thumbnail.jpg?cb=134079488799722963);
+                                  "
+                                ></div>
+                              </div>
+                              <div
+                                class="product-card__content--white"
+                                data-selenium-id="product-block"
+                              >
+                                <div class="product-card__content__inner">
+                                  <div class="product-card__rating">
+                                    <div
+                                      class="ruk_rating_snippet"
+                                      data-sku="78"
+                                      data-regression-hidden=""
+                                      rating-snippet-batch="0"
+                                      style="color: rgb(199, 148, 177)"
+                                      title="4.67 Stars - 12080 Reviews"
+                                      aria-label="4.67 Stars - 12080 Reviews"
+                                      data-done="true"
+                                      data-retrieved="true"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--100"
+                                      ></i
+                                      ><i
+                                        aria-hidden="true"
+                                        class="ruk-icon-percentage-star--75"
+                                      ></i
+                                      ><span
+                                        aria-hidden="true"
+                                        class="ruk-rating-snippet-count"
+                                        style="color: rgb(51, 51, 51)"
+                                        >(12080 Reviews)</span
+                                      >
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="product-card__title"
+                                    data-selenium-id="product-title"
+                                  >
+                                    <h2>Workplace First Aid Training</h2>
+                                  </div>
+                                  <div class="product-card__pills">
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>CPD</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>IIRSM</span>
+                                    </div>
+                                    <div class="product-card__pills__pill">
+                                      <svg
+                                        class="svg-icon--large product-card__title__icon"
+                                      >
+                                        <use xlink:href="#tick"></use>
+                                      </svg>
+                                      <span>City &amp; Guilds</span>
+                                    </div>
+                                  </div>
+                                  <div class="product-card__description">
+                                    <p>
+                                      An online course designed to enhance your
+                                      confidence in effectively addressing
+                                      situations where you are required to
+                                      administer first aid assistance. This
+                                      includes treating minor injuries and
+                                      illnesses or responding appropriately to a
+                                      variety of emergency situations you could
+                                      encounter in the workplace.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="product-card__bottom">
+                                  <div class="product-card__price">
+                                    <span
+                                      >£26&nbsp;<span class="vat"
+                                        >+VAT</span
+                                      ></span
+                                    >
+                                  </div>
+                                  <div class="product-card__btns">
+                                    <div class="product-card__button">
+                                      View course
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script id="js_pagination-controls" type="text/template">
+          <div class="pagination-bar">
+          	<div class="js_pagination-bar__navigation pagination-bar__navigation" data-selenium-id="pagination-bar__navigation">
+          		<div class="pagination-bar__navigation--inner">
+          			<button type="button" class="js_pagination-bar__prev pagination-bar__button" data-selenium-id="pagination-bar__prev">Previous</button>
+          				<span class="js_pagination-bar__ellipsis--before pagination-bar__ellipsis" data-selenium-id="pagination-bar__ellipsis--before">...</span>
+          				<button type="button" class="js_pagination-bar__page-1 pagination-bar__button" data-selenium-id="pagination-bar__page-1">1st</button>
+          				<button type="button" class="js_pagination-bar__page-2 pagination-bar__button" data-selenium-id="pagination-bar__page-2">2nd</button>
+          				<button type="button" class="js_pagination-bar__page-3 pagination-bar__button" data-selenium-id="pagination-bar__page-3">3rd</button>
+          				<button type="button" class="js_pagination-bar__page-4 pagination-bar__button" data-selenium-id="pagination-bar__page-4">4th</button>
+          				<span class="js_pagination-bar__ellipsis--after pagination-bar__ellipsis" data-selenium-id="pagination-bar__ellipsis--after">...</span>
+          			<button type="button" class="js_pagination-bar__next pagination-bar__button" data-selenium-id="pagination-bar__next">Next</button>
+          		</div>
+          	</div>
+          		<div class="pagination-bar__download">
+          		<a target="_blank" href="https://www.highspeedtraining.co.uk/media/sales-pdfs/course-accreditation-price-list.pdf?cb=134079488799722963" rel="noopener noreferrer">
+          			Download full course list
+          			<svg class="svg-icon--large">
+          				<use xlink:href="#arrow-circle-right-solid"></use>
+          			</svg>
+          		</a>
+          	</div>
+          </div>
+        </script>
+        <div class="js_pagination-bar-wrapper">
+          <div class="pagination-bar">
+            <div
+              class="js_pagination-bar__navigation pagination-bar__navigation"
+              data-selenium-id="pagination-bar__navigation"
+            >
+              <div class="pagination-bar__navigation--inner">
+                <button
+                  type="button"
+                  class="js_pagination-bar__prev pagination-bar__button"
+                  data-selenium-id="pagination-bar__prev"
+                  disabled="disabled"
+                >
+                  Previous
+                </button>
+                <span
+                  class="js_pagination-bar__ellipsis--before pagination-bar__ellipsis is-hidden"
+                  data-selenium-id="pagination-bar__ellipsis--before"
+                  >...</span
+                >
+                <button
+                  type="button"
+                  class="js_pagination-bar__page-1 pagination-bar__button is-active"
+                  data-selenium-id="pagination-bar__page-1"
+                >
+                  1
+                </button>
+                <button
+                  type="button"
+                  class="js_pagination-bar__page-2 pagination-bar__button"
+                  data-selenium-id="pagination-bar__page-2"
+                >
+                  2
+                </button>
+                <button
+                  type="button"
+                  class="js_pagination-bar__page-3 pagination-bar__button"
+                  data-selenium-id="pagination-bar__page-3"
+                >
+                  3
+                </button>
+                <button
+                  type="button"
+                  class="js_pagination-bar__page-4 pagination-bar__button"
+                  data-selenium-id="pagination-bar__page-4"
+                >
+                  4
+                </button>
+                <span
+                  class="js_pagination-bar__ellipsis--after pagination-bar__ellipsis"
+                  data-selenium-id="pagination-bar__ellipsis--after"
+                  >...</span
+                >
+                <button
+                  type="button"
+                  class="js_pagination-bar__next pagination-bar__button"
+                  data-selenium-id="pagination-bar__next"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <div class="pagination-bar__download">
+              <a
+                target="_blank"
+                href="https://www.highspeedtraining.co.uk/media/sales-pdfs/course-accreditation-price-list.pdf?cb=134079488799722963"
+                rel="noopener noreferrer"
+              >
+                Download full course list
+                <svg class="svg-icon--large">
+                  <use xlink:href="#arrow-circle-right-solid"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+  </body>
+</html>

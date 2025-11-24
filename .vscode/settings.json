@@ -1,0 +1,32 @@
+{
+    "cSpell.words": [
+        "bcorp",
+        "Dansk",
+        "highspeedtraining",
+        "IATP",
+        "Ilkley",
+        "Mesothelioma",
+        "organisations",
+        "ROSPA"
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#1fc6df",
+        "activityBar.background": "#1fc6df",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#c41bae",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#1fc6df",
+        "statusBar.background": "#199eb2",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#1fc6df",
+        "statusBarItem.remoteBackground": "#199eb2",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#199eb2",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#199eb299",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#199eb2"
+}
