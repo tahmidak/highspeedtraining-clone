@@ -1,13 +1,17 @@
 {
     "cSpell.words": [
+        "accreditations",
         "bcorp",
         "Dansk",
         "highspeedtraining",
         "IATP",
         "Ilkley",
         "Mesothelioma",
+        "nodownload",
         "organisations",
-        "ROSPA"
+        "ROSPA",
+        "tyct",
+        "wywl"
     ],
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#1fc6df",
@@ -28,5 +32,6 @@
         "titleBar.inactiveBackground": "#199eb299",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#199eb2"
+    "peacock.color": "#199eb2",
+    "liveServer.settings.port": 5501
 }

@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
+
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -30,9 +31,42 @@
 
     <!-- Your custom CSS (load LAST so it can override if needed) -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      .tabs-lifted .tab.tab-active:not(.tab-disabled):not([disabled]) {
+        --tab-border-color: #1d4ed8;
+        /* blue-700 */
+        --tab-bg: #1d4ed8;
+        /* active tab background */
+        --tab-color: white;
+        /* active tab text/icon color */
+      }
+    </style>
+
+    <style>
+      /* Custom Swiper Pagination Styles */
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: transparent;
+        border: 2px solid #0f1422;
+        opacity: 1;
+        margin: 0 !important;
+        transition: all 0.3s ease;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #0f1422;
+        border: 2px solid #0f1422;
+      }
+
+      .swiper-pagination-bullet:hover {
+        transform: scale(1.1);
+      }
+    </style>
   </head>
 
-  <body class=" position-relative">
+  <body class="position-relative">
     <!-- header sec -->
     <header class="main-header">
       <div class="main-header-container">
@@ -975,6 +1009,2391 @@
       </div>
     </header>
 
+    <!-- hero img sect -->
+    <section>
+      <div class="hero-img h-[40vh] w-full xl:hidden">
+        <img
+          src="assets/img/single-page-imgs/education-course-thumbnail.webp"
+          alt="single-course-hero"
+          width="100%"
+          height="100%"
+          class="w-full h-full object-cover object-center"
+        />
+      </div>
+    </section>
+
+    <main>
+      <div class="main-single-course-container p-6">
+        <div
+          class="max-w-7xl mx-auto w-full flex flex-col justify-start items-center lg:items-start gap-6"
+        >
+          <!-- single-page header -->
+          <div
+            class="sp-header w-full flex justify-start items-center gap-6 flex-col lg:flex-row"
+          >
+            <div class="w-full lg:w-2/3 flex flex-col gap-5">
+              <div class="sp-title text-4xl font-semibold w-full">
+                <h1 class="w-full">Safer Recruitment in Education Training</h1>
+              </div>
+              <div class="sp-header-body mt-6">
+                <div
+                  class="sp-header-body-info flex justify-end items-start xl:items-center gap-3 xl:gap-6 flex-col xl:flex-row-reverse"
+                >
+                  <div class="sp-header-body-info-reviews">
+                    <div
+                      class="sp-header-rating-snippet flex items-center justify-center gap-2"
+                      style="color: rgb(199, 148, 177)"
+                      title="5 Stars - 1059 Reviews"
+                    >
+                      <div class="flex text-2xl">★★★★★</div>
+                      <span style="color: rgb(51, 51, 51)">(1059 Reviews)</span>
+                    </div>
+                  </div>
+                  <div
+                    class="sp-header-body-info-duration flex items-center justify-center gap-2"
+                  >
+                    <div
+                      class="sp-header-body-info-duration-icon w-5 h-5 flex justify-center items-center"
+                    >
+                      <svg
+                        class="w-full h-full"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z"
+                            fill="#0F0F0F"
+                          ></path>
+                          <path
+                            d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z"
+                            fill="#0F0F0F"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="sp-header-body-info-duration-text">
+                      <p>Duration <span>2 Hours</span></p>
+                    </div>
+                  </div>
+                  <div
+                    class="sp-header-body-info-last-audited flex items-center justify-center gap-2"
+                  >
+                    <div
+                      class="sp-header-body-info-last-audited-icon w-5 h-5 flex justify-center items-center"
+                    >
+                      <svg
+                        class="w-full h-full"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                            stroke="#292D32"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M7.75 12L10.58 14.83L16.25 9.17004"
+                            stroke="#292D32"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="sp-header-body-info-last-audited-text">
+                      <p>Last audited <span>2nd September 2025</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="product-page-hero-head-accreditations flex items-center justify-start gap-4"
+              >
+                <div class="w-20 rounded-box p-2 border-2 aspect-square h-auto">
+                  <img
+                    class="product-page-hero-head-accreditations-image"
+                    width="100%"
+                    height="100%"
+                    alt="City &amp; Guilds Assured"
+                    src="assets/img/hero-trust-logos/city-guilds-square.webp"
+                  />
+                </div>
+
+                <div class="w-20 rounded-box p-2 border-2 aspect-square h-auto">
+                  <img
+                    class="product-page-hero-head-accreditations-image"
+                    width="100%"
+                    height="100%"
+                    alt="City &amp; Guilds Assured"
+                    src="assets/img/hero-trust-logos/logo-cpd.webp"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="price-box flex w-full lg:w-1/3 flex-col gap-2">
+              <div role="tablist" class="tabs tabs-border">
+                <a role="tab" class="tab">Tab 1</a>
+                <a role="tab" class="tab tab-active">Tab 2</a>
+                <a role="tab" class="tab">Tab 3</a>
+              </div>
+              <!-- Tabs -->
+              <div class="tabs tabs-lifted mb-4">
+                <a class="tab flex-1 tab-active" id="tabIndividual">For me</a>
+                <a class="tab flex-1" id="tabTeam">For teams</a>
+              </div>
+
+              <!-- USPs Individual -->
+              <ul class="space-y-2 mb-4" id="uspIndividual">
+                <li class="flex items-center gap-2 text-sm">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 text-success"
+                  ></i>
+                  100% online training
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 text-success"
+                  ></i>
+                  Start when you like
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 text-success"
+                  ></i>
+                  Learn on any device
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 text-success"
+                  ></i>
+                  Instant assessment and result
+                </li>
+              </ul>
+
+              <!-- USPs Team -->
+              <ul class="space-y-2 mb-4 hidden" id="uspTeam">
+                <li class="flex items-center gap-2 text-sm">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 text-success"
+                  ></i>
+                  1 learner per course
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 text-success"
+                  ></i>
+                  Train teams of all sizes
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 text-success"
+                  ></i>
+                  Bulk discounts starting at 10%
+                </li>
+                <li class="flex items-center gap-2 text-sm">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 text-success"
+                  ></i>
+                  Pay by invoice (5+ courses)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- single-page contents -->
+          <div
+            class="sp-contents w-full flex justify-start items-center gap-6 flex-col lg:flex-row"
+          >
+            <div class="w-full lg:w-2/3 flex flex-col gap-5 lg:pr-6">
+              <!-- single-page contents description -->
+              <div
+                class="sp-contents-description space-y-4 text-base font-medium"
+              >
+                <p>
+                  Adhering to strict safer recruitment processes is an essential
+                  component of safeguarding children. Safer recruitment helps to
+                  ensure that the people you hire to work in your educational
+                  setting are suitable for the role and match up with your
+                  expectations, attitudes, and values.
+                </p>
+                <p>
+                  <span>
+                    This Safer Recruitment in Education Course provides you with
+                    the knowledge to ensure procedures are in place to recruit
+                    people who share your commitment to safeguarding children.
+                    At the end of this course, you will understand what’s
+                    involved in the process from start to finish, looking at
+                    compiling recruitment documentation, preparing for and
+                    conducting interviews, carrying out pre-appointment checks,
+                    and then continuing safer recruitment practices after
+                    appointment.
+                  </span>
+                </p>
+              </div>
+              <!-- bullet-points -->
+              <div
+                class="sp-hero-body-bullet-points flex flex-col md:flex-row gap-6"
+              >
+                <div
+                  class="sp-hero-body-bullet-points-fixed flex flex-col gap-1 w-full md:w-1/2"
+                >
+                  <div
+                    class="sp-hero-body-bullet-points-fixed-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="sp-hero-body-bullet-points-fixed-item-icon text-xl"
+                    >
+                      ✦
+                    </div>
+                    <div class="sp-hero-body-bullet-points-fixed-item-text">
+                      <p>100% online training</p>
+                    </div>
+                  </div>
+                  <div
+                    class="sp-hero-body-bullet-points-fixed-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="sp-hero-body-bullet-points-fixed-item-icon text-xl"
+                    >
+                      ✦
+                    </div>
+                    <div class="sp-hero-body-bullet-points-fixed-item-text">
+                      <p>Access anywhere (desktop, mobile or tablet)</p>
+                    </div>
+                  </div>
+                  <div
+                    class="sp-hero-body-bullet-points-fixed-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="sp-hero-body-bullet-points-fixed-item-icon text-xl"
+                    >
+                      ✦
+                    </div>
+                    <div class="sp-hero-body-bullet-points-fixed-item-text">
+                      <p>Same day digital certificate</p>
+                    </div>
+                  </div>
+                  <div
+                    class="sp-hero-body-bullet-points-fixed-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="sp-hero-body-bullet-points-fixed-item-icon text-xl"
+                    >
+                      ✦
+                    </div>
+                    <div class="sp-hero-body-bullet-points-fixed-item-text">
+                      <p>Printed certificate posted next working day</p>
+                    </div>
+                  </div>
+                  <div
+                    class="sp-hero-body-bullet-points-fixed-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="sp-hero-body-bullet-points-fixed-item-icon text-xl"
+                    >
+                      ✦
+                    </div>
+                    <div class="sp-hero-body-bullet-points-fixed-item-text">
+                      <p>Full audio voiceover</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="product-page-hero-body-bullet-points-optional flex flex-col gap-1 w-full md:w-1/2"
+                >
+                  <div
+                    class="product-page-hero-body-bullet-points-optional-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-icon"
+                    >
+                      ✧
+                    </div>
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-text"
+                    >
+                      <p>
+                        Written in line with Keeping Children Safe in Education
+                        (KCSIE) Statutory Guidance
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="product-page-hero-body-bullet-points-optional-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-icon"
+                    >
+                      ✧
+                    </div>
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-text"
+                    >
+                      <p>
+                        Developed by a qualified child protection professional
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="product-page-hero-body-bullet-points-optional-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-icon"
+                    >
+                      ✧
+                    </div>
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-text"
+                    >
+                      <p>City &amp; Guilds Assured</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="product-page-hero-body-bullet-points-optional-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-icon"
+                    >
+                      ✧
+                    </div>
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-text"
+                    >
+                      <p>Accredited by CPD</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="product-page-hero-body-bullet-points-optional-item flex justify-start items-center gap-2"
+                  >
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-icon"
+                    >
+                      ✧
+                    </div>
+                    <div
+                      class="product-page-hero-body-bullet-points-optional-item-text"
+                    >
+                      <p>Earn 2 CPD points on completion</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- jump links -->
+              <div
+                class="product-page-jumplinks-wrapper bg-[#ecf1fe] w-full lg:h-12"
+              >
+                <ul
+                  class="product-page-jumplinks w-full h-full flex justify-start items-center font-semibold text-black flex-wrap"
+                >
+                  <li
+                    class="product-page-jumplinks-list-item h-full px-4 hover:bg-[#c5d4fc] flex justify-center items-center text-base"
+                  >
+                    <a
+                      href="#product-page-accreditations"
+                      class="js-jumplinks-list-item h-full flex justify-center items-center py-6"
+                    >
+                      Accreditations
+                    </a>
+                  </li>
+                  <li
+                    class="product-page-jumplinks-list-item h-full px-4 hover:bg-[#c5d4fc] flex justify-center items-center"
+                  >
+                    <a
+                      class="js-jumplinks-list-item h-full flex justify-center items-center py-6"
+                      href="#product-page-course-content"
+                    >
+                      Course Content
+                    </a>
+                  </li>
+                  <li
+                    class="product-page-jumplinks-list-item h-full px-4 hover:bg-[#c5d4fc] flex justify-center items-center"
+                  >
+                    <a
+                      href="#product-page-faqs"
+                      class="js-jumplinks-list-item h-full flex justify-center items-center py-6"
+                    >
+                      FAQs
+                    </a>
+                  </li>
+                  <li
+                    class="product-page-jumplinks-list-item h-full px-4 hover:bg-[#c5d4fc] flex justify-center items-center"
+                  >
+                    <a
+                      href="#product-page-reviews"
+                      class="js-jumplinks-list-item h-full flex justify-center items-center py-6"
+                    >
+                      Reviews
+                    </a>
+                  </li>
+                  <li
+                    class="product-page-jumplinks-list-item h-full px-4 hover:bg-[#c5d4fc] flex justify-center items-center"
+                  >
+                    <a
+                      class="js-jumplinks-list-item h-full flex justify-center items-center py-6"
+                      href="#product-page-course-content"
+                    >
+                      Suitable for
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- promotion for bigger order from clint -->
+              <div
+                class="product-page-custom-sections-wrapper flex flex-col items-center sm:flex-row px-3 py-12 bg-[#f8f2f5] rounded-ee-[3rem]"
+              >
+                <div
+                  class="product-page-custom-sections-image w-1/2 sm:w-3/12 pr-3 md:p-3"
+                >
+                  <img
+                    class="w-full h-auto object-cover object-center"
+                    alt="bulk-discount.png"
+                    loading="lazy"
+                    src="https://www.highspeedtraining.co.uk/media/illustrations/bulk-discount.png?cb=134079488799722963"
+                  />
+                </div>
+                <div
+                  class="product-page-custom-sections-content-wrapper mt-3 sm:mt-0 sm:w-9/12 space-y-2"
+                >
+                  <div
+                    class="product-page-custom-sections-content-title text-lg font-semibold"
+                  >
+                    <h2>Bigger orders = bigger discounts</h2>
+                  </div>
+                  <div class="product-page-custom-sections-content-text">
+                    <p>
+                      Save on our courses when you&nbsp;buy more training
+                      upfront.&nbsp;<b>Lock in&nbsp;a better price</b>&nbsp;now
+                      and access the training whenever you need to. You
+                      can&nbsp;<b>mix and match</b>&nbsp;any of our courses too
+                      and get the&nbsp;<b>discount off your whole order.</b>
+                    </p>
+                    <p>
+                      10+ courses = 10% off<br />50+ courses = 20% off<br />100+
+                      courses = 30% off<br />500+ courses = 40% off
+                    </p>
+                  </div>
+                  <div class="product-page-custom-sections-content-link"></div>
+                </div>
+              </div>
+
+              <!-- what you'll learn -->
+              <div
+                class="product-page-wywl-wrapper relative w-full p-6 pt-10 rounded-ee-[5rem] border border-black"
+              >
+                <h2
+                  class="product-page-wywl-title text-2xl font-serif font-medium mb-4"
+                >
+                  What you'll learn
+                </h2>
+
+                <!-- CONTENT -->
+                <div
+                  id="wywlContent"
+                  class="product-page-wywl-content max-h-64 overflow-hidden transition-all duration-500 relative"
+                >
+                  <p>By the end of this course, you will:</p>
+
+                  <ul
+                    class="list-disc list-outside marker:text-black marker:content-['✔'] marker:pr-9 pl-5 mt-3 space-y-2"
+                  >
+                    <li class="pl-3">
+                      Understand why having strict safer recruitment practices
+                      in place is so important in regard to safeguarding
+                      children.
+                    </li>
+                    <li class="pl-3">
+                      Know how to put together effective applicant
+                      documentation, including a job description and
+                      safeguarding statement.
+                    </li>
+                    <li class="pl-3">
+                      Know what to look for when shortlisting candidates.
+                    </li>
+                    <li class="pl-3">
+                      Understand how to contact referees and know what is needed
+                      from a reference.
+                    </li>
+                    <li class="pl-3">
+                      Know how to put together a panel to conduct the interview
+                      and what training the panel members should have.
+                    </li>
+                    <li class="pl-3">
+                      Know how to successfully interview candidates.
+                    </li>
+                    <li class="pl-3">
+                      Understand what is involved in the pre-appointment checks,
+                      including DBS checks, before a candidate can start work.
+                    </li>
+                    <li class="pl-3">
+                      Understand how to create a compliant Single Central
+                      Record.
+                    </li>
+                    <li class="pl-3">
+                      Understand the importance of a thorough staff induction
+                      process and safeguarding children training.
+                    </li>
+                    <li class="pl-3">
+                      Know how to practically deal with Allegation Management.
+                    </li>
+                  </ul>
+
+                  <!-- Fade Overlay -->
+                  <div
+                    id="fadeOverlay"
+                    class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent pointer-events-none transition-all duration-300"
+                  ></div>
+                </div>
+
+                <!-- BUTTON WRAPPER -->
+                <div
+                  class="product-page-wywl-button-wrapper text-center mt-4 relative"
+                >
+                  <button
+                    id="wywlBtn"
+                    class="product-page-wywl-button js_show-more-button text-black font-semibold flex items-center gap-2 mx-auto"
+                    onclick="toggleWywl()"
+                  >
+                    <span id="wywlBtnText">Show more</span>
+
+                    <span class="product-page-wywl-button-icon">
+                      <svg
+                        fill="#000000"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-3 h-3 transition-all duration-300"
+                        id="wywlIcon"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Training you can trust -->
+              <section class="product-page-tyct-wrapper py-8 lg:py-16">
+                <div
+                  class="product-page-tyct-title text-2xl md:text-3xl font-serif mb-6 font-medium w-full flex justify-between items-center py-2"
+                >
+                  <h3>Training you can trust</h3>
+                </div>
+
+                <div class="tyct-main">
+                  <div
+                    class="swiper swiper-tyct px-2 py-6 bg-[#f7f6f2] rounded-ee-[4rem] rounded-ss-[4rem]"
+                  >
+                    <div
+                      id="swiper-wrapper-container"
+                      class="lg:flex lg:flex-col"
+                    >
+                      <div class="swiper-slide !h-auto">
+                        <div
+                          class="tyct-accreditations flex flex-col items-center md:flex-row p-6 h-full"
+                        >
+                          <div
+                            class="tyct-accreditations-logo flex-shrink-0 mb-4 md:mb-0 md:mr-6 md:pr-6 w-2/12 aspect-square md:border-r-2 md:border-black md:border-solid"
+                          >
+                            <img
+                              alt="City &amp; Guilds Logo"
+                              loading="lazy"
+                              src="https://www.highspeedtraining.co.uk/media/logos/city-guilds.png?cb=134079488799722963"
+                              class="w-full h-full object-contain"
+                            />
+                          </div>
+                          <div
+                            class="tyct-accreditations-content-wrapper w-full md:w-10/12 flex-grow flex justify-center items-center md:items-start flex-col"
+                          >
+                            <div class="tyct-accreditations-title mb-2">
+                              <p
+                                class="tyct-accreditations-title-text text-xl font-semibold text-gray-800"
+                              >
+                                City &amp; Guilds Assured
+                              </p>
+                            </div>
+                            <div
+                              class="tyct-accreditations-content-text text-center md:text-start"
+                            >
+                              <p class="text-gray-600 text-sm">
+                                Thoroughly reviewed independently by City &amp;
+                                Guilds learning and development experts, this
+                                course is approved as City &amp; Guilds Assured.
+                                High Speed Training is the first e-learning
+                                provider to have online courses awarded City
+                                &amp; Guilds Assured status.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide !h-auto">
+                        <div
+                          class="tyct-accreditations flex flex-col items-center md:flex-row p-6 h-full"
+                        >
+                          <div
+                            class="tyct-accreditations-logo flex-shrink-0 mb-4 md:mb-0 md:mr-6 md:pr-6 w-2/12 aspect-square md:border-r-2 md:border-black md:border-solid"
+                          >
+                            <img
+                              alt="CPD Logo"
+                              loading="lazy"
+                              src="https://www.highspeedtraining.co.uk/media/accreditations/logo-cpd-pp.gif?cb=134079488799722963"
+                              class="w-full h-full object-contain"
+                            />
+                          </div>
+                          <div
+                            class="tyct-accreditations-content-wrapper w-full md:w-10/12 flex-grow flex justify-center items-center md:items-start flex-col"
+                          >
+                            <div class="tyct-accreditations-title mb-2">
+                              <p
+                                class="tyct-accreditations-title-text text-xl font-semibold text-gray-800"
+                              >
+                                Accredited by CPD
+                              </p>
+                            </div>
+                            <div
+                              class="tyct-accreditations-content-text text-center md:text-start"
+                            >
+                              <p class="text-gray-600 text-sm">
+                                All of our courses are accredited by the CPD
+                                Certification Service as conforming to
+                                universally accepted Continuing Professional
+                                Development (CPD) guidelines.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide !h-auto">
+                        <div
+                          class="tyct-accreditations flex flex-col items-center md:flex-row p-6 h-full"
+                        >
+                          <div
+                            class="tyct-accreditations-logo flex-shrink-0 mb-4 md:mb-0 md:mr-6 md:pr-6 w-2/12 aspect-square md:border-r-2 md:border-black md:border-solid"
+                          >
+                            <img
+                              alt="City &amp; Guilds Logo"
+                              loading="lazy"
+                              src="https://www.highspeedtraining.co.uk/media/logos/city-guilds.png?cb=134079488799722963"
+                              class="w-full h-full object-contain"
+                            />
+                          </div>
+                          <div
+                            class="tyct-accreditations-content-wrapper w-full md:w-10/12 flex-grow flex justify-center items-center md:items-start flex-col"
+                          >
+                            <div class="tyct-accreditations-title mb-2">
+                              <p
+                                class="tyct-accreditations-title-text text-xl font-semibold text-gray-800"
+                              >
+                                City &amp; Guilds Assured
+                              </p>
+                            </div>
+                            <div
+                              class="tyct-accreditations-content-text text-center md:text-start"
+                            >
+                              <p class="text-gray-600 text-sm">
+                                Thoroughly reviewed independently by City &amp;
+                                Guilds learning and development experts, this
+                                course is approved as City &amp; Guilds Assured.
+                                High Speed Training is the first e-learning
+                                provider to have online courses awarded City
+                                &amp; Guilds Assured status.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide !h-auto">
+                        <div
+                          class="tyct-accreditations flex flex-col items-center md:flex-row p-6 h-full"
+                        >
+                          <div
+                            class="tyct-accreditations-logo flex-shrink-0 mb-4 md:mb-0 md:mr-6 md:pr-6 w-2/12 aspect-square md:border-r-2 md:border-black md:border-solid"
+                          >
+                            <img
+                              alt="CPD Logo"
+                              loading="lazy"
+                              src="https://www.highspeedtraining.co.uk/media/accreditations/logo-cpd-pp.gif?cb=134079488799722963"
+                              class="w-full h-full object-contain"
+                            />
+                          </div>
+                          <div
+                            class="tyct-accreditations-content-wrapper w-full md:w-10/12 flex-grow flex justify-center items-center md:items-start flex-col"
+                          >
+                            <div class="tyct-accreditations-title mb-2">
+                              <p
+                                class="tyct-accreditations-title-text text-xl font-semibold text-gray-800"
+                              >
+                                Accredited by CPD
+                              </p>
+                            </div>
+                            <div
+                              class="tyct-accreditations-content-text text-center md:text-start"
+                            >
+                              <p class="text-gray-600 text-sm">
+                                All of our courses are accredited by the CPD
+                                Certification Service as conforming to
+                                universally accepted Continuing Professional
+                                Development (CPD) guidelines.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="swipper-nevigation-container flex justify-between items-center mt-6 lg:hidden px-5"
+                  >
+                    <!-- Navigation Buttons (Left Side) -->
+                    <div class="swiper-arrows flex space-x-4">
+                      <button
+                        class="custom-prev-tyct btn btn-circle bg-white border-gray-300 hover:bg-gray-100"
+                        type="button"
+                        aria-label="Show previous item"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="14"
+                          viewBox="0 0 25 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M7.918 13.7953C7.70359 14.0682 7.27478 14.0682 7.00677 13.7953L0.789017 7.46394C0.52101 7.19103 0.52101 6.80897 0.789017 6.53606L7.00677 0.204681C7.27478 -0.0682236 7.70359 -0.0682235 7.918 0.204681L8.34681 0.586747C8.56121 0.859651 8.56121 1.24172 8.34681 1.51462L3.84429 6.09942L23.9448 6.09942C24.32 6.09942 24.588 6.37232 24.588 6.75439L24.588 7.3002C24.588 7.62768 24.32 7.95517 23.9448 7.95517L3.84429 7.95517L8.34681 12.4854C8.56121 12.7583 8.56121 13.1403 8.34681 13.4133L7.918 13.7953Z"
+                            fill="#0F1422"
+                          ></path>
+                        </svg>
+                      </button>
+
+                      <button
+                        class="custom-next-tyct btn btn-circle bg-white border-gray-300 hover:bg-gray-100"
+                        type="button"
+                        aria-label="Show next item"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="14"
+                          viewBox="0 0 25 14"
+                          fill="none"
+                        >
+                          <path
+                            d="M17.434 0.204681C17.6484 -0.0682232 18.0772 -0.0682231 18.3452 0.204681L24.563 6.53606C24.831 6.80897 24.831 7.19104 24.563 7.46394L18.3452 13.7953C18.0772 14.0682 17.6484 14.0682 17.434 13.7953L17.0052 13.4133C16.7908 13.1404 16.7908 12.7583 17.0052 12.4854L21.5077 7.90059L1.40719 7.90058C1.03198 7.90058 0.763976 7.62768 0.763976 7.24561L0.763976 6.6998C0.763976 6.37232 1.03198 6.04483 1.40719 6.04483L21.5077 6.04484L17.0052 1.51462C16.7908 1.24172 16.7908 0.859652 17.0052 0.586747L17.434 0.204681Z"
+                            fill="#0F1422"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <!-- Pagination Dots (Right Side) -->
+                    <div
+                      class="swiper-pagination !relative !w-auto flex justify-center items-center gap-2"
+                    ></div>
+                  </div>
+                </div>
+                <div class="tyct-footer flex mt-8">
+                  <div
+                    class="tyct-footer-logo flex-shrink-0 w-1/12 aspect-square flex items-center justify-center"
+                  >
+                    <div
+                      class="bg-[#ffad5c] w-full rounded-full aspect-square flex items-center justify-center p-2"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12 6C8.69 6 6 8.69 6 12H9L5 16L1 12H4C4 7.58 7.58 4 12 4C13.57 4 15.03 4.46 16.26 5.24L14.8 6.7C13.97 6.25 13.01 6 12 6ZM15 12L19 8L23 12H20C20 16.42 16.42 20 12 20C10.43 20 8.97 19.54 7.74 18.76L9.2 17.3C10.03 17.75 10.99 18 12 18C15.31 18 18 15.31 18 12H15Z"
+                            fill="#000000"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="tyct-footer-content-wrapper recommended-renewal-warpper w-11/12 flex-grow flex flex-col pl-6"
+                  >
+                    <div
+                      class="tyct-footer-title recommended-renewal-title mb-2"
+                    >
+                      <p
+                        class="tyct-footer-title-text recommended-renewal-title-text text-base text-gray-800"
+                      >
+                        Recommended renewal: <strong>2 years</strong>
+                      </p>
+                    </div>
+                    <div
+                      class="tyct-footer-content-text recommended-renewal-content-text"
+                    >
+                      <p class="text-gray-600 text-xs">
+                        What does this mean? This certificate does not have an
+                        expiry date, however, based on industry best practice
+                        guidelines there is a recommended renewal period.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Course in Action Section -->
+              <section class="py-16">
+                <div class="">
+                  <div
+                    class="product-page-tyct-title text-2xl md:text-3xl font-serif mb-6 font-medium w-full flex justify-between items-center py-2"
+                  >
+                    <h3>Course in Action</h3>
+                  </div>
+
+                  <!-- Video Player Card -->
+                  <div class="card rounded-none bg-base-100">
+                    <div class="card-body rounded-none p-0">
+                      <!-- Video Container with Thumbnail -->
+                      <div
+                        class="relative pb-[56.25%] h-0 overflow-hidden bg-black"
+                      >
+                        <!-- Video Thumbnail -->
+                        <img
+                          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=675&fit=crop"
+                          alt="Course Preview"
+                          class="absolute top-0 left-0 w-full h-full object-cover"
+                          id="thumbnail"
+                        />
+
+                        <!-- Play Overlay -->
+                        <div
+                          class="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black/30 hover:bg-black/50 cursor-pointer transition-all duration-300 z-10"
+                          id="playOverlay"
+                        >
+                          <div
+                            class="w-20 h-20 md:w-20 md:h-20 bg-white/90 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+                          >
+                            <div
+                              class="w-0 h-0 border-l-[25px] md:border-l-[25px] border-l-black border-y-[15px] md:border-y-[15px] border-y-transparent ml-1.5"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <!-- Actual Video (Hidden Initially) -->
+                        <video
+                          id="courseVideo"
+                          controls
+                          controlsList="nodownload"
+                          preload="none"
+                          class="absolute top-0 left-0 w-full h-full hidden"
+                        >
+                          <source
+                            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+
+                      <!-- YouTube Video Container -->
+                      <div
+                        class="relative pb-[56.25%] h-0 overflow-hidden bg-black"
+                      >
+                        <iframe
+                          id="youtubeVideo"
+                          src="https://www.youtube.com/embed/MEtvCw1LzRc"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen
+                          class="absolute top-0 left-0 w-full h-full"
+                        >
+                        </iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  // Video player functionality
+                  const playOverlay = document.getElementById("playOverlay");
+                  const thumbnail = document.getElementById("thumbnail");
+                  const video = document.getElementById("courseVideo");
+
+                  playOverlay.addEventListener("click", function () {
+                    // Hide overlay and thumbnail
+                    playOverlay.style.display = "none";
+                    thumbnail.style.display = "none";
+
+                    // Show and play video
+                    video.style.display = "block";
+                    video.play();
+                  });
+
+                  // Optional: Reset when video ends
+                  video.addEventListener("ended", function () {
+                    playOverlay.style.display = "flex";
+                    thumbnail.style.display = "block";
+                    video.style.display = "none";
+                  });
+
+                  // Optional: Show overlay when video is paused
+                  video.addEventListener("pause", function () {
+                    if (video.currentTime === 0 || video.ended) {
+                      playOverlay.style.display = "flex";
+                    }
+                  });
+                </script>
+              </section>
+
+              <!-- Engage and empower -->
+              <section>
+                <div class="py-8 lg:py-16 bg-[#f8f2f5]">
+                  <!-- Header Section -->
+                  <div
+                    class="eae-header font-serif mb-6 font-medium w-full flex flex-col py-2"
+                  >
+                    <div
+                      class="eae-title text-2xl md:text-3xl mb-4 font-medium w-full flex justify-between items-center py-2"
+                    >
+                      <h3>Engage and empower</h3>
+                    </div>
+                    <div class="eae-sub-title">
+                      Our in-house Learning Designers develop all of our courses
+                      to give you and your learners the most engaging training
+                      possible.
+                    </div>
+
+                    <div
+                      class="eae-cta sec-cta w-full text-end flex justify-end items-center pt-4 justify-self-end self-end"
+                    >
+                      <a
+                        href="#"
+                        class="flex justify-center items-center gap-4 font-semibold"
+                      >
+                        Register for a free course demo
+                        <span class="w-4 h-4 flex justify-center items-center">
+                          <svg
+                            fill="#000000"
+                            viewBox="0 0 32 32"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <path
+                                d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM16.637 9.957c-0.39 0.39-0.39 1.024 0 1.414l3.617 3.617h-11.264c-0.553 0-1 0.448-1 1s0.447 1 1 1h11.327l-3.68 3.68c-0.39 0.39-0.39 1.023 0 1.414 0.195 0.195 0.451 0.293 0.707 0.293s0.512-0.098 0.707-0.293l5.907-6.063-5.907-6.063c-0.391-0.39-1.023-0.39-1.415 0z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Carousel Section -->
+                  <div class="">
+                    <div
+                      id="vertical-thumbnails"
+                      data-carousel='{ "loadingClasses": "opacity-0" }'
+                      class="relative w-full"
+                    >
+                      <div class="carousel flex gap-4 max-md:flex-col">
+                        <!-- Thumbnail Navigation (Vertical on desktop, Horizontal on mobile) -->
+                        <div class="order-1 md:order-none w-full md:w-1/5">
+                          <div
+                            class="carousel-pagination grid grid-cols-3 gap-3 justify-center md:w-full md:grid-cols-1 md:overflow-hidden md:h-full"
+                          >
+                            <img
+                              src="assets/img/single-page-imgs/dsl-training-sample-cert-v6.webp"
+                              class="carousel-pagination-item carousel-active:opacity-100 carousel-active:ring-2 carousel-active:ring-primary h-full w-full object-cover aspect-[551/383] cursor-pointer opacity-60 hover:opacity-100 transition-opacity active"
+                              alt="vr set"
+                            />
+                            <img
+                              src="assets/img/single-page-imgs/dsl-course-screenshot-1.webp"
+                              class="carousel-pagination-item carousel-active:opacity-100 carousel-active:ring-2 carousel-active:ring-primary h-full w-full object-cover aspect-[551/383] cursor-pointer opacity-60 hover:opacity-100 transition-opacity"
+                              alt="play station"
+                            />
+                            <img
+                              src="assets/img/single-page-imgs/dsl-course-screenshot-2.webp"
+                              class="carousel-pagination-item carousel-active:opacity-100 carousel-active:ring-2 carousel-active:ring-primary h-full w-full object-cover aspect-[551/383] cursor-pointer opacity-60 hover:opacity-100 transition-opacity"
+                              alt="watch"
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Main Carousel -->
+                        <div
+                          class="relative flex-1 overflow-hidden bg-base-100 w-full md:w-4/5"
+                        >
+                          <div
+                            class="carousel-body flex transition-transform duration-300 ease-in-out"
+                          >
+                            <!-- Slide 1 -->
+                            <div
+                              class="carousel-slide w-full aspect-[551/383] flex-shrink-0 active"
+                            >
+                              <div class="flex size-full justify-center">
+                                <img
+                                  src="assets/img/single-page-imgs/dsl-training-sample-cert-v6.webp"
+                                  class="h-full w-full object-cover"
+                                  alt="vr set"
+                                />
+                              </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div
+                              class="carousel-slide w-full aspect-[551/383] flex-shrink-0"
+                            >
+                              <div class="flex size-full justify-center">
+                                <img
+                                  src="assets/img/single-page-imgs/dsl-course-screenshot-1.webp"
+                                  class="h-full w-full object-cover"
+                                  alt="play station"
+                                />
+                              </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div
+                              class="carousel-slide w-full aspect-[551/383] flex-shrink-0"
+                            >
+                              <div class="flex size-full justify-center">
+                                <img
+                                  src="assets/img/single-page-imgs/dsl-course-screenshot-2.webp"
+                                  class="h-full w-full object-cover"
+                                  alt="watch"
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Previous Button -->
+                          <button
+                            type="button"
+                            class="carousel-prev btn btn-circle btn-sm bg-base-100 shadow-lg absolute top-1/2 -translate-y-1/2 left-4 z-10 disabled:opacity-50"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-5 w-5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M15 19l-7-7 7-7"
+                              />
+                            </svg>
+                          </button>
+
+                          <!-- Next Button -->
+                          <button
+                            type="button"
+                            class="carousel-next btn btn-circle btn-sm bg-base-100 shadow-lg absolute top-1/2 -translate-y-1/2 right-4 z-10"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-5 w-5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- course module, description and info panel -->
+              <section>
+                <div class="">
+                  <div
+                    class="product-page-course-content"
+                    id="product-page-course-content"
+                  >
+                    <div
+                      class="product-page-course-info-panel-wrapper"
+                      style="margin: 48px 0"
+                    >
+                      <div class="product-page-course-info-panel-tab-wrapper">
+                        <!-- Tab Menu -->
+                        <div
+                          class="border-b border-[#baae8c] mb-10 -mr-5 md:mr-0"
+                        >
+                          <ul
+                            class="flex list-none m-0 overflow-x-auto scrollbar-none p-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                          >
+                            <li
+                              class="cursor-pointer text-base font-medium leading-[175%] mx-3 first:ml-0 first:pl-0 p-2 whitespace-nowrap relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:bg-[#ff8100] before:opacity-0 before:transition-opacity before:duration-300 before:ease-in-out hover:before:opacity-100 active:before:bg-[#bb5808] focus-visible:bg-[#ffd15c] focus-visible:text-[#0f1422] focus-visible:outline-none mb-0 product-page-course-info-panel-tab-menu-item js-course-content active"
+                              tabindex="0"
+                            >
+                              Course Content
+                            </li>
+                            <li
+                              class="cursor-pointer text-base font-medium leading-[175%] mx-3 first:ml-0 first:pl-0 p-2 whitespace-nowrap relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:bg-[#ff8100] before:opacity-0 before:transition-opacity before:duration-300 before:ease-in-out hover:before:opacity-100 active:before:bg-[#bb5808] focus-visible:bg-[#ffd15c] focus-visible:text-[#0f1422] focus-visible:outline-none mb-0 product-page-course-info-panel-tab-menu-item"
+                              tabindex="0"
+                            >
+                              Assessment
+                            </li>
+                            <li
+                              class="cursor-pointer text-base font-medium leading-[175%] mx-3 first:ml-0 first:pl-0 p-2 whitespace-nowrap relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:bg-[#ff8100] before:opacity-0 before:transition-opacity before:duration-300 before:ease-in-out hover:before:opacity-100 active:before:bg-[#bb5808] focus-visible:bg-[#ffd15c] focus-visible:text-[#0f1422] focus-visible:outline-none mb-0 product-page-course-info-panel-tab-menu-item js-suitable-for"
+                              tabindex="0"
+                            >
+                              Suitable for
+                            </li>
+                          </ul>
+                        </div>
+
+                        <!-- Tab Contents -->
+                        <div
+                          class="product-page-course-info-panel-tab-contents [&>*]:hidden [&>.active]:block"
+                        >
+                          <!-- Course Content Tab -->
+                          <div
+                            class="product-page-course-info-panel-tab-contents-course-content-wrapper js-course-content active"
+                          >
+                            <div
+                              class="product-page-course-info-panel-tab-contents-course-content"
+                            >
+                              <!-- Module 1 -->
+                              <div
+                                data-cmpt="accordion"
+                                class="cmpt js-accordion-initialised"
+                              >
+                                <div
+                                  class="border-b border-[#ddd] my-4 pb-4 relative accordion-info-panel"
+                                >
+                                  <input
+                                    id="acc-info-panel-1"
+                                    type="checkbox"
+                                    name="accordian-group"
+                                    class="absolute w-px h-px -left-[100vw] top-0 overflow-hidden whitespace-nowrap border-0 p-0 m-[-1px] [clip:rect(0,0,0,0)] peer accordion-trigger"
+                                  />
+                                  <div
+                                    class="flex accordion-info-panel-heading"
+                                  >
+                                    <label
+                                      for="acc-info-panel-1"
+                                      class="cursor-pointer h-3 mt-[5px] w-3 transition-transform duration-[400ms] peer-checked:rotate-90 accordion-title-button"
+                                    >
+                                      <svg
+                                        viewBox="0 0 256 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block h-3 w-[10px] pointer-events-none"
+                                      >
+                                        <path
+                                          fill="currentColor"
+                                          d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                                        />
+                                      </svg>
+                                    </label>
+                                    <div
+                                      class="flex flex-shrink gap-4 ml-[10px] w-full z-[1] cursor-pointer hover:underline peer-focus-visible:bg-[#ffd15c] accordion-title"
+                                    >
+                                      <h3
+                                        class="flex-[0_1_100%] text-base font-medium leading-[150%] m-0 pointer-events-none w-full accordion-title-text"
+                                      >
+                                        Module 1: Introduction to Designated
+                                        Safeguarding Lead
+                                      </h3>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="max-h-0 overflow-hidden pl-[26px] relative w-full transition-[max-height] duration-[400ms] ease-in-out peer-checked:max-h-[100vmax] accordion-content"
+                                  >
+                                    <div
+                                      class="text-sm font-normal leading-[150%] pt-4 [&>*]:leading-[175%] accordion-content-inner"
+                                    >
+                                      <p class="m-0">
+                                        Defining child protection and
+                                        safeguarding, the importance of
+                                        safeguarding training, child
+                                        safeguarding practice reviews, key child
+                                        protection and safeguarding legislation,
+                                        Working Together to Safeguard Children,
+                                        responsibilities and your
+                                        responsibilities.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Module 2 -->
+                              <div
+                                data-cmpt="accordion"
+                                class="cmpt js-accordion-initialised"
+                              >
+                                <div
+                                  class="border-b border-[#ddd] my-4 pb-4 relative accordion-info-panel"
+                                >
+                                  <input
+                                    id="acc-info-panel-2"
+                                    type="checkbox"
+                                    name="accordian-group"
+                                    class="absolute w-px h-px -left-[100vw] top-0 overflow-hidden whitespace-nowrap border-0 p-0 m-[-1px] [clip:rect(0,0,0,0)] peer accordion-trigger"
+                                  />
+                                  <div
+                                    class="flex accordion-info-panel-heading"
+                                  >
+                                    <label
+                                      for="acc-info-panel-2"
+                                      class="cursor-pointer h-3 mt-[5px] w-3 transition-transform duration-[400ms] peer-checked:rotate-90 accordion-title-button"
+                                    >
+                                      <svg
+                                        viewBox="0 0 256 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block h-3 w-[10px] pointer-events-none"
+                                      >
+                                        <path
+                                          fill="currentColor"
+                                          d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                                        />
+                                      </svg>
+                                    </label>
+                                    <div
+                                      class="flex flex-shrink gap-4 ml-[10px] w-full z-[1] cursor-pointer hover:underline peer-focus-visible:bg-[#ffd15c] accordion-title"
+                                    >
+                                      <h3
+                                        class="flex-[0_1_100%] text-base font-medium leading-[150%] m-0 pointer-events-none w-full accordion-title-text"
+                                      >
+                                        Module 2: Creating a Culture of
+                                        Safeguarding
+                                      </h3>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="max-h-0 overflow-hidden pl-[26px] relative w-full transition-[max-height] duration-[400ms] ease-in-out peer-checked:max-h-[100vmax] accordion-content"
+                                  >
+                                    <div
+                                      class="text-sm font-normal leading-[150%] pt-4 [&>*]:leading-[175%] accordion-content-inner"
+                                    >
+                                      <p class="m-0">
+                                        What is a culture of safeguarding?,
+                                        vigilance, a safe environment, effective
+                                        relationships, policies and procedures,
+                                        safer recruitment processes and case
+                                        study - William Vahey.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Module 3 -->
+                              <div
+                                data-cmpt="accordion"
+                                class="cmpt js-accordion-initialised"
+                              >
+                                <div
+                                  class="border-b border-[#ddd] my-4 pb-4 relative accordion-info-panel"
+                                >
+                                  <input
+                                    id="acc-info-panel-3"
+                                    type="checkbox"
+                                    name="accordian-group"
+                                    class="absolute w-px h-px -left-[100vw] top-0 overflow-hidden whitespace-nowrap border-0 p-0 m-[-1px] [clip:rect(0,0,0,0)] peer accordion-trigger"
+                                  />
+                                  <div
+                                    class="flex accordion-info-panel-heading"
+                                  >
+                                    <label
+                                      for="acc-info-panel-3"
+                                      class="cursor-pointer h-3 mt-[5px] w-3 transition-transform duration-[400ms] peer-checked:rotate-90 accordion-title-button"
+                                    >
+                                      <svg
+                                        viewBox="0 0 256 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block h-3 w-[10px] pointer-events-none"
+                                      >
+                                        <path
+                                          fill="currentColor"
+                                          d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                                        />
+                                      </svg>
+                                    </label>
+                                    <div
+                                      class="flex flex-shrink gap-4 ml-[10px] w-full z-[1] cursor-pointer hover:underline peer-focus-visible:bg-[#ffd15c] accordion-title"
+                                    >
+                                      <h3
+                                        class="flex-[0_1_100%] text-base font-medium leading-[150%] m-0 pointer-events-none w-full accordion-title-text"
+                                      >
+                                        Module 3: Raising Awareness of Child
+                                        Protection and Safeguarding Issues
+                                      </h3>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="max-h-0 overflow-hidden pl-[26px] relative w-full transition-[max-height] duration-[400ms] ease-in-out peer-checked:max-h-[100vmax] accordion-content"
+                                  >
+                                    <div
+                                      class="text-sm font-normal leading-[150%] pt-4 [&>*]:leading-[175%] accordion-content-inner"
+                                    >
+                                      <p class="m-0">
+                                        Raising awareness, types of
+                                        maltreatment, other safeguarding issues,
+                                        potential indicators of maltreatment,
+                                        why children don't disclose information,
+                                        children with additional
+                                        vulnerabilities, children's responses to
+                                        maltreatment, why adults don't take
+                                        action, training and further awareness
+                                        raising.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Module 4 -->
+                              <div
+                                data-cmpt="accordion"
+                                class="cmpt js-accordion-initialised"
+                              >
+                                <div
+                                  class="border-b border-[#ddd] my-4 pb-4 relative accordion-info-panel"
+                                >
+                                  <input
+                                    id="acc-info-panel-4"
+                                    type="checkbox"
+                                    name="accordian-group"
+                                    class="absolute w-px h-px -left-[100vw] top-0 overflow-hidden whitespace-nowrap border-0 p-0 m-[-1px] [clip:rect(0,0,0,0)] peer accordion-trigger"
+                                  />
+                                  <div
+                                    class="flex accordion-info-panel-heading"
+                                  >
+                                    <label
+                                      for="acc-info-panel-4"
+                                      class="cursor-pointer h-3 mt-[5px] w-3 transition-transform duration-[400ms] peer-checked:rotate-90 accordion-title-button"
+                                    >
+                                      <svg
+                                        viewBox="0 0 256 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block h-3 w-[10px] pointer-events-none"
+                                      >
+                                        <path
+                                          fill="currentColor"
+                                          d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                                        />
+                                      </svg>
+                                    </label>
+                                    <div
+                                      class="flex flex-shrink gap-4 ml-[10px] w-full z-[1] cursor-pointer hover:underline peer-focus-visible:bg-[#ffd15c] accordion-title"
+                                    >
+                                      <h3
+                                        class="flex-[0_1_100%] text-base font-medium leading-[150%] m-0 pointer-events-none w-full accordion-title-text"
+                                      >
+                                        Module 4: Responding to Concerns
+                                      </h3>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="max-h-0 overflow-hidden pl-[26px] relative w-full transition-[max-height] duration-[400ms] ease-in-out peer-checked:max-h-[100vmax] accordion-content"
+                                  >
+                                    <div
+                                      class="text-sm font-normal leading-[150%] pt-4 [&>*]:leading-[175%] accordion-content-inner"
+                                    >
+                                      <p class="m-0">
+                                        Responding to concerns, how concerns
+                                        might be raised, responding to a
+                                        disclosure, responding to concerns
+                                        raised, levels of need, no additional
+                                        needs, early help, child in need, child
+                                        protection and what response is needed?
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Module 5 -->
+                              <div
+                                data-cmpt="accordion"
+                                class="cmpt js-accordion-initialised"
+                              >
+                                <div
+                                  class="border-b border-[#ddd] my-4 pb-4 relative accordion-info-panel"
+                                >
+                                  <input
+                                    id="acc-info-panel-5"
+                                    type="checkbox"
+                                    name="accordian-group"
+                                    class="absolute w-px h-px -left-[100vw] top-0 overflow-hidden whitespace-nowrap border-0 p-0 m-[-1px] [clip:rect(0,0,0,0)] peer accordion-trigger"
+                                  />
+                                  <div
+                                    class="flex accordion-info-panel-heading"
+                                  >
+                                    <label
+                                      for="acc-info-panel-5"
+                                      class="cursor-pointer h-3 mt-[5px] w-3 transition-transform duration-[400ms] peer-checked:rotate-90 accordion-title-button"
+                                    >
+                                      <svg
+                                        viewBox="0 0 256 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block h-3 w-[10px] pointer-events-none"
+                                      >
+                                        <path
+                                          fill="currentColor"
+                                          d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                                        />
+                                      </svg>
+                                    </label>
+                                    <div
+                                      class="flex flex-shrink gap-4 ml-[10px] w-full z-[1] cursor-pointer hover:underline peer-focus-visible:bg-[#ffd15c] accordion-title"
+                                    >
+                                      <h3
+                                        class="flex-[0_1_100%] text-base font-medium leading-[150%] m-0 pointer-events-none w-full accordion-title-text"
+                                      >
+                                        Module 5: Making a Referral and the
+                                        Referral Process
+                                      </h3>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="max-h-0 overflow-hidden pl-[26px] relative w-full transition-[max-height] duration-[400ms] ease-in-out peer-checked:max-h-[100vmax] accordion-content"
+                                  >
+                                    <div
+                                      class="text-sm font-normal leading-[150%] pt-4 [&>*]:leading-[175%] accordion-content-inner"
+                                    >
+                                      <p class="m-0">
+                                        Making and managing referrals, accessing
+                                        further guidance and advice, making a
+                                        Prevent referral, making a DBS referral,
+                                        making a referral to the LADO, referrals
+                                        to Children's Social Care, what should
+                                        you include in a referral?, responses
+                                        from Children's Social Care, the
+                                        assessment process, Early Help
+                                        Assessments, child in need assessments,
+                                        child protection and what response is
+                                        needed?
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Module 6 -->
+                              <div
+                                data-cmpt="accordion"
+                                class="cmpt js-accordion-initialised"
+                              >
+                                <div
+                                  class="border-b border-[#ddd] my-4 pb-4 relative accordion-info-panel"
+                                >
+                                  <input
+                                    id="acc-info-panel-6"
+                                    type="checkbox"
+                                    name="accordian-group"
+                                    class="absolute w-px h-px -left-[100vw] top-0 overflow-hidden whitespace-nowrap border-0 p-0 m-[-1px] [clip:rect(0,0,0,0)] peer accordion-trigger"
+                                  />
+                                  <div
+                                    class="flex accordion-info-panel-heading"
+                                  >
+                                    <label
+                                      for="acc-info-panel-6"
+                                      class="cursor-pointer h-3 mt-[5px] w-3 transition-transform duration-[400ms] peer-checked:rotate-90 accordion-title-button"
+                                    >
+                                      <svg
+                                        viewBox="0 0 256 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block h-3 w-[10px] pointer-events-none"
+                                      >
+                                        <path
+                                          fill="currentColor"
+                                          d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                                        />
+                                      </svg>
+                                    </label>
+                                    <div
+                                      class="flex flex-shrink gap-4 ml-[10px] w-full z-[1] cursor-pointer hover:underline peer-focus-visible:bg-[#ffd15c] accordion-title"
+                                    >
+                                      <h3
+                                        class="flex-[0_1_100%] text-base font-medium leading-[150%] m-0 pointer-events-none w-full accordion-title-text"
+                                      >
+                                        Module 6: Working with Others
+                                      </h3>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="max-h-0 overflow-hidden pl-[26px] relative w-full transition-[max-height] duration-[400ms] ease-in-out peer-checked:max-h-[100vmax] accordion-content"
+                                  >
+                                    <div
+                                      class="text-sm font-normal leading-[150%] pt-4 [&>*]:leading-[175%] accordion-content-inner"
+                                    >
+                                      <p class="m-0">
+                                        The key principles of multi-agency
+                                        working, multi-agency working, resolving
+                                        disagreements, the escalation process,
+                                        case study - Telford, your continued
+                                        involvement and support for staff.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Module 7 -->
+                              <div
+                                data-cmpt="accordion"
+                                class="cmpt js-accordion-initialised"
+                              >
+                                <div
+                                  class="border-b border-[#ddd] my-4 pb-4 relative accordion-info-panel"
+                                >
+                                  <input
+                                    id="acc-info-panel-7"
+                                    type="checkbox"
+                                    name="accordian-group"
+                                    class="absolute w-px h-px -left-[100vw] top-0 overflow-hidden whitespace-nowrap border-0 p-0 m-[-1px] [clip:rect(0,0,0,0)] peer accordion-trigger"
+                                  />
+                                  <div
+                                    class="flex accordion-info-panel-heading"
+                                  >
+                                    <label
+                                      for="acc-info-panel-7"
+                                      class="cursor-pointer h-3 mt-[5px] w-3 transition-transform duration-[400ms] peer-checked:rotate-90 accordion-title-button"
+                                    >
+                                      <svg
+                                        viewBox="0 0 256 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block h-3 w-[10px] pointer-events-none"
+                                      >
+                                        <path
+                                          fill="currentColor"
+                                          d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                                        />
+                                      </svg>
+                                    </label>
+                                    <div
+                                      class="flex flex-shrink gap-4 ml-[10px] w-full z-[1] cursor-pointer hover:underline peer-focus-visible:bg-[#ffd15c] accordion-title"
+                                    >
+                                      <h3
+                                        class="flex-[0_1_100%] text-base font-medium leading-[150%] m-0 pointer-events-none w-full accordion-title-text"
+                                      >
+                                        Module 7: Recording, Sharing and Holding
+                                        Information
+                                      </h3>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="max-h-0 overflow-hidden pl-[26px] relative w-full transition-[max-height] duration-[400ms] ease-in-out peer-checked:max-h-[100vmax] accordion-content"
+                                  >
+                                    <div
+                                      class="text-sm font-normal leading-[150%] pt-4 [&>*]:leading-[175%] accordion-content-inner"
+                                    >
+                                      <p class="m-0">
+                                        Recording information, what to record,
+                                        why professionals don't share
+                                        information, sharing information,
+                                        information sharing - best practice and
+                                        record keeping.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Module 8 -->
+                              <div
+                                data-cmpt="accordion"
+                                class="cmpt js-accordion-initialised"
+                              >
+                                <div
+                                  class="border-b border-[#ddd] my-4 pb-4 relative accordion-info-panel"
+                                >
+                                  <input
+                                    id="acc-info-panel-8"
+                                    type="checkbox"
+                                    name="accordian-group"
+                                    class="absolute w-px h-px -left-[100vw] top-0 overflow-hidden whitespace-nowrap border-0 p-0 m-[-1px] [clip:rect(0,0,0,0)] peer accordion-trigger"
+                                  />
+                                  <div
+                                    class="flex accordion-info-panel-heading"
+                                  >
+                                    <label
+                                      for="acc-info-panel-8"
+                                      class="cursor-pointer h-3 mt-[5px] w-3 transition-transform duration-[400ms] peer-checked:rotate-90 accordion-title-button"
+                                    >
+                                      <svg
+                                        viewBox="0 0 256 512"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="inline-block h-3 w-[10px] pointer-events-none"
+                                      >
+                                        <path
+                                          fill="currentColor"
+                                          d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"
+                                        />
+                                      </svg>
+                                    </label>
+                                    <div
+                                      class="flex flex-shrink gap-4 ml-[10px] w-full z-[1] cursor-pointer hover:underline peer-focus-visible:bg-[#ffd15c] accordion-title"
+                                    >
+                                      <h3
+                                        class="flex-[0_1_100%] text-base font-medium leading-[150%] m-0 pointer-events-none w-full accordion-title-text"
+                                      >
+                                        Module 8: DSLs in Education
+                                      </h3>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="max-h-0 overflow-hidden pl-[26px] relative w-full transition-[max-height] duration-[400ms] ease-in-out peer-checked:max-h-[100vmax] accordion-content"
+                                  >
+                                    <div
+                                      class="text-sm font-normal leading-[150%] pt-4 [&>*]:leading-[175%] accordion-content-inner"
+                                    >
+                                      <p class="m-0">
+                                        <strong
+                                          >Optional Education Specific Choose
+                                          Your Path Content</strong
+                                        >
+                                        (further sector-specific guidance, the
+                                        DSL in education, policies and
+                                        procedures, child on child sexual
+                                        violence and harassment, safeguarding
+                                        and the curriculum, the Prevent Duty and
+                                        promoting British values, raising
+                                        awareness, children with additional
+                                        vulnerabilities, working with others and
+                                        sharing, recording and holding
+                                        information), your continued development
+                                        and assessment.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Download Button -->
+                            <div
+                              class="flex justify-end product-page-course-info-panel-button-wrapper"
+                            >
+                              <a
+                                class="inline-flex items-center m-0 no-underline text-[#0f1422] hover:[&_.product-page-course-info-panel-button-icon_svg]:text-[#ff8100] hover:[&_.product-page-course-info-panel-button-text_p]:text-[#ff8100] active:[&_.product-page-course-info-panel-button-icon_svg]:text-[#bb5808] active:[&_.product-page-course-info-panel-button-text_p]:text-[#bb5808] focus-visible:bg-[#ffd15c] focus-visible:text-[#0f1422] focus-visible:outline-none product-page-course-info-panel-button"
+                                target="_blank"
+                                href="https://www.highspeedtraining.co.uk/media/products/215/designated-safeguarding-lead-updated-aug-25.pdf"
+                                rel="noopener noreferrer"
+                              >
+                                <div
+                                  class="product-page-course-info-panel-button-text"
+                                >
+                                  <p
+                                    class="text-sm font-medium leading-[150%] m-0"
+                                  >
+                                    Download Course Overview (PDF)
+                                  </p>
+                                </div>
+                                <div
+                                  class="h-4 ml-2 w-4 product-page-course-info-panel-button-icon"
+                                >
+                                  <svg
+                                    viewBox="0 0 512 512"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="text-[#0f1422] h-4 w-4"
+                                  >
+                                    <path
+                                      fill="currentColor"
+                                      d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"
+                                    />
+                                  </svg>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+
+                          <!-- Assessment Tab -->
+                          <div
+                            class="product-page-course-info-panel-tab-contents-assessment"
+                          >
+                            <p>
+                              The online assessment is taken on completion of
+                              the training material.&nbsp;
+                            </p>
+                            <p>
+                              <strong
+                                >You will be asked 25 multiple choice questions
+                                with a pass mark of 80%.</strong
+                              >&nbsp;
+                            </p>
+                            <p>
+                              The answers are marked automatically so you will
+                              instantly know whether you have passed. If you
+                              don't pass don't worry! You can take the test as
+                              many times as you need with no extra charge.
+                            </p>
+                          </div>
+
+                          <!-- Suitable For Tab -->
+                          <div
+                            class="product-page-course-info-panel-tab-contents-suitable-for js-suitable-for"
+                          >
+                            <p>
+                              <span
+                                >This course is written at an advanced level and
+                                it is recommended you have some knowledge of
+                                safeguarding procedures before beginning the
+                                training.</span
+                              >
+                            </p>
+                            <p>
+                              <span></span>It is suitable for anyone who works
+                              frequently with children and who holds a
+                              management, supervisory or designated child
+                              protection role in settings such as schools,
+                              universities, charities, places of worship, sports
+                              clubs, leisure centres and GP and healthcare
+                              practices.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- course author or writer intro -->
+              <section>
+                <div
+                  class="product-page-faq-title text-2xl md:text-3xl font-serif mb-6 font-medium w-full flex justify-between items-center py-2"
+                >
+                  <h3>Written by experts</h3>
+                </div>
+
+                <div
+                  class="bg-base-100 border-base-300 collapse rounded-none group"
+                >
+                  <input type="checkbox" class="peer" />
+                  <div
+                    class="collapse-title bg-[#313e5e] text-white pt-2 pb-4 pl-3 pr-5"
+                  >
+                    <div
+                      class="c-autr-details w-full flex justify-center items-center"
+                    >
+                      <div class="c-autr-avatar avatar w-1/12">
+                        <div class="overflow-hidden rounded-full">
+                          <img
+                            src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="c-autr-info w-9/12 pl-5">
+                        <p class="pb-2">In partnership with</p>
+                        <div class="c-autr-name font-semibold">
+                          <span>Joanna Nicolas</span>
+                        </div>
+                        <div class="c-autr-job">
+                          <span
+                            >Safeguarding and Child Protection Consultant</span
+                          >
+                        </div>
+                      </div>
+
+                      <div
+                        class="c-autr-bio-btn avatar w-2/12 capitalize text-end flex justify-end items-center font-bold gap-1 self-end text-white group-hover:text-[#e07000] transition-all duration-300"
+                      >
+                        <span class="transition-all duration-500 show-bio-text"
+                          >Show Bio</span
+                        >
+                        <span
+                          class="transition-all duration-500 hidden hide-bio-text"
+                          >Hide Bio</span
+                        >
+                        <span
+                          class="w-3 h-3 aspect-square flex justify-center items-center transition-all duration-700 arrow-icon"
+                        >
+                          <svg
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <path
+                                d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <script>
+                          document
+                            .querySelectorAll(
+                              '.collapse input[type="checkbox"]'
+                            )
+                            .forEach((checkbox) => {
+                              checkbox.addEventListener("change", function () {
+                                const collapse = this.closest(".collapse");
+                                const showText =
+                                  collapse.querySelector(".show-bio-text");
+                                const hideText =
+                                  collapse.querySelector(".hide-bio-text");
+                                const arrow =
+                                  collapse.querySelector(".arrow-icon");
+
+                                if (this.checked) {
+                                  showText.classList.add("hidden");
+                                  hideText.classList.remove("hidden");
+                                  arrow.classList.add("rotate-180");
+                                } else {
+                                  showText.classList.remove("hidden");
+                                  hideText.classList.add("hidden");
+                                  arrow.classList.remove("rotate-180");
+                                }
+                              });
+                            });
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse-content bg-white text-black peer-checked:pt-4 peer-checked:border-2 peer-checked:rounded-ee-[40px] space-y-3"
+                  >
+                    <p>
+                      Joanna Nicolas is a highly regarded safeguarding
+                      consultant, trainer and social worker with 30 years of
+                      experience in the sector.
+                    </p>
+
+                    <p>
+                      Joanna is a co-opted Board member of Cafcass and a member
+                      of the Prince’s Trust Safeguarding Advisory Panel. She is
+                      also a court-appointed expert witness in child protection
+                      cases.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- FAQ Accordion -->
+              <section>
+                <div
+                  class="product-page-faq-title text-2xl md:text-3xl font-serif mb-6 font-medium w-full flex justify-between items-center py-2"
+                >
+                  <h3>Frequently asked questions</h3>
+                </div>
+
+                <div class="faq-accordion">
+                  <div
+                    class="faq-accordion-container flex justify-start items-center"
+                  >
+                    <div
+                      class="flex flex-col justify-center items-center w-full gap-4"
+                    >
+                      <div
+                        class="collapse collapse-plus border border-base-300 rounded-se-none rounded-es-none rounded-ss-none"
+                      >
+                        <input
+                          type="radio"
+                          name="faq-accordion"
+                          checked="checked"
+                          class="peer"
+                        />
+                        <div
+                          class="collapse-title font-semibold bg-[#e8e4d9] peer-checked:bg-[#f7f6f2] after:text-3xl"
+                        >
+                          How do I create an account?
+                        </div>
+                        <div
+                          class="collapse-content text-sm bg-[#e8e4d9] peer-checked:bg-[#f7f6f2]"
+                        >
+                          Click the "Sign Up" button in the top right corner and
+                          follow the registration process.
+                        </div>
+                      </div>
+
+                      <div
+                        class="collapse collapse-plus border border-base-300 rounded-se-none rounded-es-none rounded-ss-none"
+                      >
+                        <input type="radio" name="faq-accordion" class="peer" />
+                        <div
+                          class="collapse-title font-semibold bg-[#e8e4d9] peer-checked:bg-[#f7f6f2] after:text-3xl"
+                        >
+                          How do I create an account?
+                        </div>
+                        <div
+                          class="collapse-content text-sm bg-[#e8e4d9] peer-checked:bg-[#f7f6f2]"
+                        >
+                          Click the "Sign Up" button in the top right corner and
+                          follow the registration process.
+                        </div>
+                      </div>
+
+                      <div
+                        class="collapse collapse-plus border border-base-300 rounded-se-none rounded-es-none rounded-ss-none"
+                      >
+                        <input type="radio" name="faq-accordion" class="peer" />
+                        <div
+                          class="collapse-title font-semibold bg-[#e8e4d9] peer-checked:bg-[#f7f6f2] after:text-3xl"
+                        >
+                          How do I create an account?
+                        </div>
+                        <div
+                          class="collapse-content text-sm bg-[#e8e4d9] peer-checked:bg-[#f7f6f2]"
+                        >
+                          Click the "Sign Up" button in the top right corner and
+                          follow the registration process.
+                        </div>
+                      </div>
+
+                      <div
+                        class="collapse collapse-plus border border-base-300 rounded-se-none rounded-es-none rounded-ss-none"
+                      >
+                        <input type="radio" name="faq-accordion" class="peer" />
+                        <div
+                          class="collapse-title font-semibold bg-[#e8e4d9] peer-checked:bg-[#f7f6f2] after:text-3xl"
+                        >
+                          How do I create an account?
+                        </div>
+                        <div
+                          class="collapse-content text-sm bg-[#e8e4d9] peer-checked:bg-[#f7f6f2]"
+                        >
+                          Click the "Sign Up" button in the top right corner and
+                          follow the registration process.
+                        </div>
+                      </div>
+
+                      <div
+                        class="collapse collapse-plus border border-base-300 rounded-se-none rounded-es-none rounded-ss-none"
+                      >
+                        <input type="radio" name="faq-accordion" class="peer" />
+                        <div
+                          class="collapse-title font-semibold bg-[#e8e4d9] peer-checked:bg-[#f7f6f2] after:text-3xl"
+                        >
+                          How do I create an account?
+                        </div>
+                        <div
+                          class="collapse-content text-sm bg-[#e8e4d9] peer-checked:bg-[#f7f6f2]"
+                        >
+                          Click the "Sign Up" button in the top right corner and
+                          follow the registration process.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- review sec -->
+              <section class="product-page-reviews bg-[#e7edff] py-16">
+                <div class="review-container max-w-7xl mx-auto w-full py-4">
+                  <!-- section header -->
+                  <div
+                    class="section-header text-2xl md:text-3xl font-serif mb-8 font-medium w-full flex justify-between items-center py-2"
+                  >
+                    <h2>Course reviews</h2>
+                  </div>
+
+                  <div
+                    class="flex flex-col md:flex-row justify-between items-stretch w-full"
+                  >
+                    <div
+                      class="w-full md:w-1/3 lg:w-1/2 mb-6 md:mb-0 px-14 md:px-0"
+                    >
+                      <div class="text-center p-3 w-full h-full bg-[#c5d4fc]">
+                        <div
+                          class="inline-flex flex-col items-center space-y-1 w-full h-full justify-center"
+                        >
+                          <!-- Heading -->
+                          <div class="text-lg font-semibold">Excellent</div>
+
+                          <!-- Stars -->
+                          <div class="flex text-yellow-400 text-3xl">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span class="text-white">★</span>
+                            <!-- 4.5 star look -->
+                          </div>
+
+                          <!-- Average rating -->
+                          <div class="text-sm text-gray-700">
+                            <strong class="text-base">4.7</strong> average
+                          </div>
+
+                          <!-- Review count -->
+                          <div class="text-sm text-gray-700">
+                            <strong class="text-base">28,716</strong> reviews
+                          </div>
+
+                          <!-- Reviews.io logo -->
+                          <div>
+                            <a
+                              href="https://www.reviews.io/company-reviews/store/high-speed-training-limited"
+                              target="_blank"
+                              rel="noreferrer"
+                              title="Read more reviews on REVIEWS.io"
+                            >
+                              <img
+                                src="https://assets.reviews.io/img/all-global-assets/logo/reviewsio-logo.svg"
+                                alt="REVIEWS.io Logo"
+                                class="w-[120px] h-auto"
+                              />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="w-[calc(100%-(56px*2))] md:w-[calc(66%-56px)] lg:w-[calc(50%-56px)] mx-14 relative"
+                    >
+                      <!-- Swiper -->
+                      <div class="swiper-review w-full overflow-hidden">
+                        <div class="swiper-wrapper flex !items-stretch">
+                          <!-- Slide 1 -->
+                          <div
+                            class="swiper-slide bg-white shadow rounded-lg p-6 flex flex-col"
+                          >
+                            <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                            <p class="text-gray-700 flex-1 mb-4">
+                              “The course was clear, concise, and easy to
+                              follow. Highly recommend!”
+                            </p>
+                            <span class="text-sm text-gray-500"
+                              >– Sarah J.</span
+                            >
+                          </div>
+                          <!-- Slide 1 -->
+                          <div
+                            class="swiper-slide bg-white shadow rounded-lg p-6 flex flex-col"
+                          >
+                            <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                            <p class="text-gray-700 flex-1 mb-4">
+                              “The course was clear, concise, and easy to
+                              follow. Highly recommend!”
+                            </p>
+                            <span class="text-sm text-gray-500"
+                              >– Sarah J.</span
+                            >
+                          </div>
+
+                          <!-- Slide 2 -->
+                          <div
+                            class="swiper-slide bg-white shadow rounded-lg p-6 flex flex-col"
+                          >
+                            <div class="flex text-yellow-400 mb-4">★★★★☆</div>
+                            <p class="text-gray-700 flex-1 mb-4">
+                              “Great value for money. Well structured and easy
+                              to understand.”
+                            </p>
+                            <span class="text-sm text-gray-500"
+                              >– Ahmed R.</span
+                            >
+                          </div>
+
+                          <!-- Slide 3 -->
+                          <div
+                            class="swiper-slide bg-white shadow rounded-lg p-6 flex flex-col"
+                          >
+                            <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                            <p class="text-gray-700 flex-1 mb-4">
+                              “I liked that I could complete the training at my
+                              own pace.”
+                            </p>
+                            <span class="text-sm text-gray-500"
+                              >– Emily K.</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Custom Navigation -->
+                      <div
+                        class="w-[calc(100%+(48px*2))] flex justify-between items-center gap-4 absolute top-[calc(50%-24px)] -left-12 z-50"
+                      >
+                        <button
+                          class="custom-prev w-12 h-12 flex items-center justify-center bg-transparent text-black rounded-full hover:bg-gray-200 p-3"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 48 48"
+                            class="w-full h-full"
+                          >
+                            <path
+                              fill="none"
+                              stroke="#000000"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="4"
+                              d="M36 24.008H12M24 12l12 12l-12 12"
+                            />
+                          </svg>
+                        </button>
+
+                        <button
+                          class="custom-next w-12 h-12 flex items-center justify-center bg-transparent text-black rounded-full hover:bg-gray-200 p-3"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 48 48"
+                            class="w-full h-full"
+                          >
+                            <path
+                              fill="none"
+                              stroke="#000000"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="4"
+                              d="M12 23.992h24M24 36L12 24l12-12"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="all-review-cta sec-cta w-full text-end flex justify-end items-center pt-6"
+                  >
+                    <a
+                      href="#"
+                      class="flex justify-center items-center gap-4 font-semibold"
+                    >
+                      View all reviews
+                      <span class="w-4 h-4 flex justify-center items-center">
+                        <svg
+                          fill="#000000"
+                          viewBox="0 0 32 32"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM16.637 9.957c-0.39 0.39-0.39 1.024 0 1.414l3.617 3.617h-11.264c-0.553 0-1 0.448-1 1s0.447 1 1 1h11.327l-3.68 3.68c-0.39 0.39-0.39 1.023 0 1.414 0.195 0.195 0.451 0.293 0.707 0.293s0.512-0.098 0.707-0.293l5.907-6.063-5.907-6.063c-0.391-0.39-1.023-0.39-1.415 0z"
+                            ></path>
+                          </g>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </section>
+
+              <!-- suggested course sec -->
+              <section class="product-page-sug-c py-16">
+                <div class="sug-c-container max-w-7xl mx-auto w-full py-4">
+                  <!-- section header -->
+                  <div
+                    class="section-header text-2xl md:text-3xl font-serif mb-8 font-medium w-full flex justify-between items-center py-2"
+                  >
+                    <h2>Recommended courses</h2>
+                  </div>
+
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 md:gap-3 justify-between items-stretch w-full"
+                  >
+                    <div
+                      class="suggested-course-card-wrapper p-5 flex flex-col w-full h-full justify-start items-start group bg-[#f7f6f2] hover:bg-[#f0ede6] rounded-ss-[35px] rounded-ee-[35px] overflow-hidden transition-all duration-500 ease-in-out"
+                    >
+                      <div
+                        class="course-review flex justify-center items-center gap-2 mb-4"
+                      >
+                        <div class="flex text-yellow-400">★★★★★</div>
+                        <span class="text-sm">(3286 Reviews)</span>
+                      </div>
+                      <h4 class="course-card-course-title text-xl">
+                        Level 2 Food Hygiene and Safety for Catering
+                      </h4>
+                      <!-- <div class="course-card-course-teg flex-1 my-3 text-sm">
+                        <div
+                          class="flex flex-wrap gap-2 justify-start gap-y-2 items-start"
+                        >
+                          <span
+                            class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                          >
+                            <span>✓</span> CPD
+                          </span>
+                          <span
+                            class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                          >
+                            <span>✓</span> Mesothelioma UK
+                          </span>
+                          <span
+                            class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                          >
+                            <span>✓</span> ROSPA
+                          </span>
+                          <span
+                            class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                          >
+                            <span>✓</span> City &amp; Guilds
+                          </span>
+                          <span
+                            class="course-teg rounded-full bg-[#d1c9b3] px-2 py-0.5 w-fit h-fit"
+                          >
+                            <span>✓</span> IATP
+                          </span>
+                        </div>
+                      </div> -->
+                      <div
+                        class="course-card-end flex justify-between items-center w-full mt-4"
+                      >
+                        <div
+                          class="course-price text-gray-600 text-lg font-semibold"
+                        >
+                          £20<span class="text-sm font-normal">+VAT</span>
+                        </div>
+                        <div class="course-card-course-button w-fit">
+                          <a
+                            class="btn w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white"
+                          >
+                            View course
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="suggested-course-card-wrapper p-5 flex flex-col w-full h-full justify-start items-start group bg-[#f7f6f2] hover:bg-[#f0ede6] rounded-ss-[35px] rounded-ee-[35px] overflow-hidden transition-all duration-500 ease-in-out"
+                    >
+                      <div
+                        class="course-review flex justify-center items-center gap-2 mb-4"
+                      >
+                        <div class="flex text-yellow-400">★★★★★</div>
+                        <span class="text-sm">(3286 Reviews)</span>
+                      </div>
+                      <h4 class="course-card-course-title text-xl">
+                        Level 2 Food Hygiene and Safety for Catering
+                      </h4>
+
+                      <div
+                        class="course-card-end flex justify-between items-center w-full mt-4"
+                      >
+                        <div
+                          class="course-price text-gray-600 text-lg font-semibold"
+                        >
+                          £20<span class="text-sm font-normal">+VAT</span>
+                        </div>
+                        <div class="course-card-course-button w-fit">
+                          <a
+                            class="btn w-full rounded-full bg-white border-2 border-[#bb5808] text-[#bb5808] transition-all duration-500 group-hover:bg-[#e07000] group-hover:text-white"
+                          >
+                            View course
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="all-review-cta sec-cta w-full text-end flex justify-end items-center pt-6"
+                  >
+                    <a
+                      href="#"
+                      class="flex justify-center items-center gap-4 font-semibold"
+                    >
+                      View all reviews
+                      <span class="w-4 h-4 flex justify-center items-center">
+                        <svg
+                          fill="#000000"
+                          viewBox="0 0 32 32"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM16.637 9.957c-0.39 0.39-0.39 1.024 0 1.414l3.617 3.617h-11.264c-0.553 0-1 0.448-1 1s0.447 1 1 1h11.327l-3.68 3.68c-0.39 0.39-0.39 1.023 0 1.414 0.195 0.195 0.451 0.293 0.707 0.293s0.512-0.098 0.707-0.293l5.907-6.063-5.907-6.063c-0.391-0.39-1.023-0.39-1.415 0z"
+                            ></path>
+                          </g>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <footer>
       <section class="brand-logo bg-[#f0ede6]">
         <div class="max-w-screen-2xl mx-auto w-full p-4 lg:px-10 lg:py-6">
@@ -1389,6 +3808,28 @@
 
     <!-- scripts -->
     <script>
+      function toggleWywl() {
+        const content = document.getElementById("wywlContent");
+        const text = document.getElementById("wywlBtnText");
+        const icon = document.getElementById("wywlIcon");
+        const fade = document.getElementById("fadeOverlay");
+
+        content.classList.toggle("max-h-64");
+        content.classList.toggle("max-h-[2000px]"); // expand
+
+        if (text.textContent === "Show more") {
+          text.textContent = "Show less";
+          fade.style.display = "none";
+          icon.style.transform = "rotate(180deg)";
+        } else {
+          text.textContent = "Show more";
+          fade.style.display = "block";
+          icon.style.transform = "rotate(0deg)";
+        }
+      }
+    </script>
+
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         const details = document.querySelectorAll(".menu details");
 
@@ -1501,6 +3942,29 @@
       });
     </script>
 
+    <script>
+      document
+        .querySelectorAll('.collapse input[type="checkbox"]')
+        .forEach((checkbox) => {
+          checkbox.addEventListener("change", function () {
+            const collapse = this.closest(".collapse");
+            const showText = collapse.querySelector(".show-bio-text");
+            const hideText = collapse.querySelector(".hide-bio-text");
+            const arrow = collapse.querySelector(".arrow-icon");
+
+            if (this.checked) {
+              showText.classList.add("hidden");
+              hideText.classList.remove("hidden");
+              arrow.classList.add("rotate-180");
+            } else {
+              showText.classList.remove("hidden");
+              hideText.classList.add("hidden");
+              arrow.classList.remove("rotate-180");
+            }
+          });
+        });
+    </script>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -1518,9 +3982,9 @@
         },
 
         /*pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        }, */
+        el: ".swiper-pagination",
+        clickable: true,
+      }, */
 
         navigation: {
           nextEl: ".custom-next",
@@ -1530,7 +3994,7 @@
         breakpoints: {
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          1024: { slidesPerView: 1 },
         },
 
         on: {
@@ -1538,6 +4002,7 @@
           resize: updateSlideHeights,
         },
       });
+
       // Function to make all slides equal height
       function updateSlideHeights() {
         const slides = document.querySelectorAll(
@@ -1563,110 +4028,276 @@
       }
     </script>
 
-    <!-- hero swiper -->
     <script>
-      const heroSwiper = new Swiper(".swiper-hero", {
-        loop: true,
-        slidesPerView: 1.2,
-        centeredSlides: true,
-        spaceBetween: 20,
+      const swiperWrapper = document.getElementById("swiper-wrapper-container");
+      let swiperInstance = null;
+      // Tailwind's lg breakpoint is 1024px
+      const mediaQuery = window.matchMedia("(max-width: 1023px)");
 
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
+      function initSwiper() {
+        // Only initialize if screen is smaller than lg and swiper doesn't exist
+        if (mediaQuery.matches && !swiperInstance) {
+          swiperWrapper.classList.add("swiper-wrapper");
 
-        navigation: {
-          nextEl: ".hero-custom-next",
-          prevEl: ".hero-custom-prev",
-        },
+          swiperInstance = new Swiper(".swiper-tyct", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+              nextEl: ".custom-next-tyct",
+              prevEl: ".custom-prev-tyct",
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+              dynamicBullets: false, // Optional: set to true for dynamic bullets
+            },
+          });
 
-        pagination: {
-          el: ".hero-pagination",
-          clickable: true,
-        },
-
-        on: {
-          init() {
-            updateHeroSlideHeights();
-            handleHeroVisibility(this);
-          },
-          resize() {
-            updateHeroSlideHeights();
-          },
-          slideChangeTransitionStart() {
-            handleHeroVisibility(this);
-          },
-        },
-      });
-
-      // Visibility Logic
-      function handleHeroVisibility(swiper) {
-        swiper.slides.forEach((slide) => {
-          slide.style.opacity = "0"; // default: gone (left side)
-        });
-
-        // Active = full visible
-        swiper.slides[swiper.activeIndex].style.opacity = "1";
-
-        // Coming from right = 50% visible
-        const nextIndex = swiper.activeIndex + 1;
-        if (swiper.slides[nextIndex]) {
-          swiper.slides[nextIndex].style.opacity = "0.5";
+          console.log("Swiper initialized");
         }
       }
 
-      // Auto Equal Height for Hero Slides
-      function updateHeroSlideHeights() {
-        const slides = document.querySelectorAll(".swiper-hero .swiper-slide");
-        let maxHeight = 0;
+      function destroySwiper() {
+        // Only destroy if screen is lg or larger and swiper exists
+        if (!mediaQuery.matches && swiperInstance) {
+          swiperInstance.destroy(true, true); // destroy(deleteInstance, cleanStyles)
+          swiperInstance = null;
+          swiperWrapper.classList.remove("swiper-wrapper");
 
-        slides.forEach((slide) => {
-          slide.style.height = "auto";
-        });
-
-        slides.forEach((slide) => {
-          const h = slide.offsetHeight;
-          if (h > maxHeight) maxHeight = h;
-        });
-
-        slides.forEach((slide) => {
-          slide.style.height = maxHeight + "px";
-        });
+          console.log("Swiper destroyed");
+        }
       }
+
+      function handleBreakpoint() {
+        if (mediaQuery.matches) {
+          initSwiper();
+        } else {
+          destroySwiper();
+        }
+      }
+
+      // Initial check
+      handleBreakpoint();
+
+      // Listen for changes
+      mediaQuery.addEventListener("change", handleBreakpoint);
+
+      // Backup resize listener
+      let resizeTimer;
+      window.addEventListener("resize", function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(handleBreakpoint, 100);
+      });
     </script>
 
-    <!-- animation js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
     <script>
-      // Load your animation
-      const animation = lottie.loadAnimation({
-        container: document.getElementById("animation-1"), // Required
-        renderer: "svg", // Required: 'svg', 'canvas', or 'html'
-        loop: true, // Optional
-        autoplay: true, // Optional
-        path: "assets/animation/Online-Classes.json", // Path to your JSON file
+      // Tabs functionality
+      const tabIndividual = document.getElementById("tabIndividual");
+      const tabTeam = document.getElementById("tabTeam");
+      const uspIndividual = document.getElementById("uspIndividual");
+      const uspTeam = document.getElementById("uspTeam");
+
+      tabIndividual.addEventListener("click", function (e) {
+        e.preventDefault();
+        tabIndividual.classList.add("tab-active");
+        tabTeam.classList.remove("tab-active");
+        uspIndividual.classList.remove("hidden");
+        uspTeam.classList.add("hidden");
+        lucide.createIcons();
       });
 
-      // Load your animation
-      const animation2 = lottie.loadAnimation({
-        container: document.getElementById("animation-2"), // Required
-        renderer: "svg", // Required: 'svg', 'canvas', or 'html'
-        loop: true, // Optional
-        autoplay: true, // Optional
-        path: "assets/animation/study-online.json", // Path to your JSON file
-      });
-
-      // Load your animation
-      const animation3 = lottie.loadAnimation({
-        container: document.getElementById("animation-3"), // Required
-        renderer: "svg", // Required: 'svg', 'canvas', or 'html'
-        loop: true, // Optional
-        autoplay: true, // Optional
-        path: "assets/animation/Global-Education.json", // Path to your JSON file
+      tabTeam.addEventListener("click", function (e) {
+        e.preventDefault();
+        tabTeam.classList.add("tab-active");
+        tabIndividual.classList.remove("tab-active");
+        uspTeam.classList.remove("hidden");
+        uspIndividual.classList.add("hidden");
+        lucide.createIcons();
       });
     </script>
-    
+
+    <!-- Custom JavaScript for Carousel -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.getElementById("vertical-thumbnails");
+        const carouselBody = carousel.querySelector(".carousel-body");
+        const slides = carousel.querySelectorAll(".carousel-slide");
+        const thumbnails = carousel.querySelectorAll(
+          ".carousel-pagination-item"
+        );
+        const prevBtn = carousel.querySelector(".carousel-prev");
+        const nextBtn = carousel.querySelector(".carousel-next");
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        // Function to update carousel
+        function updateCarousel(index) {
+          if (index < 0 || index >= totalSlides) return;
+
+          currentIndex = index;
+
+          // Update slide position
+          const offset = -currentIndex * 100;
+          carouselBody.style.transform = `translateX(${offset}%)`;
+
+          // Update active states
+          slides.forEach((slide, i) => {
+            if (i === currentIndex) {
+              slide.classList.add("active");
+            } else {
+              slide.classList.remove("active");
+            }
+          });
+
+          thumbnails.forEach((thumb, i) => {
+            if (i === currentIndex) {
+              thumb.classList.add("active");
+              thumb.classList.remove("opacity-60");
+              thumb.classList.add("opacity-100");
+            } else {
+              thumb.classList.remove("active");
+              thumb.classList.add("opacity-60");
+              thumb.classList.remove("opacity-100");
+            }
+          });
+
+          // Update button states
+          prevBtn.disabled = currentIndex === 0;
+          nextBtn.disabled = currentIndex === totalSlides - 1;
+
+          if (prevBtn.disabled) {
+            prevBtn.classList.add("opacity-50", "cursor-not-allowed");
+          } else {
+            prevBtn.classList.remove("opacity-50", "cursor-not-allowed");
+          }
+
+          if (nextBtn.disabled) {
+            nextBtn.classList.add("opacity-50", "cursor-not-allowed");
+          } else {
+            nextBtn.classList.remove("opacity-50", "cursor-not-allowed");
+          }
+        }
+
+        // Previous button
+        prevBtn.addEventListener("click", function () {
+          if (currentIndex > 0) {
+            updateCarousel(currentIndex - 1);
+          }
+        });
+
+        // Next button
+        nextBtn.addEventListener("click", function () {
+          if (currentIndex < totalSlides - 1) {
+            updateCarousel(currentIndex + 1);
+          }
+        });
+
+        // Thumbnail click
+        thumbnails.forEach((thumb, index) => {
+          thumb.addEventListener("click", function () {
+            updateCarousel(index);
+          });
+        });
+
+        // Keyboard navigation
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "ArrowLeft") {
+            prevBtn.click();
+          } else if (e.key === "ArrowRight") {
+            nextBtn.click();
+          }
+        });
+
+        // Touch/Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselBody.addEventListener("touchstart", function (e) {
+          touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carouselBody.addEventListener("touchend", function (e) {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        });
+
+        function handleSwipe() {
+          if (touchEndX < touchStartX - 50) {
+            // Swipe left
+            nextBtn.click();
+          }
+          if (touchEndX > touchStartX + 50) {
+            // Swipe right
+            prevBtn.click();
+          }
+        }
+
+        // Initialize
+        updateCarousel(0);
+      });
+    </script>
+
+    <script>
+      // Tab switching functionality
+      const tabItems = document.querySelectorAll(
+        ".product-page-course-info-panel-tab-menu-item"
+      );
+      const tabContents = document.querySelectorAll(
+        ".product-page-course-info-panel-tab-contents > *"
+      );
+
+      tabItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          // Remove active class from all tabs
+          tabItems.forEach((tab) => tab.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+
+          // Add active class to clicked tab
+          item.classList.add("active");
+          tabContents[index].classList.add("active");
+        });
+
+        // Keyboard accessibility
+        item.addEventListener("keypress", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            item.click();
+          }
+        });
+      });
+
+      // Accordion functionality
+      const accordionInputs = document.querySelectorAll(
+        'input[type="checkbox"].accordion-trigger'
+      );
+
+      accordionInputs.forEach((input) => {
+        input.addEventListener("change", function () {
+          const content =
+            this.parentElement.querySelector(".accordion-content");
+          if (this.checked) {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = "0";
+          }
+        });
+      });
+
+      // Calculate and set max-height for accordion contents on load
+      window.addEventListener("load", () => {
+        const accordionContents =
+          document.querySelectorAll(".accordion-content");
+        accordionContents.forEach((content) => {
+          const checkbox = content.parentElement.querySelector(
+            'input[type="checkbox"]'
+          );
+          if (checkbox && checkbox.checked) {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      });
+    </script>
   </body>
 </html>

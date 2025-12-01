@@ -2,6 +2,10 @@
   --color-primary: #20293e;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   min-width: 425px;
   font-family: "Space Grotesk", sans-serif;
