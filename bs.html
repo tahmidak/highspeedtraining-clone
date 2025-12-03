@@ -564,6 +564,329 @@
         }
       }
     </style>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Trebuchet MS", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #0f1422;
+        background-color: #f9f9f9;
+      }
+
+      /* Purchase Panel Main Container */
+      .purchase-panel_main {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 0;
+        max-width: 400px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Tabs */
+      .purchase-panel_tab {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        background-color: #f0ede6;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease;
+        color: #0f1422;
+      }
+
+      .purchase-panel_tab:first-child {
+        border-top-left-radius: 8px;
+        border-right: 1px solid #ddd;
+      }
+
+      .purchase-panel_tab:last-child {
+        border-top-right-radius: 8px;
+      }
+
+      .purchase-panel_tab:hover {
+        background-color: #e5e1d8;
+      }
+
+      .purchase-panel_tab.active {
+        background-color: #fff;
+        border-bottom: 3px solid #ff8100;
+        font-weight: 600;
+      }
+
+      .purchase-panel_tab:focus-visible {
+        outline: 2px solid #ffd15c;
+        outline-offset: -2px;
+      }
+
+      /* Content Area */
+      .purchase-panel_content {
+        padding: 24px;
+      }
+
+      /* USP Content */
+      .purchase-panel_usp-content {
+        display: none;
+      }
+
+      .purchase-panel_usp-content.active {
+        display: block;
+      }
+
+      .purchase-panel_usp-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 24px 0;
+      }
+
+      .purchase-panel_usp-content li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        gap: 12px;
+      }
+
+      .purchase-panel_usp-content li:last-child {
+        margin-bottom: 0;
+      }
+
+      .purchase-panel_usp-content svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .purchase-panel_usp-content p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #0f1422;
+      }
+
+      /* Price Section */
+      .purchase-panel_price {
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 20px 0;
+        margin-bottom: 20px;
+      }
+
+      .purchase-panel_price_total {
+        font-family: Georgia, serif;
+        font-size: 32px;
+        font-weight: 400;
+        margin: 0 0 12px 0;
+        color: #0f1422;
+      }
+
+      .purchase-panel_price_total span {
+        font-size: 32px;
+      }
+
+      .purchase-panel_price_vat-toggle {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .purchase-panel_price_vat-text {
+        font-size: 14px;
+        color: #0f1422;
+        text-transform: lowercase;
+      }
+
+      /* Toggle Switch */
+      .purchase-panel_price_switch {
+        position: relative;
+        width: 44px;
+        height: 24px;
+      }
+
+      .purchase-panel_price_switch input[type="checkbox"] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .purchase-panel_price_switch label {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 24px;
+      }
+
+      .purchase-panel_price_switch label:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      .purchase-panel_price_switch input:checked + label {
+        background-color: #7396f7;
+      }
+
+      .purchase-panel_price_switch input:checked + label:before {
+        transform: translateX(20px);
+      }
+
+      .purchase-panel_price_switch input:focus-visible + label {
+        outline: 2px solid #ffd15c;
+        outline-offset: 2px;
+      }
+
+      /* Quantity Controls */
+      .purchase-panel_quantity {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .purchase-panel_quantity-icon {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #baae8c;
+        border-radius: 4px;
+        background-color: #fff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        padding: 0;
+      }
+
+      .purchase-panel_quantity-icon img {
+        width: 16px;
+        height: 16px;
+      }
+
+      .purchase-panel_quantity-icon:hover:not(.disabled) {
+        background-color: #ff8100;
+        border-color: #ff8100;
+      }
+
+      .purchase-panel_quantity-icon:active:not(.disabled) {
+        background-color: #bb5808;
+        border-color: #bb5808;
+      }
+
+      .purchase-panel_quantity-icon:focus-visible {
+        outline: 2px solid #ffd15c;
+        outline-offset: 2px;
+      }
+
+      .purchase-panel_quantity-icon.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+
+      .purchase-panel_quantity input[type="number"] {
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        border: 2px solid #baae8c;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #0f1422;
+      }
+
+      .purchase-panel_quantity input[type="number"]:focus {
+        outline: 2px solid #ffd15c;
+        outline-offset: 2px;
+        border-color: #baae8c;
+      }
+
+      /* Remove number input arrows */
+      .purchase-panel_quantity input[type="number"]::-webkit-inner-spin-button,
+      .purchase-panel_quantity input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .purchase-panel_quantity input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      /* Add to Basket Button */
+      .purchase-panel_add-to-basket-btn {
+        width: 100%;
+        padding: 16px 24px;
+        background-color: #ff8100;
+        color: #0f1422;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-align: center;
+      }
+
+      .purchase-panel_add-to-basket-btn:hover {
+        background-color: #e67300;
+      }
+
+      .purchase-panel_add-to-basket-btn:active {
+        background-color: #bb5808;
+      }
+
+      .purchase-panel_add-to-basket-btn:focus-visible {
+        outline: 2px solid #ffd15c;
+        outline-offset: 2px;
+      }
+
+      /* Discount Message */
+      .purchase-panel_discount-wrapper {
+        margin-top: 16px;
+        padding: 12px;
+        background-color: #fff9e6;
+        border-radius: 8px;
+        border: 1px solid #ffd15c;
+      }
+
+      .purchase-panel_discount {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .purchase-panel_discount svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+      }
+
+      .purchase-panel_discount-msg {
+        margin: 0;
+        font-size: 14px;
+        color: #0f1422;
+        font-weight: 500;
+      }
+    </style>
   </head>
 
   <body>
@@ -5765,8 +6088,923 @@
           </div>
         </div>
       </div>
+    </main>
 
-      
+    <main>
+      <!-- test layouts -->
+      <div class="flex w-full h-full min-h-[100vh] flex-wrap">
+        <div class="no-1 w-9/12 h-[20vh] bg-red-700 order-1"></div>
+        <div
+          class="no-2 w-[calc(25%-20px)] h-[140vh] bg-blue-700 order-3"
+        ></div>
+        <div class="no-3 w-9/12 h-[120vh] bg-green-700 order-2"></div>
+      </div>
+
+      <!-- grid layout -->
+      <div class="w-full grid grid-cols-12 auto-rows-min gap-0 text-white">
+        <div class="no-1 bg-red-700 col-span-12 md:col-span-9">
+          <div class="w-full h-[10vh]">1</div>
+        </div>
+        <div
+          class="no-2 bg-blue-700 col-span-12 md:col-span-3 md:row-span-2 xl:row-span-3 xl:col-start-10"
+        >
+          <div class="w-full h-full min-h-[20vh]">2</div>
+        </div>
+        <div class="no-3 bg-green-700 col-span-12 md:col-span-9 xl:row-start-2">
+          <div class="w-full min-h-[30vh]">3</div>
+        </div>
+        <div
+          class="no-3 bg-yellow-700 col-span-12 xl:col-span-9 xl:row-start-3"
+        >
+          <div class="w-full h-[120vh]">4</div>
+        </div>
+      </div>
+    </main>
+
+    <main>
+      <div class="max-w-md mx-auto">
+        <div class="purchase-panel_main">
+          <!-- Tabs -->
+          <div
+            class="purchase-panel_tab purchase-panel_tab--individual js_pp_tab--individual active"
+            tabindex="0"
+            data-selenium-id="purchase-panel_tab--individual"
+          >
+            For me
+          </div>
+          <div
+            class="purchase-panel_tab purchase-panel_tab--team js_pp_tab--team"
+            tabindex="0"
+            data-selenium-id="purchase-panel_tab--team"
+          >
+            For teams
+          </div>
+
+          <!-- Content -->
+          <div class="purchase-panel_content">
+            <!-- Individual USP Content -->
+            <div
+              class="purchase-panel_usp-content purchase-panel_usp-content--individual active"
+            >
+              <ul>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>100% online training</p>
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>Start when you like</p>
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>Learn on any device (desktop, mobile or tablet)</p>
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>Instant assessment and result</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Team USP Content -->
+            <div
+              class="purchase-panel_usp-content purchase-panel_usp-content--team"
+              data-selenium-id="purchase-panel_usp-content--team"
+            >
+              <ul>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>1 learner per course</p>
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>Train teams of all sizes</p>
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>Bulk discounts starting at 10% off 10 courses</p>
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p>
+                    Pay by invoice with 30 day payment terms available (5+
+                    courses)
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Price Section -->
+            <div class="purchase-panel_price">
+              <h3 class="purchase-panel_price_total">
+                £<span
+                  class="js_pp_price"
+                  data-selenium-id="purchase-panel_product-price"
+                  >31</span
+                ><span
+                  class="js_pp_vat"
+                  data-selenium-id="purchase-panel_vat-text"
+                  >&nbsp;+VAT</span
+                >
+              </h3>
+              <div class="purchase-panel_price_vat-toggle">
+                <span class="purchase-panel_price_vat-text">include vat</span>
+                <div class="purchase-panel_price_switch">
+                  <input
+                    type="checkbox"
+                    id="pp_vat-toggle"
+                    name="pp_vat-toggle"
+                    autocomplete="off"
+                    tabindex="0"
+                    class="js_pp_vat-toggle"
+                  />
+                  <label
+                    for="pp_vat-toggle"
+                    data-selenium-id="purchase-panel_vat-toggle"
+                  ></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Purchase Form -->
+            <form
+              class="purchase-panel_purchase-controls js_addToBasket"
+              method="post"
+              id="js__addToBasket__form"
+            >
+              <div class="purchase-panel_quantity">
+                <button
+                  type="button"
+                  class="purchase-panel_quantity-icon js_pp_decrement disabled"
+                  tabindex="0"
+                  aria-label="decrease basket count button"
+                  data-selenium-id="purchase-panel_qty-decrement"
+                  disabled
+                >
+                  <img
+                    alt="minus"
+                    loading="eager"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f1422' stroke-width='2'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E"
+                  />
+                </button>
+                <input
+                  type="number"
+                  pattern="[0-9]+"
+                  min="1"
+                  max="999999"
+                  class="js_pp_quantity js_addToBasket-quantity"
+                  id="Quantity"
+                  name="Quantity"
+                  tabindex="0"
+                  value="1"
+                  autocomplete="off"
+                  data-selenium-id="tb_quantity"
+                />
+                <input
+                  type="hidden"
+                  value="120"
+                  id="ProductId"
+                  name="ProductId"
+                />
+                <button
+                  type="button"
+                  class="purchase-panel_quantity-icon js_pp_increment"
+                  aria-label="increase basket count button"
+                  tabindex="0"
+                  data-selenium-id="purchase-panel_qty-increment"
+                >
+                  <img
+                    alt="plus"
+                    loading="eager"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f1422' stroke-width='2'%3E%3Cline x1='12' y1='5' x2='12' y2='19'/%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E"
+                  />
+                </button>
+              </div>
+              <button
+                data-selenium-id="btn_buyNow"
+                class="purchase-panel_add-to-basket-btn js_modal_open_trigger js_modal_submit_trigger"
+                type="submit"
+              >
+                Add To Basket
+              </button>
+            </form>
+
+            <!-- Discount Message (hidden by default) -->
+            <div
+              class="purchase-panel_discount-wrapper js_pp_discount"
+              data-selenium-id="purchase-panel_discount-msg"
+              style="display: none"
+            >
+              <div class="purchase-panel_discount">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                    fill="#ffd15c"
+                    stroke="#ff8100"
+                    stroke-width="1"
+                  />
+                </svg>
+                <p class="purchase-panel_discount-msg">
+                  Includes a 10% discount for 10+ courses
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <script>
+        // Tab switching functionality
+        const individualTab = document.querySelector(".js_pp_tab--individual");
+        const teamTab = document.querySelector(".js_pp_tab--team");
+        const individualContent = document.querySelector(
+          ".purchase-panel_usp-content--individual"
+        );
+        const teamContent = document.querySelector(
+          ".purchase-panel_usp-content--team"
+        );
+
+        function switchTab(
+          activeTab,
+          inactiveTab,
+          activeContent,
+          inactiveContent
+        ) {
+          activeTab.classList.add("active");
+          inactiveTab.classList.remove("active");
+          activeContent.classList.add("active");
+          inactiveContent.classList.remove("active");
+        }
+
+        individualTab.addEventListener("click", () => {
+          switchTab(individualTab, teamTab, individualContent, teamContent);
+        });
+
+        teamTab.addEventListener("click", () => {
+          switchTab(teamTab, individualTab, teamContent, individualContent);
+        });
+
+        // Keyboard support for tabs
+        [individualTab, teamTab].forEach((tab) => {
+          tab.addEventListener("keypress", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              tab.click();
+            }
+          });
+        });
+
+        // VAT Toggle functionality
+        const vatToggle = document.getElementById("pp_vat-toggle");
+        const priceElement = document.querySelector(".js_pp_price");
+        const vatTextElement = document.querySelector(".js_pp_vat");
+        const basePrice = 31;
+        const vatRate = 0.2; // 20% VAT
+
+        vatToggle.addEventListener("change", function () {
+          if (this.checked) {
+            const priceWithVat = (basePrice * (1 + vatRate)).toFixed(2);
+            priceElement.textContent = priceWithVat;
+            vatTextElement.textContent = " inc VAT";
+          } else {
+            priceElement.textContent = basePrice;
+            vatTextElement.textContent = " +VAT";
+          }
+        });
+
+        // Quantity controls
+        const quantityInput = document.querySelector(".js_pp_quantity");
+        const decrementBtn = document.querySelector(".js_pp_decrement");
+        const incrementBtn = document.querySelector(".js_pp_increment");
+        const discountWrapper = document.querySelector(".js_pp_discount");
+
+        function updateQuantity(newValue) {
+          const value = parseInt(newValue);
+          if (value >= 1 && value <= 999999) {
+            quantityInput.value = value;
+
+            // Enable/disable decrement button
+            if (value <= 1) {
+              decrementBtn.classList.add("disabled");
+              decrementBtn.disabled = true;
+            } else {
+              decrementBtn.classList.remove("disabled");
+              decrementBtn.disabled = false;
+            }
+
+            // Show/hide discount message
+            if (value >= 10) {
+              discountWrapper.style.display = "block";
+            } else {
+              discountWrapper.style.display = "none";
+            }
+          }
+        }
+
+        decrementBtn.addEventListener("click", () => {
+          const currentValue = parseInt(quantityInput.value);
+          if (currentValue > 1) {
+            updateQuantity(currentValue - 1);
+          }
+        });
+
+        incrementBtn.addEventListener("click", () => {
+          const currentValue = parseInt(quantityInput.value);
+          if (currentValue < 999999) {
+            updateQuantity(currentValue + 1);
+          }
+        });
+
+        quantityInput.addEventListener("input", (e) => {
+          updateQuantity(e.target.value);
+        });
+
+        quantityInput.addEventListener("blur", (e) => {
+          const value = parseInt(e.target.value);
+          if (isNaN(value) || value < 1) {
+            updateQuantity(1);
+          }
+        });
+
+        // Form submission
+        const form = document.querySelector(".js_addToBasket");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const quantity = quantityInput.value;
+          const productId = document.getElementById("ProductId").value;
+          alert(
+            `Adding ${quantity} course(s) to basket!\nProduct ID: ${productId}`
+          );
+        });
+
+        // Initialize
+        updateQuantity(1);
+      </script> -->
+
+      <div class="max-w-md mx-auto">
+        <div class="purchase-panel-main">
+          <!-- Tabs -->
+          <div class="flex border-b border-gray-300">
+            <div
+              class="flex-1 text-center py-3 px-4 cursor-pointer font-medium text-base transition-colors duration-200 border-b-2 border-transparent hover:text-[#ff8100] focus-visible:bg-[#ffd15c] focus-visible:outline-none purchase-panel-tab purchase-panel-tab-individual js-pp-tab-individual active"
+              tabindex="0"
+              data-selenium-id="purchase-panel-tab-individual"
+            >
+              For me
+            </div>
+            <div
+              class="flex-1 text-center py-3 px-4 cursor-pointer font-medium text-base transition-colors duration-200 border-b-2 border-transparent hover:text-[#ff8100] focus-visible:bg-[#ffd15c] focus-visible:outline-none purchase-panel-tab purchase-panel-tab-team js-pp-tab-team"
+              tabindex="0"
+              data-selenium-id="purchase-panel-tab-team"
+            >
+              For teams
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 bg-white purchase-panel-content">
+            <!-- Individual USP Content -->
+            <div
+              class="hidden purchase-panel-usp-content purchase-panel-usp-content-individual active"
+            >
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-3">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 flex-shrink-0 mt-0.5"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="text-sm text-gray-700 m-0">100% online training</p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 flex-shrink-0 mt-0.5"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="text-sm text-gray-700 m-0">Start when you like</p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 flex-shrink-0 mt-0.5"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="text-sm text-gray-700 m-0">
+                    Learn on any device (desktop, mobile or tablet)
+                  </p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 flex-shrink-0 mt-0.5"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="text-sm text-gray-700 m-0">
+                    Instant assessment and result
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Team USP Content -->
+            <div
+              class="hidden purchase-panel-usp-content purchase-panel-usp-content-team"
+              data-selenium-id="purchase-panel-usp-content-team"
+            >
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-3">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 flex-shrink-0 mt-0.5"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="text-sm text-gray-700 m-0">1 learner per course</p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 flex-shrink-0 mt-0.5"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="text-sm text-gray-700 m-0">
+                    Train teams of all sizes
+                  </p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 flex-shrink-0 mt-0.5"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="text-sm text-gray-700 m-0">
+                    Bulk discounts starting at 10% off 10 courses
+                  </p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 flex-shrink-0 mt-0.5"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="#7396f7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p class="text-sm text-gray-700 m-0">
+                    Pay by invoice with 30 day payment terms available (5+
+                    courses)
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Price Section -->
+            <div class="mb-6 purchase-panel-price">
+              <h3
+                class="text-3xl font-bold text-[#0f1422] mb-2 purchase-panel-price-total"
+              >
+                £<span
+                  class="js-pp-price"
+                  data-selenium-id="purchase-panel-product-price"
+                  >31</span
+                ><span
+                  class="js-pp-vat text-base font-normal"
+                  data-selenium-id="purchase-panel-vat-text"
+                  >&nbsp;+VAT</span
+                >
+              </h3>
+              <div
+                class="flex items-center gap-2 purchase-panel-price-vat-toggle"
+              >
+                <span
+                  class="text-sm text-gray-600 purchase-panel-price-vat-text"
+                  >include vat</span
+                >
+                <div
+                  class="relative inline-block w-11 h-6 purchase-panel-price-switch"
+                >
+                  <input
+                    type="checkbox"
+                    id="pp-vat-toggle"
+                    name="pp-vat-toggle"
+                    autocomplete="off"
+                    tabindex="0"
+                    class="peer sr-only js-pp-vat-toggle"
+                  />
+                  <label
+                    for="pp-vat-toggle"
+                    data-selenium-id="purchase-panel-vat-toggle"
+                    class="block w-11 h-6 bg-gray-300 rounded-full cursor-pointer transition-colors duration-200 peer-checked:bg-[#7396f7] peer-focus-visible:ring-2 peer-focus-visible:ring-[#ffd15c] peer-focus-visible:ring-offset-2 after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-transform after:duration-200 peer-checked:after:translate-x-5"
+                  ></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Purchase Form -->
+            <form
+              class="purchase-panel-purchase-controls js-addToBasket"
+              method="post"
+              id="js-addToBasket-form"
+            >
+              <div class="flex items-center gap-2 mb-4 purchase-panel-quantity">
+                <button
+                  type="button"
+                  class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#ffd15c] focus-visible:outline-none purchase-panel-quantity-icon js-pp-decrement disabled"
+                  tabindex="0"
+                  aria-label="decrease basket count button"
+                  data-selenium-id="purchase-panel-qty-decrement"
+                  disabled
+                >
+                  <img
+                    alt="minus"
+                    loading="eager"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f1422' stroke-width='2'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E"
+                    class="w-5 h-5"
+                  />
+                </button>
+                <input
+                  type="number"
+                  pattern="[0-9]+"
+                  min="1"
+                  max="999999"
+                  class="flex-1 h-10 px-3 text-center border border-gray-300 rounded focus:border-[#7396f7] focus:ring-1 focus:ring-[#7396f7] focus:outline-none js-pp-quantity js-addToBasket-quantity"
+                  id="Quantity"
+                  name="Quantity"
+                  tabindex="0"
+                  value="1"
+                  autocomplete="off"
+                  data-selenium-id="tb-quantity"
+                />
+                <input
+                  type="hidden"
+                  value="120"
+                  id="ProductId"
+                  name="ProductId"
+                />
+                <button
+                  type="button"
+                  class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded bg-white hover:bg-gray-50 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#ffd15c] focus-visible:outline-none purchase-panel-quantity-icon js-pp-increment"
+                  aria-label="increase basket count button"
+                  tabindex="0"
+                  data-selenium-id="purchase-panel-qty-increment"
+                >
+                  <img
+                    alt="plus"
+                    loading="eager"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f1422' stroke-width='2'%3E%3Cline x1='12' y1='5' x2='12' y2='19'/%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E"
+                    class="w-5 h-5"
+                  />
+                </button>
+              </div>
+              <button
+                data-selenium-id="btn-buyNow"
+                class="w-full py-3 px-6 bg-[#ff8100] text-white font-semibold rounded hover:bg-[#e67300] active:bg-[#bb5808] transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[#ffd15c] focus-visible:ring-offset-2 focus-visible:outline-none purchase-panel-add-to-basket-btn js-modal-open-trigger js-modal-submit-trigger"
+                type="submit"
+              >
+                Add To Basket
+              </button>
+            </form>
+
+            <!-- Discount Message (hidden by default) -->
+            <div
+              class="hidden mt-4 purchase-panel-discount-wrapper js-pp-discount"
+              data-selenium-id="purchase-panel-discount-msg"
+            >
+              <div
+                class="flex items-center gap-2 p-3 bg-[#fff9e6] border border-[#ffd15c] rounded purchase-panel-discount"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 flex-shrink-0"
+                >
+                  <path
+                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                    fill="#ffd15c"
+                    stroke="#ff8100"
+                    stroke-width="1"
+                  />
+                </svg>
+                <p
+                  class="text-sm text-[#0f1422] m-0 purchase-panel-discount-msg"
+                >
+                  Includes a 10% discount for 10+ courses
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        /* Active tab styles using custom class since Tailwind can't do sibling selectors dynamically */
+        .purchase-panel-tab.active {
+          color: #ff8100;
+          border-bottom-color: #ff8100;
+        }
+
+        .purchase-panel-usp-content.active {
+          display: block;
+        }
+      </style>
+
+      <script>
+        // Tab switching functionality
+        const individualTab = document.querySelector(".js-pp-tab-individual");
+        const teamTab = document.querySelector(".js-pp-tab-team");
+        const individualContent = document.querySelector(
+          ".purchase-panel-usp-content-individual"
+        );
+        const teamContent = document.querySelector(
+          ".purchase-panel-usp-content-team"
+        );
+
+        function switchTab(
+          activeTab,
+          inactiveTab,
+          activeContent,
+          inactiveContent
+        ) {
+          activeTab.classList.add("active");
+          inactiveTab.classList.remove("active");
+          activeContent.classList.add("active");
+          inactiveContent.classList.remove("active");
+        }
+
+        individualTab.addEventListener("click", () => {
+          switchTab(individualTab, teamTab, individualContent, teamContent);
+        });
+
+        teamTab.addEventListener("click", () => {
+          switchTab(teamTab, individualTab, teamContent, individualContent);
+        });
+
+        // Keyboard support for tabs
+        [individualTab, teamTab].forEach((tab) => {
+          tab.addEventListener("keypress", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              tab.click();
+            }
+          });
+        });
+
+        // VAT Toggle functionality
+        const vatToggle = document.getElementById("pp-vat-toggle");
+        const priceElement = document.querySelector(".js-pp-price");
+        const vatTextElement = document.querySelector(".js-pp-vat");
+        const basePrice = 31;
+        const vatRate = 0.2; // 20% VAT
+
+        vatToggle.addEventListener("change", function () {
+          if (this.checked) {
+            const priceWithVat = (basePrice * (1 + vatRate)).toFixed(2);
+            priceElement.textContent = priceWithVat;
+            vatTextElement.textContent = " inc VAT";
+          } else {
+            priceElement.textContent = basePrice;
+            vatTextElement.textContent = " +VAT";
+          }
+        });
+
+        // Quantity controls
+        const quantityInput = document.querySelector(".js-pp-quantity");
+        const decrementBtn = document.querySelector(".js-pp-decrement");
+        const incrementBtn = document.querySelector(".js-pp-increment");
+        const discountWrapper = document.querySelector(".js-pp-discount");
+
+        function updateQuantity(newValue) {
+          const value = parseInt(newValue);
+          if (value >= 1 && value <= 999999) {
+            quantityInput.value = value;
+
+            // Enable/disable decrement button
+            if (value <= 1) {
+              decrementBtn.classList.add("disabled");
+              decrementBtn.disabled = true;
+            } else {
+              decrementBtn.classList.remove("disabled");
+              decrementBtn.disabled = false;
+            }
+
+            // Show/hide discount message
+            if (value >= 10) {
+              discountWrapper.classList.remove("hidden");
+            } else {
+              discountWrapper.classList.add("hidden");
+            }
+          }
+        }
+
+        decrementBtn.addEventListener("click", () => {
+          const currentValue = parseInt(quantityInput.value);
+          if (currentValue > 1) {
+            updateQuantity(currentValue - 1);
+          }
+        });
+
+        incrementBtn.addEventListener("click", () => {
+          const currentValue = parseInt(quantityInput.value);
+          if (currentValue < 999999) {
+            updateQuantity(currentValue + 1);
+          }
+        });
+
+        quantityInput.addEventListener("input", (e) => {
+          updateQuantity(e.target.value);
+        });
+
+        quantityInput.addEventListener("blur", (e) => {
+          const value = parseInt(e.target.value);
+          if (isNaN(value) || value < 1) {
+            updateQuantity(1);
+          }
+        });
+
+        // Form submission
+        const form = document.querySelector(".js-addToBasket");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const quantity = quantityInput.value;
+          const productId = document.getElementById("ProductId").value;
+          alert(
+            `Adding ${quantity} course(s) to basket!\nProduct ID: ${productId}`
+          );
+        });
+
+        // Initialize
+        updateQuantity(1);
+      </script>
     </main>
 
     <footer>
