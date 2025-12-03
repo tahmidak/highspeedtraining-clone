@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Training UI Practice Project</title>
- <link rel="icon" href="assets/img/icons/favicon.ico">
-<meta name="description" content="A frontend UI practice project created for learning purposes. Not an official website.">
+    <link rel="icon" href="assets/img/icons/favicon.ico" />
+    <meta
+      name="description"
+      content="A frontend UI practice project created for learning purposes. Not an official website."
+    />
 
     <!-- DaisyUI CSS (load FIRST) -->
     <link
@@ -80,6 +83,25 @@
 
       .purchase-panel-usp-content.active {
         display: block;
+      }
+    </style>
+
+    <style>
+      /* Sticky form styles - only on screens smaller than xl (1280px) */
+      @media (max-width: 1279px) {
+        .sticky-to-bottom {
+          position: fixed !important;
+          bottom: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          z-index: 50 !important;
+          box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15) !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          border-radius: 0 !important;
+          padding: 1rem 2rem !important;
+          background-color: #fff !important;
+        }
       }
     </style>
   </head>
@@ -1183,7 +1205,7 @@
 
             <!-- product-price-info -->
             <div
-              class="price-box-container col-span-12 md:col-span-5 xl:col-span-4 md:row-span-2 xl:row-span-3 xl:col-start-9 md:px-6 relative"
+              class="price-box-container col-span-12 md:col-span-5 xl:col-span-4 md:row-span-2 xl:row-span-3 xl:col-start-9 md:px-6 relative my-6"
             >
               <div
                 class="purchase-panel-img w-full h-64 hidden xl:flex justify-center items-center"
@@ -1537,6 +1559,13 @@
                   </div>
                 </div>
               </div>
+
+              <!-- sticky trigger for the Purchase Form-->
+              <div
+                class="js_sticky_trigger h-px w-full"
+                data-target="#js-addToBasket-form"
+                data-class="sticky-to-bottom"
+              ></div>
             </div>
 
             <!-- single-page contents brief description -->
@@ -1573,7 +1602,9 @@
               <div
                 class="sp-contents w-full flex justify-start items-center gap-6 flex-col lg:flex-row mt-6"
               >
-                <div class="w-full flex flex-col gap-5 row-gap-6 gap-y-20 lg:pr-6">
+                <div
+                  class="w-full flex flex-col gap-5 row-gap-6 gap-y-20 lg:pr-6"
+                >
                   <!-- bullet-points -->
                   <div
                     class="sp-hero-body-bullet-points flex flex-col md:flex-row gap-6"
@@ -2552,7 +2583,7 @@
                             >
                               <!-- Course Content Tab -->
                               <div
-                                class="product-page-course-info-panel-tab-contents-course-content-wrapper js-course-content active "
+                                class="product-page-course-info-panel-tab-contents-course-content-wrapper js-course-content active"
                               >
                                 <div
                                   class="product-page-course-info-panel-tab-contents-course-content mb-4"
@@ -4819,6 +4850,133 @@
 
       // Initialize
       updateQuantity(1);
+    </script>
+
+    <!-- sticky -->
+    <script>
+      // Debounce utility
+      function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      }
+
+      // Sticky Component - Same as your Sticky.ts
+      class Sticky {
+        constructor() {
+          this.classToTrigger = "js_sticky_trigger";
+          this.classToAdd = "data-class";
+          this.classToTarget = "data-target";
+
+          this.handleScroll = debounce(this.init.bind(this), 1000 / 60);
+          this.init();
+        }
+
+        init() {
+          this.handleStickyElements();
+          window.addEventListener("scroll", this.handleScroll);
+          window.addEventListener("resize", this.handleScroll);
+        }
+
+        handleStickyElements() {
+          const triggers = document.querySelectorAll(`.${this.classToTrigger}`);
+          triggers.forEach((trigger) => {
+            this.handleStickyElement(trigger);
+          });
+        }
+
+        handleStickyElement(element) {
+          const targetSelector = element.getAttribute(this.classToTarget);
+          const classToAdd = element.getAttribute(this.classToAdd);
+
+          if (!targetSelector || !classToAdd) return;
+
+          const targetElement = document.querySelector(targetSelector);
+          if (!targetElement) return;
+
+          // Only apply sticky on screens smaller than xl (1280px)
+          if (window.innerWidth >= 1280) {
+            targetElement.classList.remove(classToAdd);
+            return;
+          }
+
+          const isSticky = this.isElementSticky(element);
+          this.toggleStickyClass(targetElement, isSticky, classToAdd);
+        }
+
+        isElementSticky(triggerElement, offset = 0) {
+          const topOffset = this.getTopOffset(triggerElement);
+          return window.scrollY >= topOffset - offset;
+        }
+
+        toggleStickyClass(element, isSticky, classToAdd) {
+          element.classList.toggle(classToAdd, isSticky);
+        }
+
+        getTopOffset(element) {
+          let offsetTop = 0;
+          while (element) {
+            offsetTop += element.offsetTop;
+            element = element.offsetParent;
+          }
+          return offsetTop;
+        }
+      }
+
+      // Quantity Controls
+      class QuantityControls {
+        constructor() {
+          this.setupControls();
+        }
+
+        setupControls() {
+          const incBtn = document.querySelector(".js-pp-increment");
+          const decBtn = document.querySelector(".js-pp-decrement");
+          const qtyInput = document.querySelector(".js-pp-quantity");
+
+          if (!incBtn || !decBtn || !qtyInput) return;
+
+          incBtn.addEventListener("click", () => {
+            const currentValue = parseInt(qtyInput.value) || 1;
+            qtyInput.value = currentValue + 1;
+            this.updateButtonStates(qtyInput, decBtn);
+          });
+
+          decBtn.addEventListener("click", () => {
+            const currentValue = parseInt(qtyInput.value) || 1;
+            if (currentValue > 1) {
+              qtyInput.value = currentValue - 1;
+              this.updateButtonStates(qtyInput, decBtn);
+            }
+          });
+
+          qtyInput.addEventListener("input", () => {
+            this.updateButtonStates(qtyInput, decBtn);
+          });
+        }
+
+        updateButtonStates(input, decBtn) {
+          const value = parseInt(input.value) || 1;
+          decBtn.disabled = value <= 1;
+        }
+      }
+
+      // Initialize
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => {
+          new Sticky();
+          new QuantityControls();
+        });
+      } else {
+        new Sticky();
+        new QuantityControls();
+      }
     </script>
   </body>
 </html>
